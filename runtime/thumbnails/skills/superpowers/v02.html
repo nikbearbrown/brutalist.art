@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../lib/base.css">
+<title>v02 — big word left + terminal right</title>
+<style>
+  /* V02 · Workhorse split: bold phrase left, CLI window right. */
+  .col{position:absolute;left:90px;top:150px;width:430px}
+  .col .kick{font-family:var(--mono);font-size:19px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:26px}
+  .col .kick .slash{color:var(--spark)}
+  .col h1{font-family:var(--sans);font-weight:700;font-size:70px;
+    line-height:1.02;letter-spacing:-.02em;color:var(--ink)}
+  .col h1 .a{color:var(--spark)}
+  .win{position:absolute;left:566px;top:150px;width:624px;height:420px}
+  .win-body{font-size:27px;line-height:1.9}
+</style></head>
+<body><div class="frame grid-bg">
+  <div class="col">
+    <div class="kick"><span class="slash">// </span>claude code</div>
+    <h1>Give&nbsp;Claude<br>a&nbsp;new<br><span class="a">superpower</span></h1>
+  </div>
+  <div class="win">
+    <div class="win-bar"><span class="dot3 r"></span><span class="dot3 y"></span><span class="dot3 g"></span><span class="win-title">claude — zsh</span></div>
+    <div class="win-body">
+      <div><span class="p">$</span> <span class="k">claude</span></div>
+      <div><span class="p">›</span> <span class="k">skill</span> <span class="c">superpowers</span></div>
+      <div><span class="c">// new abilities, loaded</span></div>
+      <div><span class="p">›</span> ready<span class="cursor"></span></div>
+    </div>
+  </div>
+  <div class="wordmark">brutalist<span class="dot">.</span>art</div>
+</div></body></html>
