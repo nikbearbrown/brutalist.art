@@ -28,6 +28,31 @@ Then eyeball `out/<slug>/contact.png` (all variations) and, critically,
 
 ---
 
+## The locked series template (Claude Skills)
+
+The chosen look for the Claude-skills series is a parametric card
+(`templates/skill-card.html`): a centered `✳ Claude Skills` serif lockup, the
+`/command` underneath, a `#num` index top-left, and the pixel Claude mascot
+bottom-right. Each new video is **one command** — only the number and the
+command word change:
+
+```bash
+./render.sh claude-skills --cmd /pdf --num 53                 # light (default)
+./render.sh claude-skills --cmd /commit --num 54 --skin dark  # dark ground
+./render.sh claude-skills --cmd /slides --num 55 --out slides # custom filename
+```
+
+Flags: `--cmd` slash command (drives the filename too) · `--num` skill index
+(`--num ""` hides it) · `--skin light|dark` · `--title` headline (default
+"Claude Skills") · `--out` output filename. Output → `out/claude-skills/<cmd>.png`
+(+ `@2x/`). Light↔dark auto-adapts (logo, ink, and dot grid flip; the mascot
+stays terracotta). `skills/claude-skills/*.html` holds the earlier exploration
+(a–e) that led here; the template is the source of truth going forward.
+
+To retheme for a different series, copy `templates/skill-card.html` and edit it.
+
+---
+
 ## Part 1 — The brand (non-negotiable look)
 
 Pulled from `runtime/remotion/src/tokens/` so thumbnails match the videos.

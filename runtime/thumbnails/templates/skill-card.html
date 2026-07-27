@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../lib/base.css">
+<title>Claude skill card (parametric)</title>
+<!--
+  Parametric thumbnail. Driven by URL query params (all optional):
+    ?title=Claude%20Skills   headline           (default "Claude Skills")
+    &cmd=/superpowers        the slash command   (default "superpowers"; leading / optional)
+    &num=52                  skill index; empty/absent hides it
+    &skin=light|dark         ground              (default "light")
+  Rendered by render.sh; see README. To preview, open this file in a browser
+  with a query string, e.g. skill-card.html?cmd=/pdf&num=53&skin=dark
+-->
+<style>
+  .frame.grid-bg::before{
+    opacity:.10;
+    background-image:radial-gradient(currentColor 1.7px, transparent 1.7px);
+    background-size:25px 25px;
+  }
+  .skillno{position:absolute;left:72px;top:58px;
+    font-family:var(--mono);font-size:34px;letter-spacing:.14em;color:var(--ink-soft)}
+  .stack{position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:46px}
+  .lockup{display:flex;align-items:center;gap:32px}
+  .lockup svg{width:100px;height:100px;fill:var(--ink);flex:none;transform:translateY(-4px)}
+  .lockup .head{font-family:var(--serif);font-weight:500;font-size:150px;
+    line-height:.98;letter-spacing:-.02em;color:var(--ink)}
+  .cmd{font-family:var(--mono);font-size:62px;letter-spacing:-.01em;color:var(--ink)}
+  .cmd .slash{color:var(--spark)}
+  .cmd .cur{display:inline-block;width:.5em;height:.98em;background:var(--spark);
+    transform:translateY(.16em);margin-left:.06em}
+  .mascot{position:absolute;right:74px;bottom:60px;width:134px;height:auto}
+</style></head>
+<body><div class="frame grid-bg cream" id="frame">
+
+  <div class="skillno" id="skillno">#52</div>
+
+  <div class="stack">
+    <div class="lockup">
+      <svg class="spark-logo" viewBox="0 0 100 100" role="img" aria-label="Claude"><g>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(0 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(30 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(60 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(90 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(120 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(150 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(180 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(210 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(240 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(270 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(300 50 50)"/>
+        <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(330 50 50)"/>
+      </g></svg>
+      <div class="head" id="head">Claude&nbsp;Skills</div>
+    </div>
+    <div class="cmd"><span class="slash">/</span><span class="cmd-word" id="cmdword">superpowers</span><span class="cur"></span></div>
+  </div>
+
+  <svg class="mascot" viewBox="0 0 140 112" role="img" aria-label="Claude mascot">
+    <g fill="#D97757">
+      <rect x="20" y="10" width="100" height="70"/>
+      <rect x="0"  y="40" width="20" height="20"/>
+      <rect x="120" y="40" width="20" height="20"/>
+      <rect x="26" y="80" width="16" height="30"/>
+      <rect x="50" y="80" width="16" height="30"/>
+      <rect x="74" y="80" width="16" height="30"/>
+      <rect x="98" y="80" width="16" height="30"/>
+    </g>
+    <g fill="#23201C">
+      <rect x="42" y="26" width="16" height="16"/>
+      <rect x="82" y="26" width="16" height="16"/>
+    </g>
+  </svg>
+
+</div>
+<script>
+(function(){
+  var p = new URLSearchParams(location.search);
+  var title = p.get('title'); if (title) document.getElementById('head').textContent = title;
+  var cmd = p.get('cmd');     if (cmd)   document.getElementById('cmdword').textContent = cmd.replace(/^\//,'');
+  var num = p.get('num'), no = document.getElementById('skillno');
+  if (num !== null) { if (num === '') no.style.display = 'none';
+                      else no.textContent = '#' + String(num).replace(/^#/,''); }
+  var skin = p.get('skin'), f = document.getElementById('frame');
+  if (skin === 'dark') f.classList.remove('cream');
+  else if (skin === 'light') f.classList.add('cream');
+})();
+</script>
+</body></html>

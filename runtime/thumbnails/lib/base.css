@@ -112,3 +112,6 @@ html,body{background:#000}
 .chip.hot{border-color:var(--spark);color:var(--ink);
   box-shadow:0 0 0 4px rgba(217,119,87,.18)}
 .chip .spark{width:9px;height:9px;border-radius:50%;background:var(--spark)}
+
+/* ---- Claude spark logo (stylized radial mark, terracotta) ---- */
+.spark-logo{display:block;fill:var(--spark)}
