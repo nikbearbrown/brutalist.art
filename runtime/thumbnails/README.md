@@ -37,17 +37,32 @@ bottom-right. Each new video is **one command** — only the number and the
 command word change:
 
 ```bash
-./render.sh claude-skills --cmd /pdf --num 53                 # light (default)
-./render.sh claude-skills --cmd /commit --num 54 --skin dark  # dark ground
-./render.sh claude-skills --cmd /slides --num 55 --out slides # custom filename
+./render.sh claude-skills --cmd /pdf --num 53 --mascot suspicious   # light (default)
+./render.sh claude-skills --cmd /commit --num 54 --skin dark --mascot smug
+./render.sh claude-skills --cmd /slides --num 55 --mascot laughing --out slides
 ```
 
 Flags: `--cmd` slash command (drives the filename too) · `--num` skill index
-(`--num ""` hides it) · `--skin light|dark` · `--title` headline (default
-"Claude Skills") · `--out` output filename. Output → `out/claude-skills/<cmd>.png`
-(+ `@2x/`). Light↔dark auto-adapts (logo, ink, and dot grid flip; the mascot
-stays terracotta). `skills/claude-skills/*.html` holds the earlier exploration
-(a–e) that led here; the template is the source of truth going forward.
+(`--num ""` hides it) · `--skin light|dark` · `--mascot <emotion>` (`--mascot ""`
+hides it) · `--title` headline (default "Claude Skills") · `--out` output
+filename. Output → `out/claude-skills/<cmd>.png` (+ `@2x/`). Light↔dark
+auto-adapts (logo, ink, and dot grid flip; the mascot stays terracotta).
+`skills/claude-skills/*.html` holds the earlier exploration (a–e) that led here;
+the template is the source of truth going forward.
+
+### Emotion mascots (bottom-right)
+
+The pixel Claude mascot in the bottom-right sets the emotional tone (a proven
+CTR lever). Six expressions live in `assets/mascots/`: **shocked, laughing,
+furious, crying, suspicious, smug** — pick one per video with `--mascot`.
+
+They're extracted from a sprite sheet by `tools/extract_mascots.py` (crops the
+6 cells, knocks out the cream/shadow background to transparent, keeps sparks /
+tears / eyes), so they sit cleanly on both light and dark grounds:
+
+```bash
+python3 tools/extract_mascots.py <sheet-3x2.png> assets/mascots
+```
 
 To retheme for a different series, copy `templates/skill-card.html` and edit it.
 

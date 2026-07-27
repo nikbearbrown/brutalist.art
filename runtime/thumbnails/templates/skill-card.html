@@ -29,7 +29,7 @@
   .cmd .slash{color:var(--spark)}
   .cmd .cur{display:inline-block;width:.5em;height:.98em;background:var(--spark);
     transform:translateY(.16em);margin-left:.06em}
-  .mascot{position:absolute;right:74px;bottom:60px;width:134px;height:auto}
+  .mascot{position:absolute;right:60px;bottom:50px;width:204px;height:auto}
 </style></head>
 <body><div class="frame grid-bg cream" id="frame">
 
@@ -56,21 +56,7 @@
     <div class="cmd"><span class="slash">/</span><span class="cmd-word" id="cmdword">superpowers</span><span class="cur"></span></div>
   </div>
 
-  <svg class="mascot" viewBox="0 0 140 112" role="img" aria-label="Claude mascot">
-    <g fill="#D97757">
-      <rect x="20" y="10" width="100" height="70"/>
-      <rect x="0"  y="40" width="20" height="20"/>
-      <rect x="120" y="40" width="20" height="20"/>
-      <rect x="26" y="80" width="16" height="30"/>
-      <rect x="50" y="80" width="16" height="30"/>
-      <rect x="74" y="80" width="16" height="30"/>
-      <rect x="98" y="80" width="16" height="30"/>
-    </g>
-    <g fill="#23201C">
-      <rect x="42" y="26" width="16" height="16"/>
-      <rect x="82" y="26" width="16" height="16"/>
-    </g>
-  </svg>
+  <img class="mascot" id="mascot" src="../assets/mascots/shocked.png" alt="Claude mascot">
 
 </div>
 <script>
@@ -84,6 +70,9 @@
   var skin = p.get('skin'), f = document.getElementById('frame');
   if (skin === 'dark') f.classList.remove('cream');
   else if (skin === 'light') f.classList.add('cream');
+  var mas = p.get('mascot'), mimg = document.getElementById('mascot');
+  if (mas === '') mimg.style.display = 'none';
+  else if (mas) mimg.src = '../assets/mascots/' + mas + '.png';
 })();
 </script>
 </body></html>

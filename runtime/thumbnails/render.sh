@@ -25,15 +25,16 @@ enc(){ node -e 'process.stdout.write(encodeURIComponent(process.argv[1]||""))' "
 spec(){ cp "$1" "$2"; sips -z 720 1280 "$2" >/dev/null 2>&1; }   # 2x master -> 1280x720 spec
 
 SLUG="${1:-superpowers}"; [ $# -gt 0 ] && shift
-ONLY=""; TPL=0; NUM=""; CMD="superpowers"; TITLE="Claude Skills"; SKIN="light"; OUTNAME=""
+ONLY=""; TPL=0; NUM=""; CMD="superpowers"; TITLE="Claude Skills"; SKIN="light"; MASCOT="shocked"; OUTNAME=""
 while [ $# -gt 0 ]; do case "$1" in
-  --num)   NUM="${2:-}";   shift 2; TPL=1;;
-  --cmd)   CMD="${2:-}";   shift 2; TPL=1;;
-  --title) TITLE="${2:-}"; shift 2; TPL=1;;
-  --skin)  SKIN="${2:-}";  shift 2; TPL=1;;
-  --out)   OUTNAME="${2:-}"; shift 2;;
-  --*)     echo "unknown flag: $1" >&2; shift;;
-  *)       ONLY="$1"; shift;;
+  --num)    NUM="${2:-}";    shift 2; TPL=1;;
+  --cmd)    CMD="${2:-}";    shift 2; TPL=1;;
+  --title)  TITLE="${2:-}";  shift 2; TPL=1;;
+  --skin)   SKIN="${2:-}";   shift 2; TPL=1;;
+  --mascot) MASCOT="${2:-}"; shift 2; TPL=1;;
+  --out)    OUTNAME="${2:-}"; shift 2;;
+  --*)      echo "unknown flag: $1" >&2; shift;;
+  *)        ONLY="$1"; shift;;
 esac; done
 
 OUT="$HERE/out/$SLUG"; RAW="$OUT/@2x"; SRC="$HERE/skills/$SLUG"; mkdir -p "$OUT" "$RAW"
@@ -43,10 +44,10 @@ if [ "$TPL" = 1 ]; then
   name="$OUTNAME"
   [ -z "$name" ] && name="$(printf '%s' "$CMD" | sed 's#^/##; s#[^A-Za-z0-9._-].*##')"
   [ -z "$name" ] && name="card"
-  url="file://$HERE/templates/skill-card.html?title=$(enc "$TITLE")&cmd=$(enc "$CMD")&num=$(enc "$NUM")&skin=$(enc "$SKIN")"
+  url="file://$HERE/templates/skill-card.html?title=$(enc "$TITLE")&cmd=$(enc "$CMD")&num=$(enc "$NUM")&skin=$(enc "$SKIN")&mascot=$(enc "$MASCOT")"
   shot "$url" "$RAW/$name.png" 1280 720 00000000
   spec "$RAW/$name.png" "$OUT/$name.png"
-  printf '  built  /%s  #%-3s  %-5s -> out/%s/%s.png\n' "${CMD#/}" "${NUM:-–}" "$SKIN" "$SLUG" "$name"
+  printf '  built  /%s  #%-3s  %-5s  %-10s -> out/%s/%s.png\n' "${CMD#/}" "${NUM:-–}" "$SKIN" "${MASCOT:-none}" "$SLUG" "$name"
   echo "done -> $OUT/$name.png"; exit 0
 fi
 
