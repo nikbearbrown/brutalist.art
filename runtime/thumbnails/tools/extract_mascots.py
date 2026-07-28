@@ -1,77 +1,86 @@
 #!/usr/bin/env python3
-"""Extract the 6 emotion mascots from a 3x2 sprite sheet into tight transparent PNGs.
+"""Extract pixel mascots from a grid sprite sheet into tight transparent PNGs.
 
-Usage: python3 extract_mascots.py <sheet.png> [out_dir]
+Usage:
+  python3 extract_mascots.py <sheet.png> <out_dir> <cols> <name1,name2,...>
+  python3 extract_mascots.py <sheet.png>              # defaults to the 6 emotions
 
-Knocks out the warm cream/shadow background with a border-connected flood fill
-(scipy label), so it preserves the mascot body, enclosed white eyes, and the
-floating colour accents (sparks, sweat, '?', sparkle) and cool bits (blue tears).
-Each emotion's text label is cropped off first.
+Row-major names; rows = len(names)/cols. Knocks out the warm cream/shadow
+background with a border-connected flood fill (scipy), preserving the mascot
+body, enclosed highlights (white eyes, gear shine), and colour/tool accessories
+(sparks, tears, gears, magnifiers, icons). Each cell's text label is cropped off.
+
+Background key: "very light AND warm-ish" (min channel > 175 and R >= B-2). This
+removes cream (~244) and its soft shadow but keeps medium-gray tools (~136) and
+any cool-coloured bits (blue tears/'?').
 """
 import sys, os
 import numpy as np
 from PIL import Image
 from scipy import ndimage
 
-NAMES = [["shocked", "laughing", "furious"],
-         ["crying", "suspicious", "smug"]]
+EMOTIONS = ["shocked", "laughing", "furious", "crying", "suspicious", "smug"]
 
 def passable_mask(rgb):
+    # background = light AND warm-or-neutral. The warmth test (R >= B-2) keeps the
+    # slightly-cool gray tools (gears, ~136/140/139) while removing cream (~244),
+    # its soft shadow, and the faint neutral divider dots (~170) between cells.
     R, G, B = (rgb[..., i].astype(int) for i in range(3))
-    # warm light = cream / beige shadow / neutral white; NOT cool (blue) or saturated
-    return (R > 140) & (G > 140) & (B > 140) & (R + 8 >= B)
+    return (np.minimum(np.minimum(R, G), B) > 150) & (R >= B - 2)
 
-def label_top(cell_passable):
-    """y (within cell) of the top of the bottom-most content band = the text label."""
-    content_rows = (~cell_passable).sum(axis=1)
-    empty = content_rows < 6
-    h = len(empty)
-    y = h - 1
-    while y >= 0 and empty[y]:
-        y -= 1                       # skip bottom margin
-    while y >= 0 and not empty[y]:
-        y -= 1                       # skip the label band
-    top = y + 1
-    return top if top > 220 else int(h * 0.82)   # guard against merged bands
+def label_top(cell_passable, bridge=6):
+    """y of the TOP of the bottom-most content band (= the text label).
+
+    Walks the bottom-most band up to its top, bridging vertical gaps up to
+    `bridge` rows (thin serif rows inside the label can dip below threshold);
+    stops at the wide empty gap that separates the label from the mascot.
+    """
+    solid = (~cell_passable).sum(axis=1) >= 6
+    h = len(solid)
+    idx = np.where(solid)[0]
+    if len(idx) == 0:
+        return int(h * 0.82)
+    top = idx[-1]; i = len(idx) - 1
+    while i > 0 and idx[i] - idx[i - 1] <= bridge:
+        i -= 1; top = idx[i]
+    return top if top > 0.30 * h else int(h * 0.82)
 
 def knockout(region_rgb):
-    """Return RGBA with border-connected warm-light background made transparent."""
     p = passable_mask(region_rgb)
-    lbl, _ = ndimage.label(p)                    # 4-connectivity
-    border = set(lbl[0, :]) | set(lbl[-1, :]) | set(lbl[:, 0]) | set(lbl[:, -1])
+    lbl, _ = ndimage.label(p)
+    border = (set(lbl[0, :]) | set(lbl[-1, :]) | set(lbl[:, 0]) | set(lbl[:, -1]))
     border.discard(0)
     bg = np.isin(lbl, list(border))
     alpha = np.where(bg, 0, 255).astype(np.uint8)
     return np.dstack([region_rgb, alpha])
 
-def trim(rgba):
+def trim(rgba, pad=6):
     ys, xs = np.where(rgba[..., 3] > 0)
     if len(xs) == 0:
         return rgba
-    pad = 6
     y0, y1 = max(ys.min() - pad, 0), min(ys.max() + 1 + pad, rgba.shape[0])
     x0, x1 = max(xs.min() - pad, 0), min(xs.max() + 1 + pad, rgba.shape[1])
     return rgba[y0:y1, x0:x1]
 
 def main():
     sheet = sys.argv[1]
-    out = sys.argv[2] if len(sys.argv) > 2 else "assets/mascots"
+    out   = sys.argv[2] if len(sys.argv) > 2 else "assets/mascots"
+    cols  = int(sys.argv[3]) if len(sys.argv) > 3 else 3
+    names = sys.argv[4].split(",") if len(sys.argv) > 4 else EMOTIONS
+    rows  = (len(names) + cols - 1) // cols
     os.makedirs(out, exist_ok=True)
     arr = np.asarray(Image.open(sheet).convert("RGB"))
     H, W = arr.shape[:2]
-    ch, cw = H // 2, W // 3
-    saved = []
-    for r in range(2):
-        for c in range(3):
-            cell = arr[r*ch:(r+1)*ch, c*cw:(c+1)*cw]
-            cut = label_top(passable_mask(cell))         # drop the label text
-            region = cell[:cut]
-            rgba = trim(knockout(region))
-            name = NAMES[r][c]
-            Image.fromarray(rgba, "RGBA").save(os.path.join(out, f"{name}.png"))
-            saved.append((name, rgba.shape[1], rgba.shape[0]))
-            print(f"  {name:11s} {rgba.shape[1]}x{rgba.shape[0]}")
-    return saved
+    ch, cw = H // rows, W // cols
+    ins = 5   # inset each cell to drop the surviving boundary divider dashes
+    for i, name in enumerate(names):
+        r, c = divmod(i, cols)
+        cell = arr[r*ch+ins:(r+1)*ch-ins, c*cw+ins:(c+1)*cw-ins]
+        # crop off the text label; clamp as a backstop against a merged band.
+        cut = min(label_top(passable_mask(cell)), int(cell.shape[0] * 0.85))
+        rgba = trim(knockout(cell[:cut]))
+        Image.fromarray(rgba).save(os.path.join(out, f"{name}.png"))
+        print(f"  {name:12s} {rgba.shape[1]}x{rgba.shape[0]}")
 
 if __name__ == "__main__":
     main()

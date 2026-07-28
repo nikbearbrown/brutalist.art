@@ -50,18 +50,27 @@ auto-adapts (logo, ink, and dot grid flip; the mascot stays terracotta).
 `skills/claude-skills/*.html` holds the earlier exploration (a–e) that led here;
 the template is the source of truth going forward.
 
-### Emotion mascots (bottom-right)
+### Mascots (bottom-right)
 
-The pixel Claude mascot in the bottom-right sets the emotional tone (a proven
-CTR lever). Six expressions live in `assets/mascots/`: **shocked, laughing,
-furious, crying, suspicious, smug** — pick one per video with `--mascot`.
+The pixel Claude mascot in the bottom-right sets the tone (a proven CTR lever).
+**26** live in `assets/mascots/` — pick one per video with `--mascot`
+(`--mascot ""` hides it). See `out/claude-skills/mascots-library.png`.
 
-They're extracted from a sprite sheet by `tools/extract_mascots.py` (crops the
-6 cells, knocks out the cream/shadow background to transparent, keeps sparks /
-tears / eyes), so they sit cleanly on both light and dark grounds:
+- **Emotions:** shocked · laughing · furious · crying · suspicious · smug
+- **Actions:** explaining · question · idea · tip · example · coding ·
+  debugging · searching · testing · fixing · success · error · warning ·
+  blocked · retry · setup · automate · compare · connect · launch
+
+Tip: match the mascot to the command (`/debug` + debugging, `/ship` + launch).
+
+They're cut from a grid sprite sheet by `tools/extract_mascots.py`, which knocks
+out the cream/shadow background to transparent (keeping bodies, eyes, and colour
+/ tool accessories) and crops each cell's text label — so they sit cleanly on
+both light and dark grounds:
 
 ```bash
-python3 tools/extract_mascots.py <sheet-3x2.png> assets/mascots
+# args: <sheet.png> <out_dir> <cols> <comma,separated,names,row-major>
+python3 tools/extract_mascots.py sheet.png assets/mascots 5 "explaining,question,..."
 ```
 
 To retheme for a different series, copy `templates/skill-card.html` and edit it.
