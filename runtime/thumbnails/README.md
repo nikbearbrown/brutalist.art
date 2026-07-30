@@ -73,6 +73,27 @@ both light and dark grounds:
 python3 tools/extract_mascots.py sheet.png assets/mascots 5 "explaining,question,..."
 ```
 
+### Batch: one thumbnail per video folder
+
+`tools/thumbnail_youtube.sh` writes a `thumbnail.png` into every
+`clauded/youtube/<skill>/` folder — title "Claude Skills", command `/<slug>`,
+skin light, and a topic-matched mascot (see the `mascot_for()` map in the
+script). The command line auto-shrinks so long slugs never clip. Numbers are
+omitted (no canonical episode order in the repo).
+
+```bash
+tools/thumbnail_youtube.sh                       # defaults to ../../clauded/youtube
+tools/thumbnail_youtube.sh /path/to/youtube      # or point it somewhere
+```
+
+Re-run anytime; it overwrites in place. To change a single card, use the
+one-off template command with `--dest`:
+
+```bash
+./render.sh claude-skills --cmd /code-review --mascot searching \
+  --dest /path/to/youtube/code-review/thumbnail.png
+```
+
 To retheme for a different series, copy `templates/skill-card.html` and edit it.
 
 ---

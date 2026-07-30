@@ -63,7 +63,17 @@
 (function(){
   var p = new URLSearchParams(location.search);
   var title = p.get('title'); if (title) document.getElementById('head').textContent = title;
-  var cmd = p.get('cmd');     if (cmd)   document.getElementById('cmdword').textContent = cmd.replace(/^\//,'');
+  var cmd = p.get('cmd');
+  if (cmd) {
+    var word = cmd.replace(/^\//,'');
+    document.getElementById('cmdword').textContent = word;
+    // auto-fit: shrink the command line so long slugs never clip (base 62px @ ~11 chars)
+    var full = word.length + 1;                 // + the slash
+    if (full > 12) {
+      var px = Math.max(30, Math.min(62, Math.round(62 * 12 / full)));
+      document.querySelector('.cmd').style.fontSize = px + 'px';
+    }
+  }
   var num = p.get('num'), no = document.getElementById('skillno');
   if (num !== null) { if (num === '') no.style.display = 'none';
                       else no.textContent = '#' + String(num).replace(/^#/,''); }
