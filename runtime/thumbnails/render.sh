@@ -7,6 +7,9 @@
 #   ./render.sh claude-skills --cmd /slides --num 55 --title "Claude Skills" --out slides
 #     flags: --cmd <slash-command>  --num <n|"" to hide>  --skin light|dark
 #            --title <headline>      --out <filename>  (default: derived from --cmd)
+#            --4k                    3840x2160 master (= --scale 3 --full)
+#            --scale N               device scale factor (default 2)
+#            --full                  keep the @Nx master; skip the 1280x720 downsample
 #
 # GALLERY MODE — render the example HTML in skills/<slug>/ (+ contact & mobile sheets):
 #   ./render.sh superpowers          # whole folder + sheets
@@ -16,9 +19,9 @@ set -euo pipefail
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 
-shot(){ # shot <url> <out-png> <w> <h> <bg-aarrggbb>
+shot(){ # shot <url> <out-png> <w> <h> <bg-aarrggbb>   (device scale = $SCALE)
   "$CHROME" --headless=new --disable-gpu --hide-scrollbars \
-    --force-device-scale-factor=2 --window-size="$3,$4" \
+    --force-device-scale-factor="$SCALE" --window-size="$3,$4" \
     --default-background-color="$5" --virtual-time-budget=2800 \
     --screenshot="$2" "$1" >/dev/null 2>&1; }
 enc(){ node -e 'process.stdout.write(encodeURIComponent(process.argv[1]||""))' "$1"; }
@@ -26,6 +29,7 @@ spec(){ cp "$1" "$2"; sips -z 720 1280 "$2" >/dev/null 2>&1; }   # 2x master -> 
 
 SLUG="${1:-superpowers}"; [ $# -gt 0 ] && shift
 ONLY=""; TPL=0; NUM=""; CMD="superpowers"; TITLE="Claude Skills"; SKIN="light"; MASCOT="shocked"; OUTNAME=""; DEST=""
+SCALE=2; FULL=0
 while [ $# -gt 0 ]; do case "$1" in
   --num)    NUM="${2:-}";    shift 2; TPL=1;;
   --cmd)    CMD="${2:-}";    shift 2; TPL=1;;
@@ -34,11 +38,14 @@ while [ $# -gt 0 ]; do case "$1" in
   --mascot) MASCOT="${2:-}"; shift 2; TPL=1;;
   --out)    OUTNAME="${2:-}"; shift 2;;
   --dest)   DEST="${2:-}";   shift 2;;
+  --scale)  SCALE="${2:-2}"; shift 2;;
+  --full)   FULL=1;          shift;;
+  --4k)     SCALE=3; FULL=1; shift;;
   --*)      echo "unknown flag: $1" >&2; shift;;
   *)        ONLY="$1"; shift;;
 esac; done
 
-OUT="$HERE/out/$SLUG"; RAW="$OUT/@2x"; SRC="$HERE/skills/$SLUG"; mkdir -p "$OUT" "$RAW"
+OUT="$HERE/out/$SLUG"; RAW="$OUT/@${SCALE}x"; SRC="$HERE/skills/$SLUG"; mkdir -p "$OUT" "$RAW"
 
 # ---------- template mode ----------
 if [ "$TPL" = 1 ]; then
@@ -47,10 +54,13 @@ if [ "$TPL" = 1 ]; then
   [ -z "$name" ] && name="card"
   url="file://$HERE/templates/skill-card.html?title=$(enc "$TITLE")&cmd=$(enc "$CMD")&num=$(enc "$NUM")&skin=$(enc "$SKIN")&mascot=$(enc "$MASCOT")"
   shot "$url" "$RAW/$name.png" 1280 720 00000000
-  spec "$RAW/$name.png" "$OUT/$name.png"
-  printf '  built  /%s  #%-3s  %-5s  %-10s -> out/%s/%s.png\n' "${CMD#/}" "${NUM:-–}" "$SKIN" "${MASCOT:-none}" "$SLUG" "$name"
-  if [ -n "$DEST" ]; then cp "$OUT/$name.png" "$DEST"; echo "  copied -> $DEST"; fi
-  echo "done -> $OUT/$name.png"; exit 0
+  # --full keeps the @Nx master (4K = --scale 3); otherwise downsample to the 1280x720 spec
+  if [ "$FULL" = 1 ]; then FINAL="$RAW/$name.png"
+  else FINAL="$OUT/$name.png"; spec "$RAW/$name.png" "$FINAL"; fi
+  dim="$(sips -g pixelWidth -g pixelHeight "$FINAL" 2>/dev/null | awk -F': ' '/pixelWidth/{w=$2}/pixelHeight/{h=$2}END{print w"x"h}')"
+  printf '  built  /%s  #%-3s  %-5s  %-10s  %-9s -> %s\n' "${CMD#/}" "${NUM:-–}" "$SKIN" "${MASCOT:-none}" "$dim" "${FINAL#$HERE/}"
+  if [ -n "$DEST" ]; then cp "$FINAL" "$DEST"; echo "  copied -> $DEST"; fi
+  echo "done -> $FINAL"; exit 0
 fi
 
 # ---------- gallery mode ----------

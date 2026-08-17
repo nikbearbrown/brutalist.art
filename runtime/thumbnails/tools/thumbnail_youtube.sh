@@ -1,10 +1,23 @@
 #!/usr/bin/env bash
 # Write a brutalist "Claude Skills" thumbnail.png into each clauded/youtube/<skill>/ folder.
 # Title = "Claude Skills"; command = /<folder-slug>; mascot chosen per topic; skin light.
-# Usage: tools/thumbnail_youtube.sh [youtube_dir]
+#
+# Usage: tools/thumbnail_youtube.sh [youtube_dir] [--4k|--both]
+#   (default)  1280x720 -> thumbnail.png
+#   --4k       3840x2160 -> thumbnail-4k.png
+#   --both     both files
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")/.." && pwd)"      # runtime/thumbnails
-YT="${1:-$HERE/../../clauded/youtube}"
+
+MODE=spec
+YT=""
+for a in "$@"; do case "$a" in
+  --4k)   MODE=4k;;
+  --both) MODE=both;;
+  --*)    echo "unknown flag: $a" >&2; exit 2;;
+  *)      YT="$a";;
+esac; done
+YT="${YT:-$HERE/../../clauded/youtube}"
 [ -d "$YT" ] || { echo "no such dir: $YT" >&2; exit 1; }
 
 # topic -> mascot (from the 26-mascot library). Fallback: idea.
@@ -35,8 +48,14 @@ for d in "$YT"/*/; do
   # a video folder is one that carries the build metadata
   [ -f "$d/beat_sheet.json" ] || [ -d "$d/mp4" ] || continue
   m="$(mascot_for "$slug")"
-  "$HERE/render.sh" claude-skills --cmd "/$slug" --skin light --mascot "$m" \
-    --out "yt-$slug" --dest "$d/thumbnail.png" | sed 's/^/  /'
+  if [ "$MODE" != 4k ]; then
+    "$HERE/render.sh" claude-skills --cmd "/$slug" --skin light --mascot "$m" \
+      --out "yt-$slug" --dest "$d/thumbnail.png" | sed 's/^/  /'
+  fi
+  if [ "$MODE" != spec ]; then
+    "$HERE/render.sh" claude-skills --cmd "/$slug" --skin light --mascot "$m" --4k \
+      --out "yt-$slug" --dest "$d/thumbnail-4k.png" | sed 's/^/  /'
+  fi
   n=$((n+1))
 done
-echo "== wrote $n thumbnails =="
+echo "== wrote $n thumbnails ($MODE) =="

@@ -29,7 +29,9 @@
   .cmd .slash{color:var(--spark)}
   .cmd .cur{display:inline-block;width:.5em;height:.98em;background:var(--spark);
     transform:translateY(.16em);margin-left:.06em}
-  .mascot{position:absolute;right:60px;bottom:50px;width:204px;height:auto}
+  /* pixel-art sprites: nearest-neighbour, so the upscale keeps hard edges instead of blurring */
+  .mascot{position:absolute;right:60px;bottom:50px;width:204px;height:auto;
+    image-rendering:pixelated}
 </style></head>
 <body><div class="frame grid-bg cream" id="frame">
 
