@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../lib/base.css">
+<title>v06 — before / after diptych</title>
+<style>
+  /* V06 · Transformation: plain Claude (left, muted) vs + skills (right, lit). */
+  .split{position:absolute;left:0;top:0;width:1280px;height:720px;display:flex}
+  .pane{position:relative;flex:1;padding:96px 70px}
+  .pane.before{opacity:.62}
+  .divider{position:absolute;left:640px;top:120px;width:2px;height:480px;
+    background:var(--border)}
+  .pane .cap{font-family:var(--mono);font-size:19px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:34px}
+  .pane h2{font-family:var(--sans);font-weight:700;font-size:58px;
+    line-height:1.02;letter-spacing:-.02em;color:var(--ink)}
+  .pane.after h2 .a{color:var(--spark)}
+  .pane ul{list-style:none;margin-top:36px;font-family:var(--mono);font-size:25px;
+    line-height:1.95;color:var(--ink-soft)}
+  .pane li .b{color:var(--spark);margin-right:.5em}
+  .pane.before li .b{color:var(--ghost)}
+</style></head>
+<body><div class="frame grid-bg">
+  <div class="split">
+    <div class="pane before">
+      <div class="cap">plain claude</div>
+      <h2>knows<br>a lot.</h2>
+      <ul>
+        <li><span class="b">—</span> general help</li>
+        <li><span class="b">—</span> no house rules</li>
+      </ul>
+    </div>
+    <div class="pane after">
+      <div class="cap">+ superpowers</div>
+      <h2>knows<br><span class="a">your way.</span></h2>
+      <ul>
+        <li><span class="b">›</span> your workflows</li>
+        <li><span class="b">›</span> your standards</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="wordmark">brutalist<span class="dot">.</span>art</div>
+</div></body></html>

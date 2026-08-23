@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../lib/base.css">
+<title>v01 — serif typographic hero</title>
+<style>
+  /* V01 · Big-word typographic hero. Max restraint, off-center left-anchored. */
+  .hero{position:absolute;left:90px;top:196px;width:1100px}
+  .hero .word{
+    font-family:var(--serif);font-weight:500;font-size:210px;
+    letter-spacing:-.03em;line-height:.92;color:var(--ink);
+  }
+  .hero .word .dot{color:var(--spark)}
+  .hero .sub{
+    margin-top:80px;font-family:var(--mono);font-size:26px;
+    letter-spacing:.02em;color:var(--ink-soft);
+  }
+  .hero .sub .a{color:var(--spark)}
+  .tag{position:absolute;left:90px;top:64px}
+</style></head>
+<body><div class="frame grid-bg">
+  <div class="label tag"><span class="slash">// </span>claude&nbsp;code&nbsp;·&nbsp;skills</div>
+  <div class="hero">
+    <div class="word">superpowers<span class="dot">.</span></div>
+    <div class="sub">one folder <span class="a">→</span> new abilities</div>
+  </div>
+  <div class="wordmark">brutalist<span class="dot">.</span>art</div>
+</div></body></html>

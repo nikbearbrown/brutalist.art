@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../lib/base.css">
+<title>v08 — composer card + highlighted chip</title>
+<style>
+  /* V08 · Fidelity skin: Claude composer, skill chip lit in accent. */
+  .head{position:absolute;left:90px;top:150px;width:1090px}
+  .head h1{font-family:var(--serif);font-weight:500;font-size:104px;
+    line-height:.96;letter-spacing:-.02em;color:var(--ink)}
+  .head h1 .a{color:var(--spark)}
+  .composer{position:absolute;left:90px;top:388px;width:1010px;
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    box-shadow:0 24px 70px rgba(0,0,0,.45);padding:30px 34px}
+  .composer .prompt{font-family:var(--sans);font-size:30px;color:var(--ink)}
+  .composer .prompt .ph{color:var(--ghost)}
+  .composer .row{display:flex;align-items:center;gap:16px;margin-top:30px}
+  .composer .chip{font-size:22px;padding:10px 20px}
+  .composer .send{margin-left:auto;width:46px;height:46px;border-radius:50%;
+    background:var(--spark);display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:var(--sans);font-size:24px}
+</style></head>
+<body><div class="frame grid-bg">
+  <div class="head"><h1>Just&nbsp;<span class="a">ask.</span></h1></div>
+  <div class="composer">
+    <div class="prompt">use the <b>superpowers</b> skill to <span class="ph">…</span></div>
+    <div class="row">
+      <span class="chip hot"><span class="spark"></span>skill: superpowers</span>
+      <span class="send">↑</span>
+    </div>
+  </div>
+  <div class="wordmark">brutalist<span class="dot">.</span>art</div>
+</div></body></html>

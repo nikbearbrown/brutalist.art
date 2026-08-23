@@ -1,0 +1,117 @@
+/* ==========================================================================
+   brutalist.art — thumbnail base stylesheet
+   Claude skin (dark + cream), one-accent law, brutalist motifs.
+   Canvas: 1280x720. Fonts loaded locally from ../../fonts (offline-safe).
+   ========================================================================== */
+
+/* ---- fonts (bundled ttf, relative to this file: lib -> ../../fonts) ---- */
+@font-face{font-family:"EB Garamond";src:url("../../fonts/EB_Garamond/static/EBGaramond-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"EB Garamond";src:url("../../fonts/EB_Garamond/static/EBGaramond-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"EB Garamond";src:url("../../fonts/EB_Garamond/static/EBGaramond-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:block}
+@font-face{font-family:"Montserrat";src:url("../../fonts/Montserrat/static/Montserrat-Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:block}
+@font-face{font-family:"Montserrat";src:url("../../fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"Montserrat";src:url("../../fonts/Montserrat/static/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"Montserrat";src:url("../../fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:"PT Mono";src:url("../../fonts/PT_Mono/PTMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
+
+/* ---- tokens: Claude dark skin (default) ---- */
+:root{
+  --page:#1F1E1B; --card:#2E2C28; --border:#413F3A; --footer:#292723;
+  --ink:#F0EEE6; --ink-soft:#B0AC9F; --ghost:#8F8B7F;
+  --spark:#D97757; --send:#C6613F; --pill:#38352F; --comment:#9C9788;
+  --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Montserrat",-apple-system,"SF Pro Text","Segoe UI",sans-serif;
+  --mono:"PT Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+/* ---- tokens: Claude cream skin (primary brand) ---- */
+.cream{
+  --page:#FAF9F5; --card:#FFFFFF; --border:#E5E2D9; --footer:#F1EFE7;
+  --ink:#3D3929; --ink-soft:#73705F; --ghost:#A9A491;
+  --pill:#EDEBE1; --comment:#A9A491;
+}
+
+/* ---- reset + canvas ---- */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#000}
+.frame{
+  position:relative;width:1280px;height:720px;overflow:hidden;
+  background:var(--page);color:var(--ink);
+  font-family:var(--sans);-webkit-font-smoothing:antialiased;
+}
+
+/* ---- dotted grid overlay (radial dots, 24px pitch, low opacity) ---- */
+.grid-bg::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(currentColor 1.3px, transparent 1.3px);
+  background-size:26px 26px;color:var(--ink);opacity:.05;
+}
+
+/* ---- safe area: essential content lives inside 1100x620 (90/50 margin) ---- */
+.safe{position:absolute;left:90px;top:50px;width:1100px;height:620px}
+
+/* ---- motif helpers ---- */
+.serif{font-family:var(--serif)}
+.sans{font-family:var(--sans)}
+.mono{font-family:var(--mono)}
+.accent{color:var(--spark)}
+.send{color:var(--send)}
+.soft{color:var(--ink-soft)}
+
+/* // ‑prefixed label, mono uppercase, letterspaced */
+.label{
+  font-family:var(--mono);font-size:19px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-soft);
+}
+.label .slash{color:var(--spark)}
+
+/* blinking-cursor block (static in a still: solid) */
+.cursor{
+  display:inline-block;width:.62em;height:1.02em;background:var(--spark);
+  transform:translateY(.14em);margin-left:.12em;
+}
+
+/* › list bullet */
+.bullet{color:var(--spark);font-family:var(--mono);margin-right:.5em}
+
+/* wordmark, fixed bottom-left slot (never bottom-right: timestamp zone) */
+.wordmark{
+  position:absolute;left:90px;bottom:46px;
+  font-family:var(--mono);font-size:20px;letter-spacing:.04em;color:var(--ink-soft);
+}
+.wordmark b{color:var(--ink);font-weight:400}
+.wordmark .dot{color:var(--spark)}
+
+/* hairline rule */
+.rule{height:2px;background:var(--border);border:0}
+
+/* ---- terminal / editor window chrome (fidelity skin) ---- */
+.win{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  box-shadow:0 24px 70px rgba(0,0,0,.45);overflow:hidden;
+}
+.win-bar{
+  display:flex;align-items:center;gap:9px;padding:14px 20px;
+  border-bottom:1px solid var(--border);background:var(--footer);
+}
+.dot3{width:12px;height:12px;border-radius:50%}
+.dot3.r{background:#8F8B7F}.dot3.y{background:#8F8B7F}.dot3.g{background:var(--spark)}
+.win-title{
+  margin-left:12px;font-family:var(--mono);font-size:15px;color:var(--ink-soft);
+}
+.win-body{padding:26px 30px;font-family:var(--mono);font-size:26px;line-height:1.72}
+.win-body .p{color:var(--spark)}          /* prompt $ / › */
+.win-body .c{color:var(--comment)}         /* comment */
+.win-body .k{color:var(--ink)}             /* keyword/plain */
+
+/* pill chip */
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 16px;border:1px solid var(--border);border-radius:999px;
+  background:var(--pill);font-family:var(--mono);font-size:20px;color:var(--ink-soft);
+}
+.chip.hot{border-color:var(--spark);color:var(--ink);
+  box-shadow:0 0 0 4px rgba(217,119,87,.18)}
+.chip .spark{width:9px;height:9px;border-radius:50%;background:var(--spark)}
+
+/* ---- Claude spark logo (stylized radial mark, terracotta) ---- */
+.spark-logo{display:block;fill:var(--spark)}

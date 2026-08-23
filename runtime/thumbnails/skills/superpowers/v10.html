@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../lib/base.css">
+<title>v10 — anatomy / three-part system</title>
+<style>
+  /* V10 · Explainer diagram: serif title left, 3 labelled parts right. */
+  .col{position:absolute;left:90px;top:180px;width:440px}
+  .col .kick{font-family:var(--mono);font-size:19px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:28px}
+  .col .kick .slash{color:var(--spark)}
+  .col h1{font-family:var(--serif);font-weight:500;font-size:88px;
+    line-height:.98;letter-spacing:-.02em;color:var(--ink)}
+  .col h1 .a{color:var(--spark)}
+  .parts{position:absolute;left:610px;top:172px;width:580px}
+  .part{border-left:2px solid var(--border);padding:8px 0 8px 26px;margin-bottom:26px}
+  .part.hot{border-left-color:var(--spark)}
+  .part .n{font-family:var(--mono);font-size:30px;color:var(--ink)}
+  .part .n .b{color:var(--spark);margin-right:.4em}
+  .part.hot .n .k{color:var(--spark)}
+  .part .d{font-family:var(--sans);font-size:22px;color:var(--ink-soft);margin-top:8px}
+</style></head>
+<body><div class="frame grid-bg">
+  <div class="col">
+    <div class="kick"><span class="slash">// </span>claude code · skills</div>
+    <h1>Anatomy<br>of a<br><span class="a">skill.</span></h1>
+  </div>
+  <div class="parts">
+    <div class="part hot">
+      <div class="n"><span class="b">›</span><span class="k">name</span></div>
+      <div class="d">what to call it</div>
+    </div>
+    <div class="part">
+      <div class="n"><span class="b">›</span>description</div>
+      <div class="d">when Claude should reach for it</div>
+    </div>
+    <div class="part">
+      <div class="n"><span class="b">›</span>instructions</div>
+      <div class="d">the steps, in plain Markdown</div>
+    </div>
+  </div>
+  <div class="wordmark">brutalist<span class="dot">.</span>art</div>
+</div></body></html>

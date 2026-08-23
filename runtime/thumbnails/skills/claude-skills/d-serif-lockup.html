@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../lib/base.css">
+<title>Claude Skills · serif, white spark inline, bold grid</title>
+<style>
+  /* Serif prime + white spark logo inline before the text. Command below. */
+  /* stronger dot pattern (brand motif, dialled up) */
+  .frame.grid-bg::before{
+    opacity:.12;
+    background-image:radial-gradient(currentColor 1.7px, transparent 1.7px);
+    background-size:25px 25px;
+  }
+  .lockup{position:absolute;left:88px;top:300px;display:flex;align-items:center;gap:32px}
+  .lockup svg{width:100px;height:100px;fill:var(--ink);flex:none;transform:translateY(-4px)}
+  .lockup .head{font-family:var(--serif);font-weight:500;font-size:150px;
+    line-height:.98;letter-spacing:-.02em;color:var(--ink)}
+  .cmd{position:absolute;left:90px;top:500px;
+    font-family:var(--mono);font-size:62px;letter-spacing:-.01em;color:var(--ink)}
+  .cmd .slash{color:var(--spark)}
+  .cmd .cur{display:inline-block;width:.5em;height:.98em;background:var(--spark);
+    transform:translateY(.16em);margin-left:.06em}
+</style></head>
+<body><div class="frame grid-bg">
+  <div class="lockup">
+    <svg class="spark-logo" viewBox="0 0 100 100" role="img" aria-label="Claude"><g>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(0 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(30 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(60 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(90 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(120 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(150 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(180 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(210 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(240 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(270 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(300 50 50)"/>
+      <rect x="47" y="4" width="6" height="46" rx="3" transform="rotate(330 50 50)"/>
+    </g></svg>
+    <div class="head">Claude&nbsp;Skills</div>
+  </div>
+  <div class="cmd"><span class="slash">/</span>superpowers<span class="cur"></span></div>
+</div></body></html>
