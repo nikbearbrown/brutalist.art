@@ -15,6 +15,17 @@ THE INTERFACE IS THE HOUSE INTERFACE:
   beat_sheet.json                  actual_duration_s + audio_file written back
 Durations are GROUND TRUTH for all downstream timing.
 
+PRONUNCIATION — the G2P reads spelling, so it will mispronounce brand names:
+  metadata["pronounce"] = {"Medhavy": "mɛdˈhɑːviː"}
+  A word → IPA lexicon. The line is phonemized normally, the listed words are
+  substituted, and the whole line is synthesized as phonemes. Espeak gives
+  "Medhavy" as /mˈɛdhævi/ — med-HAV-ee, rhyming with savvy — when the name is
+  meh-DHAA-vee. Get the starting IPA from --phonemize, then edit the one word.
+
+PACE:
+  beat["speed"] or --speed. 1.0 is Kokoro's default and reads brisk; a brand
+  line wants ~0.94. Below ~0.85 Kokoro smears the vowels.
+
 VOICE SELECTION:
   - beat["voice"] = "af_bella" | "am_onyx"  → that voice for that beat
   - metadata["voice_kokoro"]                → folder default (else am_onyx)
@@ -34,10 +45,12 @@ Usage:
     python3 generate_audio_kokoro.py path/to/<slug> --dry-run
     python3 generate_audio_kokoro.py path/to/<slug> --only B03 B08
     python3 generate_audio_kokoro.py --list-voices
+    python3 generate_audio_kokoro.py --phonemize "Medhavy AI."
 """
 import argparse
 import json
 import os
+import re
 import shutil
 import struct
 import subprocess
@@ -65,6 +78,39 @@ def normalize_for_tts(text: str) -> str:
     for sym, spoken in SYMBOLS.items():
         text = text.replace(sym, spoken)
     return text
+
+
+def phonemize(text: str, lang: str = "en-us") -> str:
+    """The G2P Kokoro runs internally, exposed so a wrong guess is visible."""
+    from kokoro_onnx.tokenizer import Tokenizer
+    return Tokenizer().phonemize(text, lang=lang)
+
+
+def apply_lexicon(text: str, lexicon: dict, lang: str = "en-us") -> str:
+    """text + {word: IPA} -> one phoneme string for the whole line.
+
+    The listed words are cut out of the text first and the surviving chunks are
+    phonemized in context, so the rest of the line keeps its sentence-level
+    prosody (espeak reduces "An" to /ɐn/ only when it can see the sentence).
+    Phonemizing word by word and concatenating loses that.
+    """
+    if not lexicon:
+        return phonemize(text, lang)
+    pattern = re.compile(
+        r"\b(" + "|".join(re.escape(w) for w in
+                          sorted(lexicon, key=len, reverse=True)) + r")\b",
+        re.IGNORECASE)
+    out, hits = [], []
+    for i, chunk in enumerate(pattern.split(text)):
+        if i % 2:                       # odd chunks are the matched words
+            key = next(k for k in lexicon if k.lower() == chunk.lower())
+            out.append(lexicon[key].strip())
+            hits.append(chunk)
+        elif chunk.strip():
+            out.append(phonemize(chunk, lang).strip())
+    if hits:
+        print(f"[kokoro] pronounce: {', '.join(hits)}")
+    return " ".join(out)
 
 
 def model_paths():
@@ -138,10 +184,16 @@ def main():
     ap.add_argument("--speed", type=float, default=1.0)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--list-voices", action="store_true")
+    ap.add_argument("--phonemize", metavar="TEXT", default=None,
+                    help="print the G2P's IPA for TEXT and exit — the first step "
+                         "in fixing a mispronounced name")
     ap.add_argument("--sheet", default="beat_sheet.json",
                     help="beat sheet filename to read/write (default: beat_sheet.json)")
     a = ap.parse_args()
 
+    if a.phonemize:
+        print(phonemize(a.phonemize))
+        return 0
     if a.list_voices:
         k = load_engine()
         for v in sorted(k.get_voices()):
@@ -155,6 +207,7 @@ def main():
     sheet = json.loads(sheet_path.read_text())
     md = sheet["metadata"]
     default_voice = md.get("voice_kokoro", DEFAULT_VOICE)
+    lexicon = md.get("pronounce", {})
 
     todo = []
     for b in sheet["beats"]:
@@ -195,15 +248,21 @@ def main():
     timings = json.loads(timings_path.read_text()) if timings_path.exists() else {}
     for b, voice, text in todo:
         bid = b["beat_id"]
-        samples, sr = k.create(normalize_for_tts(text), voice=voice,
-                               speed=a.speed, lang=lang_for(voice))
+        lang = lang_for(voice)
+        speed = float(b.get("speed", a.speed))
+        spoken = normalize_for_tts(text)
+        if lexicon:
+            spoken = apply_lexicon(spoken, lexicon, lang)
+        samples, sr = k.create(spoken, voice=voice, speed=speed, lang=lang,
+                               is_phonemes=bool(lexicon))
         out = folder / "mp3" / f"beat-{bid}.mp3"
         write_mp3(samples, sr, out)
         dur = measure(out)
         b["audio_file"] = f"mp3/beat-{bid}.mp3"
         b["actual_duration_s"] = round(dur, 2)
         timings[bid] = round(dur, 2)
-        print(f"[kokoro] beat-{bid}.mp3  {dur:.2f}s  voice={voice}")
+        print(f"[kokoro] beat-{bid}.mp3  {dur:.2f}s  voice={voice}  "
+              f"speed={speed}")
     sheet_path.write_text(json.dumps(sheet, indent=1, ensure_ascii=False))
     timings_path.write_text(json.dumps(timings, indent=1))
     print(f"[kokoro] {len(todo)} beat(s) generated · cost $0.00 · durations "

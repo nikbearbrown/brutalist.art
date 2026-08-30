@@ -12,7 +12,9 @@ description: >
   ("the transition looks wrong/cheap"): the phase map below is the diagnosis
   tool. Requires a mark that can be traced (dark ink on a light ground). Unlike
   every other skill here, the TRANSITION CURVE sets the timing and narration is
-  laid over it — a sting is a fixed-length slot, not an audio-driven beat.
+  laid over it — a sting is a fixed-length slot, not an audio-driven beat. The
+  build is a camera pull-back AND a staggered part assembly; when an open reads
+  as "it just appears", the parts are not travelling.
   Register: Teardown. Never publishes.
 ---
 
@@ -58,10 +60,6 @@ must be a specific human's, or when re-synthesising would change a track the
 client has already signed off. Medhavy is the second case and is therefore the
 exception, not the pattern.
 
-GATE P applies to audio generation as it does everywhere in this toolkit. For a
-one-line sting that is heavy; `--no-gate` exists and is the honest flag to use
-when the "script" is a single sentence nobody needs to review.
-
 ## Flow
 
 ### Step 1 — get the mark as parts
@@ -88,6 +86,25 @@ integration.
 **Check the trace by looking at it.** Render the parts to a flat SVG and open it
 before animating anything — a bad threshold silently drops hairlines, and at
 ghost opacity you will never catch it in the render.
+
+```bash
+python3 skills/make/logo-motion/scripts/parts_to_svg.py \
+  runtime/remotion/src/logos/acme.ts -o <reel>/acme.svg --color '#0072B2'
+```
+
+That writes a clean, role-grouped SVG from the same part list the scene animates
+— `<g id="letter">`, `<g id="book">`, `<g id="circuit">`, every path carrying its
+`data-rad`/`data-ang`. It is the artefact you look at, the one you hand a
+designer, and the one you diff a re-trace against. It is generated, never a
+second source of truth: if the SVG looks wrong, the trace is wrong.
+
+Look at it **at thumbnail size too**. A mark that dissolves at 150 px will
+dissolve in the ghost phase.
+
+`--color` sets the root `color` attribute, which every path inherits through
+`fill="currentColor"`. Recolouring the mark is one attribute in one place — if
+you ever find yourself editing 42 `fill=` values, stop, because the SVG you are
+editing is generated and your edit will not survive the next re-trace.
 
 ### Step 2 — measure the lockup, do not eyeball it
 
@@ -116,6 +133,80 @@ thing that makes a sting work, and bending it to land on a word breaks it. Lay
 the narration over the sting and let the picture finish after the line, which is
 what the reference does.
 
+### Step 3c — colour, and the fact that length is free
+
+**The mark's ink and the type's ink are two decisions, not one.** `ink` drives
+the wordmark AND the small-caps tagline; `markInk` (optional, defaults to `ink`)
+drives the mark alone. Colour the mark by setting `markInk`. Setting `ink`
+instead takes the tagline with it, and a brand hue that clears 3:1 as a large
+graphic will be the one unreadable element in the piece at 6 px in caps.
+
+Medhavy in Okabe-Ito blue is the worked example: `markInk #0072B2` on `page
+#F0EAD6` is 4.3:1 — fine for the mark, nowhere near enough for type, so `ink`
+stays `#000000` and `accent` takes vermillion `#D55E00`. Three colours, one job
+each. House palettes live in `runtime/remotion/src/tokens/`; take the values from
+there rather than typing a near-miss of the ground colour.
+
+A chromatic mark also *improves* the ghost phase. A black emboss on cream is a
+grey smudge; a blue one keeps a faint cool cast and reads as ink pressed into
+warm paper.
+
+**Changing the length is changing one number.** Every phase is a fraction of
+runtime, so `durationInSeconds` 11.7 → 9.4 needs no re-timing at all — the
+fractions stay byte-identical and the whole transition scales. The only other
+number that moves is the voice offset, because runtime is an output: transition +
+speech + tail.
+
+Prove it rather than trusting it. The Medhavy shorten kept the same fractions and
+the materialisation crossings came out 50% p=0.383 / 95% p=0.450 against the long
+cut's 0.379 / 0.464 — same curve, shorter clock. If your crossings move, a phase
+got typed in seconds somewhere.
+
+### Step 3d — the voice: say the name right, then make it audible
+
+Three things go wrong with a narrated sting's audio, and only one of them is the
+performance.
+
+**1. The brand name.** Espeak's G2P reads spelling, so it will mispronounce every
+invented name you give it. "Medhavy" came out `mˈɛdhævi` — *med-HAV-ee*, rhyming
+with *savvy*, when the name is *meh-DHAA-vee*. A sting that mispronounces the
+brand it is announcing has failed at the only job it has. Fix it with a lexicon
+in the beat sheet:
+
+```json
+"metadata": {"pronounce": {"Medhavy": "mɛdˈhɑːviː"}}
+```
+
+Get the starting IPA from `generate_audio_kokoro.py --phonemize "<line>"`, then
+edit the one word. The script phonemizes the line, substitutes the listed words,
+and synthesizes the whole thing as phonemes.
+
+**Check it with the ASR, because you cannot hear it.** Transcribe each candidate:
+the recognizer's spelling is a readout of what the audio actually sounds like.
+`mɛdˈɑːviː` transcribed as *Medavi* (aspiration gone); `mˈeɪdhɑːviː` as
+*Made-Havi* (the hyphen is the ASR reporting an audible break); `mɛdˈhɑːviː` as
+*Medhavi*. Those are the two failure modes — under-aspirate and it loses a
+consonant, over-separate and it becomes two words.
+
+**2. The level and the bitrate.** Kokoro's raw output is around −27 LUFS with a
+16 dB crest factor, and it is easy to then bury it in a low-bitrate mux. The
+Medhavy master shipped one cut at **12.9 kbps AAC / 24 kHz**, which is most of
+why the voice sounded thin — no amount of re-generating would have fixed it.
+Shape, normalise, and mux properly (full chain in that reel's `NARRATION.md`):
+
+```
+highpass 70 · +1.5 dB @ 180 Hz · +2.2 dB @ 2.9 kHz · 3:1 comp from -24 dB
+two-pass loudnorm, linear=true, I=-16 TP=-1.5      # linear: a 4s clip is too
+                                                   # short for dynamic mode
+mux: -c:a aac -b:a 160k -ar 48000 -ac 1
+```
+
+**3. Punctuation is direction.** "Medhavy AI**,** an…" left a 0.38 s hole that
+reads as the synthesizer losing its place. "Medhavy AI**.** An…" makes the same
+silence a 0.16 s beat. Set `speed` per beat too — 1.0 reads brisk, ~0.94 suits a
+brand line, and past ~0.85 Kokoro smears the vowels. Try the other house voice
+and measure: `af_bella` put a pause *inside* "Medhavy AI", so Onyx stayed.
+
 ### Step 4 — render, then LOOK
 
 ```bash
@@ -128,11 +219,48 @@ strength, a part that never converges, type 4 px off its baseline — are all
 invisible to `ffprobe` and obvious in a frame grid. Contrast-stretch the ghost
 frames or you will be reviewing a blank page.
 
+### Step 3b — check the build, not just the phase map
+
+The phase map can be perfect and the open still read as *"it just appears"*. The
+phases say *when* the mark is a ghost; they say nothing about what happens
+**inside** the build, and that is where two Medhavy cuts went wrong.
+
+Put the first ~45 frames in a grid, contrast-stretched, and follow **one part**
+across them. It must **travel**. A camera pull-back over a rigid lockup is a
+flypast, not an assembly. What the reference does, measured frame by frame:
+
+| | |
+|---|---|
+| frame 1 | ONE fragment, already mid-slide — not a whole mark at low opacity |
+| 0.1–1.3 s | parts slide in from off-frame, **mass first, detail last**, still arriving as the camera settles |
+| in flight | each part sits high off the page: a long soft cast shadow trailing back along its path, tightening as it lands |
+| the letter | **forms stroke by stroke** — left stem 0.20 s, first diagonal 0.30 s, second 0.40 s, right stem closes it 0.50–0.60 s |
+
+That last row is its own failure mode and the one that survives longest. A trace
+gives you a bold letterform as ONE connected component, so it can only slide in
+finished — every other part can be moving correctly and the mark still reads as
+delivered rather than built, because the mark *is* the letter. Do not fix it in
+the trace; set `assembly.slices` and the scene cuts the hero part into N vertical
+bands that fly in separately and reassemble seamlessly. On a geometric M, 4 bands
+land on the real strokes.
+
+`assembly` is the prop group that does this (`spread`, `drift`, `driftAngle`,
+`swirl`, `stagger`, `lift`, `blur`, `slices`, `sliceRole`, `sliceStagger`).
+Defaults are in
+[reference/TIMING.md](reference/TIMING.md), along with why travel distance is
+divided by the camera scale and why the landing order is mass-first.
+
+The cast shadow is not decoration. At ±9 LSB the part itself is invisible; the
+shadow it throws while airborne is the only thing the eye can track.
+
 ## Hard rules
 
-- **The build is a camera move.** Staggering parts inward is not a geometric
-  transition — at ghost opacity nobody can see it. Open on an extreme close-up
-  and pull back.
+- **The build is a camera move AND a part assembly.** Both, or neither works. The
+  camera opens on an extreme close-up and pulls back; underneath it, parts travel
+  in from off-frame on their own vectors, each casting a long soft shadow while
+  it is still in the air. Parts that only fade up in place have not been
+  assembled — that is a flypast over a finished logo, and it is the single defect
+  that survives every other check on this list.
 - **Runtime is transition + voice, in that order** — an output, not a round
   number picked up front. Trim leading silence off the supplied track before
   offsetting it, or the voice starts late by exactly that much.
@@ -151,6 +279,17 @@ frames or you will be reviewing a blank page.
   runtime, then one slow materialisation. A mark that arrives at full strength
   has nothing to arrive *from*, and no amount of later colour work rescues it.
   This is the single easiest thing to get wrong from a contact sheet.
+- **Colour the mark with `markInk`, never with `ink`.** `ink` also sets the
+  small-caps tagline. A brand hue that clears 3:1 as a large graphic is not
+  readable as 6 px type, so the two must move independently — and if the answer
+  is "the tagline looks fine to me", you are looking at it at 4K, not at the size
+  anyone will see it.
+- **Say the name right.** The G2P reads spelling and will mispronounce every
+  invented brand name. Force it with `metadata.pronounce`, and verify with the
+  ASR rather than assuming — a sting that mispronounces the brand it announces
+  has failed at its only job. Check the level and the mux bitrate in the same
+  pass; a −27 LUFS bed at 12.9 kbps is not a performance problem and cannot be
+  re-generated away.
 - **The accent is earned.** One accent colour, arriving once, after a full stop.
   If the accent is present from frame one it is decoration and it is not doing
   any work.
@@ -173,16 +312,27 @@ right shape: `beat_sheet.json` with a single `B00`, `mp3/B00.mp3`, a comment-onl
 
 ## Reference
 
-- [reference/TIMING.md](reference/TIMING.md) — the phase map, measured off two
-  real stings, and the failure mode each phase prevents
+- [reference/TIMING.md](reference/TIMING.md) — the phase map AND the build
+  anatomy, measured off two real stings, with the failure mode each prevents
 - `scripts/trace_logo.py` — raster → animatable part list
+- `scripts/parts_to_svg.py` — part list → clean role-grouped SVG to look at
+- `scripts/measure_sting.py` — per-frame ink geometry and emboss amplitude off a
+  rendered sting. High-passes each frame first: a reference plate's own grain or
+  vignette will otherwise swamp a ±9 LSB mark and every number will be noise.
 - `runtime/remotion/src/scenes/LogoMotion.tsx` — the composition
 - Worked examples:
-  - `youtube/medhavy-logo-sting-onyx/` (Medhavy AI, 11.700 s) — **the pattern**:
-    mark traced from source artwork, narration text synthesised with Kokoro
-    `am_onyx`, runtime falling out as transition + speech + tail
-  - `youtube/medhavy-logo-sting/` (Medhavy AI, 11.500 s) — the same sting with the
-    client's own recording reused verbatim; the supplied-mp3 exception
+  - `youtube/medhavy-logo-sting-okabe/` (Medhavy AI, 9.400 s) — **the pattern**.
+    The v2 build, recoloured to Okabe-Ito (`markInk` blue over black type),
+    shortened by changing one number, and with the name's pronunciation forced
+    and the bed mastered. `BUILD-LOG.md` has the ASR pronunciation table and the
+    proof that shortening did not move the materialisation curve.
+  - `youtube/medhavy-logo-sting-onyx-v2/` (11.700 s) — where the part assembly
+    and the letterform slicing were worked out, plus `_qc/teardown.png`, the
+    sheet that diagnoses a build
+  - `youtube/medhavy-logo-sting-onyx/` (11.700 s) — same audio and text timing,
+    build carried by the camera alone. Kept as the before-picture.
+  - `youtube/medhavy-logo-sting/` (11.500 s) — the client's own recording reused
+    verbatim; the supplied-mp3 exception
 
 ## Keep in sync
 
