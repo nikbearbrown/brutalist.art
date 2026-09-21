@@ -1,0 +1,66 @@
+[identity] authenticated as channel: Musinique
+[playlist] '@Musinique' id=PLNQy4mzqifmk (found)
+[stage] musinique-frump -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-frump.mp4
+[upload] Frump: 3%
+[upload] Frump: 15%
+[upload] Frump: 26%
+[upload] Frump: 37%
+[upload] Frump: 49%
+[upload] Frump: 60%
+[upload] Frump: 72%
+[upload] Frump: 83%
+[upload] Frump: 94%
+[upload] Frump -> https://youtu.be/Kxojj_dCHCo
+[playlist] inserted Frump at position 0
+[stage] musinique-if -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-if.mp4
+[upload] If: 0%
+[upload] If: 10%
+[upload] If: 20%
+[upload] If: 30%
+[upload] If: 40%
+[upload] If: 50%
+[upload] If: 60%
+[upload] If: 70%
+[upload] If: 80%
+[upload] If: 90%
+[upload] If -> https://youtu.be/2NA0YLyUTEU
+[playlist] inserted If at position 1
+[stage] musinique-frump-karaoke -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-frump-karaoke.mp4
+[upload] Frump (Karaoke): 4%
+[upload] Frump (Karaoke): 16%
+[upload] Frump (Karaoke): 28%
+[upload] Frump (Karaoke): 40%
+[upload] Frump (Karaoke): 53%
+[upload] Frump (Karaoke): 65%
+[upload] Frump (Karaoke): 77%
+[upload] Frump (Karaoke): 89%
+[upload] Frump (Karaoke) -> https://youtu.be/Dk6fN-HrLxI
+[playlist] inserted Frump (Karaoke) at position 2
+[stage] musinique-goosey-karaoke -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-goosey-karaoke.mp4
+[upload] Goosey (Karaoke): 1%
+[upload] Goosey (Karaoke): 12%
+[upload] Goosey (Karaoke): 22%
+[upload] Goosey (Karaoke): 32%
+[upload] Goosey (Karaoke): 43%
+[upload] Goosey (Karaoke): 53%
+[upload] Goosey (Karaoke): 64%
+[upload] Goosey (Karaoke): 74%
+[upload] Goosey (Karaoke): 84%
+[upload] Goosey (Karaoke): 95%
+[upload] Goosey (Karaoke) -> https://youtu.be/x69A_lACCdY
+[playlist] inserted Goosey (Karaoke) at position 3
+[stage] musinique-if-karaoke -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-if-karaoke.mp4
+[upload] If (Karaoke): 0%
+[upload] If (Karaoke): 10%
+[upload] If (Karaoke): 20%
+[upload] If (Karaoke): 30%
+[upload] If (Karaoke): 40%
+[upload] If (Karaoke): 50%
+[upload] If (Karaoke): 60%
+[upload] If (Karaoke): 70%
+[upload] If (Karaoke): 80%
+[upload] If (Karaoke): 90%
+[upload] If (Karaoke) -> https://youtu.be/6nzPAZ3UcOU
+[playlist] inserted If (Karaoke) at position 4
+[done] PUBLISH-LOG.md updated
+SCRIPT_EXIT: 0

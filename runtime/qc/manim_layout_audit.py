@@ -402,6 +402,8 @@ def main(argv=None):
     try:
         import os
         os.chdir(folder)
+        if str(folder) not in sys.path:  # reel-local helpers (e.g. seis_graphics.py) import like manim does from the reel dir
+            sys.path.insert(0, str(folder))
         spec = importlib.util.spec_from_file_location("bn_audit_scene", str(scene_path))
         mod = importlib.util.module_from_spec(spec)
         sys.modules["bn_audit_scene"] = mod

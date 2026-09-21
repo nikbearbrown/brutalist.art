@@ -130,10 +130,11 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
         </pre>
       </div>
 
-      {/* Spark line at bottom */}
+      {/* Spark line at bottom — inset 12px from the card's left edge so the first glyph
+          never sits on the card boundary (GATE T §8.13 card-clip, tol 4px). */}
       <div style={{
         position: 'absolute',
-        left: width * 0.07,
+        left: width * 0.07 + 12,
         right: width * 0.07,
         bottom: height * 0.06,
         display: 'flex',

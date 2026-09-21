@@ -1,0 +1,42 @@
+[identity] authenticated as channel: Musinique
+[playlist] '@Musinique' id=PLNQy4mzqifmk (created)
+[stage] musinique-frump -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-frump.mp4
+[upload] Frump: 0%
+[upload] Frump: 10%
+[upload] Frump: 20%
+[upload] Frump: 30%
+[upload] Frump: 40%
+[upload] Frump: 50%
+[upload] Frump: 60%
+[upload] Frump: 70%
+[upload] Frump: 80%
+[upload] Frump: 90%
+[upload] Frump -> https://youtu.be/DmiYbCLB_uY
+[playlist] inserted Frump at position 0
+[stage] musinique-goosey -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-goosey.mp4
+[upload] Goosey: 1%
+[upload] Goosey: 11%
+[upload] Goosey: 21%
+[upload] Goosey: 31%
+[upload] Goosey: 42%
+[upload] Goosey: 52%
+[upload] Goosey: 62%
+[upload] Goosey: 72%
+[upload] Goosey: 83%
+[upload] Goosey: 93%
+[upload] Goosey -> https://youtu.be/xcunjmx5M-s
+[playlist] inserted Goosey at position 1
+[stage] musinique-if -> /Users/bear/Documents/CoWork/bear-textbooks/books/youtube/TOPOST/musinique-if.mp4
+[upload] If: 3%
+[upload] If: 15%
+[upload] If: 26%
+[upload] If: 37%
+[upload] If: 49%
+[upload] If: 60%
+[upload] If: 72%
+[upload] If: 83%
+[upload] If: 94%
+[upload] If -> https://youtu.be/U9qzYmIrzuU
+[playlist] inserted If at position 2
+[done] PUBLISH-LOG.md updated
+SCRIPT_EXIT: 0

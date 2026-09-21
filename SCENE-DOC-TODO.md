@@ -8,7 +8,7 @@ own account of itself. Search can reach these by name and props only.
 The fix per row is one honest sentence at the top of the .tsx: what it puts
 on screen, and when to reach for it. Add it, then re-run the builder.
 
-**118 scenes** (19% of 629).
+**118 scenes** (18% of 643).
 
 | Scene | File | Folder / registered under |
 |---|---|---|

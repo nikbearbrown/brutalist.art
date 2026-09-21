@@ -91,7 +91,7 @@ and measured speech, not a fixed target. No captions unless requested.
    bounded prompt to revise one design hypothesis and specify its test.
 
 Both modes end with `ClaudeTitleOutro`: exact title, @NikBearBrown, one slug-seeded
-mascot, no subline, existing stock jingle only. Liam signs off in Your Turn.
+mascot, no subline, Liam re-reading the title then "At Nik Bear Brown" (no jingle, ever). Liam signs off in Your Turn.
 No narration, game sounds or themed voices on the final card.
 
 ## Evidence, rendering and handoff

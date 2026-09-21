@@ -274,7 +274,7 @@ def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
                 print(f"[art] {bid}: clip {d:.1f}s center-cut to {dur:.1f}s (skip {off:.1f}s head/tail)")
         # freeze-pad any sub-frame shortfall so clip totals match audio totals
         vf.append(f"tpad=stop_mode=clone:stop_duration={dur:.3f}")
-        cmd = [FFMPEG, "-y"] + seek + ["-i", src, "-vf", ",".join(vf), "-t", f"{dur:.3f}"] + enc
+        cmd = [FFMPEG, "-y"] + seek + ["-i", src, "-vf", ",".join(vf), "-t", f"{dur + 0.5 / fps:.6f}"] + enc
     elif status == "STILL":
         motion = shot.get("motion", "kenburns")
         iw, ih = probe_wh(src)
@@ -303,7 +303,7 @@ def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
             vf.append(f"zoompan=z='{z}':x='(iw-iw/zoom)*{fx:.4f}'"
                       f":y='(ih-ih/zoom)*{fy:.4f}':d={frames}:s={w}x{h}:fps={fps}")
         cmd = [FFMPEG, "-y", "-loop", "1", "-i", src, "-vf", ",".join(vf),
-               "-t", f"{dur:.3f}"] + enc
+               "-t", f"{dur + 0.5 / fps:.6f}"] + enc
     else:                                                   # slate (PIL — no drawtext needed)
         label = (beat.get("new_visual_element") or beat.get("narration_text", ""))[:80]
         from beat_plan import owner_line
@@ -317,7 +317,7 @@ def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
             owner = f"YOU -> pantry media, animated vox-style with Remotion (as {bid}.mp4)"
         png = work / f"slate-{bid}.png"
         make_slate_png(png, w, h, bid, label, owner, font, prompt_line)
-        cmd = [FFMPEG, "-y", "-loop", "1", "-i", png, "-t", f"{dur:.3f}"] + enc
+        cmd = [FFMPEG, "-y", "-loop", "1", "-i", png, "-t", f"{dur + 0.5 / fps:.6f}"] + enc
     sh(cmd)
     return src, status
 

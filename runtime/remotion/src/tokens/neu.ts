@@ -1,4 +1,4 @@
-// NEU audience palette — Northeastern brand (brand law: brutalist/… NEU-DESIGN.md).
+// NEU audience palette — Northeastern brand (brand law: runtime/design/NEU-DESIGN.md).
 // Same ROLE KEYS as tokens/vox.ts. RED = brand / emphasis / primary series ONLY,
 // NEVER state — so good/bad is carried by KEPT/LOST label + position, no hue coding.
 // White ground only. Gold is ceremonial + large-area only. Type is Lato (FONT_NEU).

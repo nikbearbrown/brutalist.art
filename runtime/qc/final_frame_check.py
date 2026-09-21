@@ -203,6 +203,31 @@ def full_bleed_beats(reel, sheet_path=None):
             if (b.get("qc") or {}).get("full_bleed") is True}
 
 
+def sparse_by_design_beats(reel, sheet_path=None):
+    """Beat ids that DECLARE themselves sparse, via `qc.sparse_by_design: true`
+    plus a written `qc.sparse_reason`.
+
+    Some mandated compositions are sparse on purpose — the hesitant-writer
+    typing bookend accumulates one line token by token, so a mid-beat frame is
+    mostly cream by design. Like full_bleed, the declaration lives in the beat
+    sheet, per beat, with a reason a reviewer can read in the diff. Only the
+    underfill / clustered checks are waived; empty-frame, edge-bleed and
+    contrast still apply. A declaration without a reason is a build error.
+    """
+    try:
+        bs = json.load(open(sheet_path or os.path.join(reel, "beat_sheet.json")))
+    except Exception:
+        return set()
+    out = set()
+    for b in bs.get("beats", []):
+        qc = b.get("qc") or {}
+        if qc.get("sparse_by_design") is True:
+            if not isinstance(qc.get("sparse_reason"), str) or not qc["sparse_reason"].strip():
+                raise BuildError(f"{b.get('beat_id')}: sparse_by_design needs a written sparse_reason")
+            out.add(b.get("beat_id"))
+    return out
+
+
 def beat_spans(reel, sheet_path=None):
     """(beat_id, start_s, dur_s) per beat, from the beat sheet's durations."""
     try:
@@ -300,6 +325,7 @@ def inspect(a, tmp):
     if not frames:
         raise BuildError('No frames inspected; cannot report clean')
     exempt = full_bleed_beats(a.reel, a.sheet) if a.reel else set()
+    sparse = sparse_by_design_beats(a.reel, a.sheet) if a.reel else set()
     reports = set()
     regional = {}
     if a.reel:
@@ -327,6 +353,8 @@ def inspect(a, tmp):
             bid = os.path.basename(f).rsplit("_", 1)[0]
             if bid in exempt:
                 d = [x for x in d if x[1] != "edge-bleed"]
+        if d and sparse and bid in sparse:
+            d = [x for x in d if x[1] not in ("underfill", "clustered")]
         if d:
             worst[f] = d
 

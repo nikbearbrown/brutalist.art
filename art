@@ -14,7 +14,8 @@
 #   ./art shorts <reel> [flags]  derive the 9:16 Short (cap check + auto-shorten)
 #   ./art vertical <reel>       full-length 9:16 companion (no shortening)
 #   ./art approvals <reel> --fingerprints  inspect human-review subjects (never signs)
-#   ./art final <reel>           verified master — no review label (→ <slug>.mp4)
+#   ./art final <reel>           verified master — GATE T then clean cut (→ <slug>.mp4)
+#   ./art post  <reel> [--no-topaz] stage the 4K master into books/youtube/TOPOST, the only upload source
 #   ./art doctor                 dependency readiness (wraps ./setup)
 #   ./art smoke                  real end-to-end render proof (examples/_smoke -> watchable mp4)
 #   ./art keys                   validate optional keys (Higgsfield login, SI key)
@@ -51,6 +52,13 @@ if [ "$cmd" = "godot-waikthrough" ] && [ "${1:-}" = "--check" ]; then
   exec python3 "$SKILLS/make/godot-waikthrough/scripts/verify_walkthrough.py" "$@"
 fi
 
+# Medhavy Hub web walkthrough; accept the old "medhavi" spelling.
+if [ "$cmd" = "medhavi-walkthrough" ]; then cmd="medhavy-walkthrough"; fi
+if [ "$cmd" = "medhavy-walkthrough" ] && [ "${1:-}" = "--check" ]; then
+  shift
+  exec python3 "$SKILLS/make/medhavy-walkthrough/scripts/verify_walkthrough.py" "$@"
+fi
+
 case "$cmd" in
   ""|-h|--help|help)
     sed -n '2,18p' "$ART_HOME/art" | sed 's/^# \{0,1\}//'
@@ -62,6 +70,7 @@ case "$cmd" in
     printf '%-22s %s\n' "godot-waikthrough" "builder — real Godot gameplay + Liam riffs; optional Walker bookends"
     printf '%-22s %s\n' "godot-gamedev" "builder — code, scenes, assets and art deep dive; optional Walker bookends"
     printf '%-22s %s\n' "godot-gdd" "builder — GDD intent, scope and game evidence; optional Walker bookends"
+    printf '%-22s %s\n' "medhavy-walkthrough" "builder — real Medhavy Hub browser capture + Liam riffs; optional textbook bookends"
     printf '%-22s %s\n' "riff"           "utility — render/inspect, then critique what visibly happens"
     printf '%-22s %s\n' "deep-explainer" "builder — 5-10 min documentary episode (vox pantry beats)"
     printf '%-22s %s\n' "anthropics"     "builder — reads Anthropic artifacts against their own claims; practitioner-report register"
@@ -108,7 +117,24 @@ case "$cmd" in
   approvals)
     exec python3 "$ART_HOME/runtime/scripts/build_safety.py" "$@"
     ;;
+  post|stage|topost|publish-prep|stage-for-youtube)
+    # clean 4K master → books/youtube/TOPOST staging (never uploads). See skills/make/post.
+    exec python3 "$ART_HOME/runtime/scripts/post.py" "$@"
+    ;;
   final)
+    # GATE T — type-lock pre-check before the clean master. TYPECHECK.md FAILs block final.
+    REEL_FOR_TC="${1:-}"
+    if [ -n "$REEL_FOR_TC" ] && [ -f "$ART_HOME/runtime/scripts/type_check.py" ]; then
+      tc_rc=0
+      python3 "$ART_HOME/runtime/scripts/type_check.py" "$REEL_FOR_TC" || tc_rc=$?
+      if [ "$tc_rc" -eq 3 ]; then
+        echo "[art final] GATE T skipped — missing deps (pip install pillow numpy scipy)"
+      elif [ "$tc_rc" -ge 2 ]; then
+        echo "[art final] GATE T BLOCKED: TYPECHECK.md has FAILs — fix before final cut."
+        echo "[art final] See: $REEL_FOR_TC/TYPECHECK.md"
+        exit 2
+      fi
+    fi
     case " $* " in
       *" --height "*|*" --height="*) exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" ;;
       *)              exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" --height 2160 ;;

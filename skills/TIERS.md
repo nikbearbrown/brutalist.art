@@ -22,6 +22,7 @@ make a video.
 | cli-explainer | Claude session + live code + output as vox beat |
 | godot-waikthrough | Real Godot feature walkthrough with Liam riffs; `walker` adds Claude/GDD bookends; regular outro |
 | godot-gamedev | Detailed Godot code/component/art teardown; source-backed editor views and optional `walker` bookends; Liam and regular outro |
+| medhavy-walkthrough | Real Medhavy Hub (hub.medhavy.com) browser walkthrough with Liam riffs; `textbook` adds Claude bookends; seeded tenant + human sign-in required; regular outro |
 | godot-gdd | GDD design-contract walkthrough using existing game evidence; proposals versus implementation; optional `walker` bookends; Liam and regular outro |
 | nbb | NikBearBrown/Teardown register — Kokoro am_onyx voice |
 | guests | Board members, advisors, invited speakers. NO feedback beat — staff do not evaluate board members. GATE G. |

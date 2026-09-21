@@ -53,7 +53,7 @@ When the user asks for a standalone riff **film**, use
 [ai-explainer](../ai-explainer/SKILL.md) for its bookends and render chassis;
 real clips remain evidence, not Claude UI wallpaper. Follow
 [OUTRO-LOCK.md](../../../OUTRO-LOCK.md): standard title/handle/mascot card,
-existing regular jingle, no narration over that final card. Do not manufacture
+Liam re-reads the title then says "At Nik Bear Brown"; no jingle or music on that card. Do not manufacture
 a scene-themed ending. No burned-in captions unless explicitly requested.
 For a critique-only request, inspect and report; do not launch a film build.
 

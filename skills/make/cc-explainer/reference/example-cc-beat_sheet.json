@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "slug": "cc-init-your-first-claude-md",
+    "title": "Your First CLAUDE.md",
+    "subtitle": "/init writes it; you decide what it is allowed to claim",
+    "topic": "CLAUDE CODE 101",
+    "skill": "cc-explainer",
+    "channel": "claude-liam",
+    "handle": "@NikBearBrown",
+    "register": "Teardown",
+    "operator": {
+      "name": "Ada",
+      "voice": "af_bella",
+      "engine": "kokoro"
+    },
+    "closing_voice": {
+      "name": "Liam",
+      "voice": "am_onyx",
+      "engine": "kokoro"
+    },
+    "brand": "claude",
+    "aspect": "16:9",
+    "fps": 30,
+    "session_note": "REFERENCE SPINE ONLY. Every CCSession block below is illustrative of SHAPE. A real reel replaces every tool name, path, diff line and output from its own SESSION.md (REAL-SESSION LAW). Do not render this sheet as an episode.",
+    "sources": [
+      "anthropics/claude-code-101/_source-docs/claude-code/README.md",
+      "info-7375-computational-skepticism-for-ai/chapters/_expanded-four-moves.md",
+      "info-7375-conducting-ai/chapters/02-the-solve-verify-asymmetry.md",
+      "info-7375-irreducibly-human/chapters/04-tier-4-metacognitive-and-supervisory.md"
+    ],
+    "kit_notes": [
+      "CCSession `text` blocks render a single line — newlines collapse. One block per output line.",
+      "CCPlanCard clips past ~7 rows under the footer band (GATE T §8.13 card-clip). Keep the plan to what fits; the plan is a summary, not the spec.",
+      "`cues` is one frame per block, in order; the kit falls back to i*20 when omitted."
+    ]
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "lane": "TERMINAL",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "I'm Ada. This is a repo I've never opened, and the first thing I do is not read it. I open Claude Code and type one command: slash init. Watch what it chooses to look at before it writes a single line.",
+      "new_visual_element": "CCSession — the terminal opens; /init typed; Explore tree lands",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "CCSession",
+          "props": {
+            "title": "acme-api",
+            "mode": "default",
+            "blocks": [
+              {
+                "type": "prompt",
+                "text": "/init",
+                "cue": 0,
+                "typeDuration": 24
+              },
+              {
+                "type": "status",
+                "verb": "Exploring",
+                "elapsed": "0m 08s",
+                "tokens": "↓ 2.1k tokens"
+              },
+              {
+                "type": "tool",
+                "name": "Explore",
+                "arg": "acme-api/",
+                "state": "done",
+                "children": [
+                  {
+                    "name": "Read",
+                    "arg": "package.json"
+                  },
+                  {
+                    "name": "Glob",
+                    "arg": "src/**/*.ts"
+                  },
+                  {
+                    "name": "Read",
+                    "arg": "README.md"
+                  }
+                ],
+                "moreCount": 3
+              }
+            ],
+            "cues": [
+              0,
+              40,
+              70
+            ],
+            "mascot": "auto"
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "/init types at the prompt bar"
+        },
+        {
+          "at": 0.3,
+          "event": "✳ Exploring… lands with elapsed + tokens"
+        },
+        {
+          "at": 0.55,
+          "event": "Explore tree opens: package.json, src glob, README"
+        }
+      ]
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE PLAN",
+      "lane": "TERMINAL",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Before it writes, it tells me what it intends to write. Three sections. Build and test commands — it found those in package.json. The layout of src. And house conventions it inferred from the code. I'm going to let it write all three, and then I'm going to check every claim in the first one, because that's the section a future session will actually run.",
+      "new_visual_element": "CCPlanCard — the plan is the overview",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "drawon",
+        "remotion": {
+          "pattern": "CCPlanCard",
+          "props": {
+            "sections": [
+              {
+                "title": "Files to create",
+                "numbered": false,
+                "items": [
+                  {
+                    "text": "CLAUDE.md",
+                    "path": "acme-api/CLAUDE.md"
+                  }
+                ]
+              },
+              {
+                "title": "What it will contain",
+                "numbered": true,
+                "items": [
+                  {
+                    "text": "Build, test and lint commands from package.json"
+                  },
+                  {
+                    "text": "Repository layout and inferred conventions"
+                  }
+                ]
+              },
+              {
+                "title": "Verification",
+                "numbered": true,
+                "items": [
+                  {
+                    "text": "Read CLAUDE.md top to bottom"
+                  },
+                  {
+                    "text": "Run one listed command, exactly as written"
+                  }
+                ]
+              }
+            ]
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.1,
+          "event": "Plan box borders in"
+        },
+        {
+          "at": 0.3,
+          "event": "Files to create"
+        },
+        {
+          "at": 0.5,
+          "event": "The three content items, numbered"
+        },
+        {
+          "at": 0.75,
+          "event": "Verification steps land last"
+        }
+      ]
+    },
+    {
+      "beat_id": "B02",
+      "act": "CYCLE 1 — CHANGE",
+      "lane": "TERMINAL",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Here's the diff. I read the diff, not the summary. Twenty-three lines. The commands block is the part that matters — npm test, npm run build, and npm run lint. Two of those I saw in package.json a minute ago. The third I'm not sure about, and I'm going to hold that thought rather than trust it.",
+      "new_visual_element": "CCSession — Writing… then the CLAUDE.md diff",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "drawon",
+        "remotion": {
+          "pattern": "CCSession",
+          "props": {
+            "title": "acme-api",
+            "mode": "accept-edits",
+            "blocks": [
+              {
+                "type": "status",
+                "verb": "Writing",
+                "elapsed": "0m 21s",
+                "tokens": "↓ 4.8k tokens"
+              },
+              {
+                "type": "diff",
+                "file": "CLAUDE.md",
+                "addCount": 23,
+                "delCount": 0,
+                "lines": [
+                  {
+                    "gutter": "1",
+                    "text": "# acme-api",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "2",
+                    "text": "",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "3",
+                    "text": "## Commands",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "4",
+                    "text": "- `npm test` — vitest, all suites",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "5",
+                    "text": "- `npm run build` — tsc + esbuild",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "6",
+                    "text": "- `npm run lint` — eslint src/",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "7",
+                    "text": "",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "8",
+                    "text": "## Layout",
+                    "kind": "add"
+                  },
+                  {
+                    "gutter": "9",
+                    "text": "- src/routes — one file per resource",
+                    "kind": "add"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "✓ Created CLAUDE.md (23 lines)"
+              }
+            ],
+            "cues": [
+              0,
+              30,
+              150
+            ],
+            "mascot": "auto"
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "✳ Writing…"
+        },
+        {
+          "at": 0.25,
+          "event": "Diff rows land, gutter-numbered, green bands"
+        },
+        {
+          "at": 0.85,
+          "event": "✓ Created CLAUDE.md"
+        }
+      ]
+    },
+    {
+      "beat_id": "B03",
+      "act": "CYCLE 1 — VERIFY",
+      "lane": "TERMINAL",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Claude says it's created. That's a claim. I run one thing from the file, exactly as written. The bang prefix runs a shell command from inside the session. npm test — forty-one passing. Good. Now the one I wasn't sure about. npm run lint. Missing script. The file I just accepted documents a command that does not exist.",
+      "new_visual_element": "CCSession — her !commands and their real output; the lint claim fails",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "CCSession",
+          "props": {
+            "title": "acme-api",
+            "mode": "accept-edits",
+            "blocks": [
+              {
+                "type": "prompt",
+                "text": "!npm test",
+                "cue": 0,
+                "typeDuration": 30
+              },
+              {
+                "type": "text",
+                "text": "Test Files  9 passed (9)"
+              },
+              {
+                "type": "text",
+                "text": "     Tests  41 passed (41)"
+              },
+              {
+                "type": "prompt",
+                "text": "!npm run lint",
+                "cue": 0,
+                "typeDuration": 36
+              },
+              {
+                "type": "text",
+                "text": "npm ERR! Missing script: \"lint\""
+              }
+            ],
+            "cues": [
+              0,
+              35,
+              70,
+              105,
+              140
+            ],
+            "mascot": "off"
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "!npm test types"
+        },
+        {
+          "at": 0.3,
+          "event": "41 passed lands"
+        },
+        {
+          "at": 0.55,
+          "event": "!npm run lint types"
+        },
+        {
+          "at": 0.8,
+          "event": "Missing script — the claim fails"
+        }
+      ]
+    },
+    {
+      "beat_id": "B04",
+      "act": "CONCEPT",
+      "lane": "CARD",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Why does one wrong line matter? Because CLAUDE.md is the file every future session reads before it does anything. A command in here is not a note to me. It's an instruction to the next Claude, which will run it, fail, and then improvise. The file's job is to be true, not complete.",
+      "new_visual_element": "ClaudeCodeBeat — the file as a file, sparkline",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "hold",
+        "leaves_terminal_because": "the diff scrolled past the file; the viewer needs to see CLAUDE.md as the artifact the next session reads",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "CLAUDE.md",
+            "code": "# acme-api\n\n## Commands\n- `npm test` — vitest, all suites\n- `npm run build` — tsc + esbuild\n- `npm run lint` — eslint src/      # ← does not exist\n\n## Layout\n- src/routes — one file per resource\n- src/db     — drizzle schema + migrations",
+            "sparkLine": "True beats complete."
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.1,
+          "event": "File lands as a file"
+        },
+        {
+          "at": 0.55,
+          "event": "Spark line"
+        }
+      ]
+    },
+    {
+      "beat_id": "B05",
+      "act": "CYCLE 2 — THE CORRECTION",
+      "lane": "TERMINAL",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "So I tell it what I found, and I tell it what not to do. Don't add a lint script — that's a tooling decision, and it's mine. Fix the document. Watch the diff: one line out, nothing else touched. That's the scope I asked for, and that's the scope I got.",
+      "new_visual_element": "CCSession — the corrective prompt, one-line removal diff",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "CCSession",
+          "props": {
+            "title": "acme-api",
+            "mode": "accept-edits",
+            "blocks": [
+              {
+                "type": "prompt",
+                "text": "CLAUDE.md lists `npm run lint` but package.json has no lint script. Remove the line. Do NOT add a lint script or any tooling — doc fix only.",
+                "cue": 0,
+                "typeDuration": 90
+              },
+              {
+                "type": "status",
+                "verb": "Updating",
+                "elapsed": "0m 04s",
+                "tokens": "↓ 0.6k tokens"
+              },
+              {
+                "type": "diff",
+                "file": "CLAUDE.md",
+                "addCount": 0,
+                "delCount": 1,
+                "lines": [
+                  {
+                    "gutter": "5",
+                    "text": "- `npm run build` — tsc + esbuild",
+                    "kind": "context"
+                  },
+                  {
+                    "gutter": "6",
+                    "text": "- `npm run lint` — eslint src/",
+                    "kind": "del"
+                  },
+                  {
+                    "gutter": "7",
+                    "text": "",
+                    "kind": "context"
+                  }
+                ]
+              }
+            ],
+            "cues": [
+              0,
+              100,
+              130
+            ],
+            "mascot": "auto"
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "The corrective prompt types — with the negative constraint"
+        },
+        {
+          "at": 0.55,
+          "event": "✳ Updating…"
+        },
+        {
+          "at": 0.7,
+          "event": "One red band: the lint line goes"
+        }
+      ]
+    },
+    {
+      "beat_id": "B06",
+      "act": "SKEPTIC — IS IT ACTUALLY DONE?",
+      "lane": "TERMINAL",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Now the part most walkthroughs skip. Claude says done. What would have to be true for that to be wrong? The lint line is gone — I can grep for it. The other two commands still work — I can run them. And the file it wrote is not the world: the world is whether a fresh session, reading this file, does the right thing. That last one I can't check today. So I'll say so.",
+      "new_visual_element": "CCSession — her three checks run: grep, test, git diff --stat",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "CCSession",
+          "props": {
+            "title": "acme-api",
+            "mode": "default",
+            "blocks": [
+              {
+                "type": "prompt",
+                "text": "!grep -n lint CLAUDE.md",
+                "cue": 0,
+                "typeDuration": 40
+              },
+              {
+                "type": "text",
+                "text": "(no output)"
+              },
+              {
+                "type": "prompt",
+                "text": "!npm test && npm run build",
+                "cue": 0,
+                "typeDuration": 46
+              },
+              {
+                "type": "text",
+                "text": "Tests  41 passed (41)"
+              },
+              {
+                "type": "text",
+                "text": "build: dist/ written, 0 errors"
+              },
+              {
+                "type": "prompt",
+                "text": "!git diff --stat",
+                "cue": 0,
+                "typeDuration": 34
+              },
+              {
+                "type": "text",
+                "text": " CLAUDE.md | 22 ++++++++++++++++++++++"
+              },
+              {
+                "type": "text",
+                "text": " 1 file changed, 22 insertions(+)"
+              }
+            ],
+            "cues": [
+              0,
+              35,
+              70,
+              105,
+              140,
+              175,
+              210,
+              245
+            ],
+            "mascot": "off"
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "grep — nothing: the line is gone"
+        },
+        {
+          "at": 0.35,
+          "event": "test + build — both pass"
+        },
+        {
+          "at": 0.7,
+          "event": "git diff --stat — exactly one file changed"
+        }
+      ]
+    },
+    {
+      "beat_id": "B07",
+      "act": "SKEPTIC — THE AUDIT",
+      "lane": "CARD",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Four moves, four stamps. Descartes: I enumerated the ways done could be wrong, and checked each. Hume: the last two prompts worked; that told me nothing about this one, so I ran it anyway. Popper: I named the failure — a command in the file that doesn't exist — before I looked, and I found one. Plato: the diff was the artifact. The test run was the world. One move I could not close: whether the next session reads this file well. That stays open, on the record.",
+      "new_visual_element": "Interim: ClaudeVerdictArtifact as the four-move audit (CCSkepticAudit when built)",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "hold",
+        "leaves_terminal_because": "the audit stamps pin Claude's claim against the four checks just run; CCSkepticAudit will overlay this on the session when it exists",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "skeptic.md",
+            "artifactHeading": "Claim: ✓ Created CLAUDE.md",
+            "artifactLines": [
+              "DESCARTES ✓ grep, test, build, diff --stat — each way it could be wrong, checked",
+              "HUME ✓ prior prompts proved nothing about this one; ran it anyway",
+              "POPPER ✓ named the failure first — a listed command that does not exist — and found one",
+              "PLATO ✓ graded the run, not the diff",
+              "OPEN — does a fresh session read this file well? Not checkable today. Logged."
+            ]
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "Claude's claim pinned as the heading"
+        },
+        {
+          "at": 0.25,
+          "event": "Four stamps land in order"
+        },
+        {
+          "at": 0.85,
+          "event": "The open item holds last"
+        }
+      ]
+    },
+    {
+      "beat_id": "B08",
+      "act": "CONDUCT — THE BOONDOGGLE SCORE",
+      "lane": "CARD",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "Who did what. Claude explored the repo and drafted the file — that's what it's superhuman at, and the handoff condition was: every command it lists exists in package.json. It failed that condition, and the only reason that mattered is step three, which was mine: I read the diff and heard the wrong note before I ran it. Then I formulated the fix as a scope, not a wish — remove the line, add no tooling. Five steps. One dangerous middle: a plausible command that was never in the repo. Notice there is no step where I asked Claude if it was sure.",
+      "new_visual_element": "Interim: ClaudeVerdictArtifact as the score (CCBoondoggleScore when built)",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "hold",
+        "leaves_terminal_because": "the score is a structure the session only implies — labor, capacity, handoff — and must be shown as a sequence",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "boondoggle.md",
+            "artifactHeading": "Your First CLAUDE.md — 5 steps, 2 Claude, 3 human",
+            "artifactLines": [
+              "1 · HUMAN [PF] · the ask: a CLAUDE.md whose commands all exist in package.json",
+              "2 · CLAUDE · /init → explore + draft — handoff: every listed command exists",
+              "3 · HUMAN [PA] · read the diff; the lint line rang wrong before it ran ← dangerous middle",
+              "4 · CLAUDE · remove the line, add nothing — handoff: diff --stat shows one file, one deletion",
+              "5 · HUMAN [IJ] · a true file beats a complete one; the next session will run this",
+              "Capacities: PF 1 · PA 1 · IJ 1 · TO 0 · EI 0 — no orchestration beat: single thread, single tool"
+            ]
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "System line"
+        },
+        {
+          "at": 0.2,
+          "event": "Steps land in dependency order"
+        },
+        {
+          "at": 0.6,
+          "event": "Step 3 is the dangerous middle"
+        },
+        {
+          "at": 0.88,
+          "event": "Capacity tally; TO and EI at zero, named"
+        }
+      ]
+    },
+    {
+      "beat_id": "B09",
+      "act": "HUMAN — THE LEDGER",
+      "lane": "CARD",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "narration_text": "So what was mine to do. I must decide what done means — a true file, not a full one. I must sign the diff. I must catch the confident error, because the machine cannot tell me when it's unsure; it sounded exactly as certain about the lint line as about the test line. Claude can read a repo in eight seconds and draft the file. It should hand me a plan before it writes. Next time, the thing I would not delegate is the commands section. I'd write those three lines myself and let it do the rest.",
+      "new_visual_element": "Interim: ClaudeVerdictArtifact as the two-column ledger (CCHumanLedger when built)",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "hold",
+        "leaves_terminal_because": "the ledger is the session's labor sorted by who must do it — a comparison the terminal never displays",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "human.md",
+            "artifactHeading": "What was mine to do",
+            "artifactLines": [
+              "MUST — decide what done means: a true file, not a complete one",
+              "MUST — sign the diff",
+              "MUST — catch the confident error; it sounded as sure about lint as about test",
+              "SHOULD — read the plan before the diff; write the failure case first",
+              "AI CAN — explore the repo in seconds; draft the file; find every call site",
+              "AI SHOULD — hand back a plan before a change",
+              "Next time I keep: the commands section. Three lines. Mine."
+            ]
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.05,
+          "event": "AI column lands first"
+        },
+        {
+          "at": 0.35,
+          "event": "MUST rows land, terracotta-ruled"
+        },
+        {
+          "at": 0.7,
+          "event": "SHOULD rows"
+        },
+        {
+          "at": 0.9,
+          "event": "The closing line holds"
+        }
+      ]
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "lane": "BOOKEND",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "voice_kokoro": "am_onyx",
+      "lead_silence_s": 0.5,
+      "narration_text": "Thanks, Ada. Let's recap with Claude. Slash init writes a CLAUDE.md from what it finds in the repo. It found a command that wasn't there, and said so as confidently as the ones that were. The fix was one line, scoped to the document. The lesson is the order of operations: plan, diff, run — and the run is the only one of the three that is evidence. What would prove this reel wrong: a fresh session that reads this file and does the wrong thing anyway. That check is still open.",
+      "new_visual_element": "ClaudeVerdictArtifact — the verdict page",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "hold",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "verdict.md",
+            "artifactHeading": "Your First CLAUDE.md",
+            "artifactLines": [
+              "/init drafts CLAUDE.md from package.json, the tree, and the README.",
+              "It listed a command that did not exist, as confidently as two that did.",
+              "The fix was scoped: remove the line, add no tooling.",
+              "Plan, diff, run — only the run is evidence.",
+              "FALSIFIABLE: a fresh session that reads this file and still does the wrong thing."
+            ]
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.0,
+          "event": "Artifact window opens"
+        },
+        {
+          "at": 0.2,
+          "event": "Lines land in sequence"
+        },
+        {
+          "at": 0.85,
+          "event": "Falsifiability line holds last"
+        }
+      ]
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "lane": "BOOKEND",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "voice_kokoro": "am_onyx",
+      "narration_text": "Your turn. Open a repo you know well, run slash init, and before you accept the file, run every command it lists, exactly as written. Then paste this: Compare CLAUDE.md against package.json and the actual tree. List every claim in the file that I could not verify by running a command, and tell me which section you would not have trusted yourself to write.",
+      "new_visual_element": "ClaudeComposerAsk — the viewer's prompt, read aloud",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "command": "Compare CLAUDE.md against package.json and the actual tree. List every claim in the file that I could not verify by running a command, and tell me which section you would not have trusted yourself to write.",
+            "segment": "Your First CLAUDE.md",
+            "topic": "YOUR TURN · CLAUDE CODE 101",
+            "runningText": "paste this into Claude Code…",
+            "output": [],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Opus 5",
+            "effortLabel": "High"
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.0,
+          "event": "Composer types the prompt"
+        },
+        {
+          "at": 0.6,
+          "event": "Send arms; prompt holds while discussed"
+        }
+      ]
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "lane": "BOOKEND",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "voice_kokoro": "am_onyx",
+      "narration_text": "Your First CLAUDE.md. Liam, in for Bear.",
+      "new_visual_element": "ClaudeTitleOutro — OUTRO-LOCK",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "hold",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Your First CLAUDE.md",
+            "slug": "cc-init-your-first-claude-md",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "",
+            "at": ""
+          }
+        }
+      },
+      "show": [
+        {
+          "at": 0.0,
+          "event": "Poster-serif title, terracotta period"
+        },
+        {
+          "at": 0.35,
+          "event": "@NikBearBrown — hardcoded"
+        },
+        {
+          "at": 0.55,
+          "event": "Slug-seeded mascot; translation and scale only"
+        }
+      ]
+    }
+  ]
+}

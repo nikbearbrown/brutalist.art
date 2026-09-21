@@ -63,7 +63,7 @@ Liam narration is the primary audio. If the game has meaningful audio, explicitl
 decide whether to retain it quietly under narration; use the supported audio
 inputs, not an untested mux assumption. Document any muting. A silent game needs
 no fabricated sound effects. All gameplay audio stops before the regular outro;
-only the existing stock jingle plays on that final card.
+only Liam's spoken title and "At Nik Bear Brown" play on that final card (no jingle).
 
 ## `coverage.json` contract
 

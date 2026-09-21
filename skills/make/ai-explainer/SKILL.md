@@ -761,7 +761,7 @@ algebra and actual-frame legibility are mandatory, including review cuts.
 - **OUTRO LAW.** The outro RESTATES THE EPISODE TITLE, poster-style serif with
   the terracotta period, handle beneath (`ClaudeTitleOutro` pattern:
   title · handle · subline). Never a generic brand outro.
-  **@NikBearBrown outro card is locked** — exact title restate, hardcoded `@NikBearBrown` handle, one of the 18 crisp-safe mascots (slug-seeded), NO subline; claude-liam reels only. See `OUTRO-LOCK.md`.
+  **@NikBearBrown outro card is locked** — exact title restate, hardcoded `@NikBearBrown` handle, one of the 18 crisp-safe mascots (slug-seeded), NO subline; claude-liam reels only. **Spoken, never scored:** Liam re-reads the title then says "At Nik Bear Brown"; no jingle or music on the card. See `OUTRO-LOCK.md`.
 
 - **Never publish.** Output stays in the reel folder for human review.
 - **There is always a free option. Kokoro is the default and the fallback. No

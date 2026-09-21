@@ -88,11 +88,10 @@ Do not force a prompt/code/revision loop onto a game walkthrough.
 Both modes close with a verdict and actionable Your Turn, then the **regular
 outro**. Read [OUTRO-LOCK.md](../../../OUTRO-LOCK.md): `ClaudeTitleOutro`, exact
 episode title, `@NikBearBrown`, one crisp-safe mascot below the handle, no
-subline, existing slug-seeded regular jingle from `svg/claude/mp3/`. The final
-card has **no narration**, gameplay audio, invented character voice, chiptune,
-victory sound, or new game-themed jingle. If stock outro assets are missing,
-report that asset blocker rather than inventing a substitute. This lock wins
-over older parent outro instructions.
+subline. The card is **spoken, never scored**: Liam re-reads the exact title,
+then "At Nik Bear Brown", over a 1 s tail hold. No jingle, no gameplay audio,
+no invented character voice, chiptune, victory sound, or game-themed music on
+that final card. This lock wins over older parent outro instructions.
 
 ## 4. Render and verify, don't stop at a beat sheet
 

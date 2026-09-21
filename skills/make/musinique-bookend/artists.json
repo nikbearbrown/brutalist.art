@@ -1,0 +1,112 @@
+{
+  "_note": "Musinique artist registry — the ONLY source of outro artist name + links for the musinique-bookend skill. Never invent a link that isn't listed here; an artist with 2 links has 2, an artist with 3 has 3. Entered verbatim from Bear's source list 2026-09-17.",
+  "_flags": [
+    "jingle-yankel: apple_music and musinique links are IDENTICAL to mayfield-king's — Bear flagged this himself as a likely copy-paste slip in his source list, not something to silently 'fix'. Entered as given; confirm/correct with Bear before treating jingle-yankel's apple_music/musinique links as real."
+  ],
+  "artists": {
+    "nik-bear-brown": {
+      "name": "Nik Bear Brown",
+      "links": {
+        "spotify": "https://open.spotify.com/artist/0hSpFCJodAYMP2cWK72zI6?si=9Fx2UusBQHi3tTyVEAoCDQ",
+        "apple_music": "https://music.apple.com/us/artist/nik-bear-brown/1779725275",
+        "musinique": "https://nikbear.musinique.com"
+      }
+    },
+    "mayfield-king": {
+      "name": "Mayfield King",
+      "note": "the voice of conscious soul",
+      "links": {
+        "apple_music": "https://music.apple.com/gb/artist/mayfield-king/1846526759",
+        "spotify": "https://open.spotify.com/artist/6vpw3aw6hEJRPHgYGrN3kX?si=_WzqjRRwSQa5AtEUEjyv4w",
+        "musinique": "https://mayfield.musinique.com"
+      }
+    },
+    "liam-bear-brown": {
+      "name": "Liam Bear Brown",
+      "links": {
+        "apple_music": "https://music.apple.com/us/artist/liam-bear-brown/1780970474",
+        "spotify": "https://open.spotify.com/artist/4SSyKsRubysg99cAIs82uI?si=pp_V83uiRJGelFNWsr8Frg",
+        "musinique": "https://liam.musinique.com"
+      }
+    },
+    "tuzi-brown": {
+      "name": "Tuzi Brown",
+      "links": {
+        "spotify": "https://open.spotify.com/artist/5DvRo9Gtg5bxsUUbKQBdg6?si=cycErkToTfKhcumPnlzt2w",
+        "apple_music": "https://music.apple.com/us/artist/tuzi-brown/1838852692",
+        "musinique": "https://tuzi.musinique.com"
+      }
+    },
+    "newton-willams-brown": {
+      "name": "Newton Willams Brown",
+      "links": {
+        "apple_music": "https://music.apple.com/gb/artist/newton-willams-brown/1781653273",
+        "spotify": "https://open.spotify.com/artist/7Ec9DTFD4EMsxdpiiGos2p?si=_S4w85ESS02IHZ9F9158RA",
+        "musinique": "https://newton.musinique.com"
+      }
+    },
+    "parvati-patel-brown": {
+      "name": "Parvati Patel Brown",
+      "links": {
+        "apple_music": "https://music.apple.com/gb/artist/parvati-patel-brown/1781528271",
+        "spotify": "https://open.spotify.com/artist/0tYk1RYgGD7k9MN0bd1p8u?si=kgAinxuRT3CNV9kF_5K3Zg",
+        "musinique": "https://parvati.musinique.com"
+      }
+    },
+    "dijit-arjun-bear-brown": {
+      "name": "Dijit Arjun Bear Brown",
+      "links": {
+        "apple_music": "https://music.apple.com/us/artist/dijit-arjun-bear-brown/1842722191",
+        "spotify": "https://open.spotify.com/artist/55YYr6d7P8x8LVZWaOd5SZ?si=Lgu49OQUTmqJ3MgUWS6S8Q",
+        "musinique": "https://dijit.musinique.com"
+      }
+    },
+    "prarthana-maha-brown": {
+      "name": "Prarthana Maha Brown",
+      "links": {
+        "apple_music": "https://music.apple.com/us/artist/prarthana-maha-brown/1840725199",
+        "spotify": "https://open.spotify.com/artist/1sPHt959TSCSgctMB5Xdop?si=yxPbrdEiReaofLd_N_kjAg",
+        "musinique": "https://prarthana.musinique.com"
+      }
+    },
+    "marley-bear-brown": {
+      "name": "Marley Bear Brown",
+      "links": {
+        "spotify": "https://open.spotify.com/artist/09UwgY1zJ63aJUkM4xgOb1?si=KtJ-oA7MQi2DFD41ot0DlA",
+        "apple_music": "https://music.apple.com/us/artist/marley-bear-brown/1835745524",
+        "musinique": "https://marley.musinique.com"
+      }
+    },
+    "humanitarians-ai": {
+      "name": "Humanitarians AI",
+      "links": {
+        "website": "https://www.humanitarians.ai/",
+        "spotify": "https://open.spotify.com/artist/3cj3R4pDpYQHaWx0MM2vFV?si=sZ6jjCB1TcyU4Rzbwv4wIg",
+        "apple_music": "https://music.apple.com/ca/artist/humanitarians-ai/1781414009"
+      }
+    },
+    "jingle-yankel": {
+      "name": "Jingle Yankel",
+      "note": "apple_music + musinique links below are IDENTICAL to mayfield-king's in Bear's source list — flagged, not corrected. See _flags.",
+      "links": {
+        "apple_music": "https://music.apple.com/gb/artist/mayfield-king/1846526759",
+        "spotify": "https://open.spotify.com/artist/3T20r0SBgeL2xUUNCRJZHG?si=LNyU8nVlTGiHg6RCzbUPDQ",
+        "musinique": "https://mayfield.musinique.com"
+      }
+    },
+    "muzack": {
+      "name": "Muzack",
+      "links": {
+        "spotify": "https://open.spotify.com/artist/4V8CzlAfk1VipGmOx5Hv7o?si=Pctm4mS6TiG04chYDyM_Gg",
+        "apple_music": "https://music.apple.com/us/artist/muzack/1880012741"
+      }
+    },
+    "cletus-bear-spuckler": {
+      "name": "Cletus Bear Spuckler",
+      "links": {
+        "spotify": "https://open.spotify.com/artist/2hmp7X5Qx3K1PZAIm2ciUB?si=nx6OZJBMQAWvw9KqNH7T7A",
+        "apple_music": "https://music.apple.com/us/artist/cletus-bear-spuckler/1882357668"
+      }
+    }
+  }
+}

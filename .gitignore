@@ -68,3 +68,19 @@ art.pre-scene-search
 /youtube/brutalist/**/_build/
 /youtube/brutalist/**/_stale/
 /youtube/brutalist/**/_previous-build/
+
+# YouTube OAuth credentials + per-channel ledger (secrets/state — never commit)
+youtube/credentials/
+
+# SEIS project media — per-reel photos, interview clips, faces, VO. Rights-bound
+# and large; they live in the private nikbearbrown/seis repo and are copied in by
+# seis_profile.py / seis_extract.py / seis_composite.py at build time. The toolkit
+# ships only the two unit marks.
+/runtime/remotion/public/seis/*
+!/runtime/remotion/public/seis/seis-logo.png
+!/runtime/remotion/public/seis/seis-button-logo.jpg
+/runtime/remotion/public/seis-film/
+/runtime/remotion/public/seis-qa/
+/runtime/remotion/public/seis-read-along/
+/runtime/remotion/public/seis-tribute/
+/runtime/remotion/public/seis-stories-roll/

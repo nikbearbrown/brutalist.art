@@ -224,7 +224,7 @@ Reuse the Claude fidelity scenes (`runtime/remotion/src/scenes/`, tokens in
 - **NEXT STEPS / HANDOFF** → `ClaudeComposerAsk` with `greeting: "Your turn."`,
   `runningText: "paste this into Claude…"`, `command` = the suggested prompt.
 - **OUTRO** → `ClaudeTitleOutro` · prop: `title` (exact episode title), `slug` (reel folder name, seeds mascot + polarity).
-  **@NikBearBrown outro card is locked** — exact title restate, hardcoded `@NikBearBrown` handle, one of the 18 crisp-safe mascots (slug-seeded), NO subline; claude-liam reels only. See `OUTRO-LOCK.md`.
+  **@NikBearBrown outro card is locked** — exact title restate, hardcoded `@NikBearBrown` handle, one of the 18 crisp-safe mascots (slug-seeded), NO subline; spoken not scored (Liam: title, then "At Nik Bear Brown"; no jingle); claude-liam reels only. See `OUTRO-LOCK.md`.
 
 **THE ACTUAL-CODE LAW.** The CODE beat shows the REAL source of the artifact —
 the sim's own JS, the generated `scenes.py`, the script that actually ran —

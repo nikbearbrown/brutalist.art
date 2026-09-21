@@ -41,8 +41,10 @@ voices, palette, and render all inherit from there.
      **reads the whole prompt** (`props.command` == `narration_text`).
    - footer `@NikBearBrown`, model chip unchanged (`Fable 5` / `High`).
 3. **TITLE re-read** — `ClaudeTitleOutro`, Liam.
-   - `narration_text` = the reel's title; Liam re-reads it as the sign-off.
-   - `props.title` = title, `handle` = `@NikBearBrown`, `subline` kept.
+   - `narration_text` = `"<exact title>. At Nik Bear Brown."` — Liam re-reads the
+     title and speaks the handle as the sign-off. **No jingle, no music** on the
+     card (OUTRO-LOCK.md §Voice, 2026-09-18); 1 s silent tail hold after the voice.
+   - `props.title` = title; the handle is hardcoded in the component; no subline.
 
 ## Voices (inherited)
 

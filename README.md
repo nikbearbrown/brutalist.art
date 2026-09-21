@@ -33,6 +33,29 @@ agents.
 | `fellows` | Wraps a HAI fellow's video report in Claude bookends for @HumanitariansAI |
 | `finance` | Templatized SEC EDGAR filings reel — 11 beats, 5 charts, fully deterministic, two audits |
 | `guests` | Wraps a board-member or invited-speaker video in Claude bookends for @HumanitariansAI |
+| [`seis-profile`](skills/make/seis-profile/SKILL.md) | One spotlight reel per Northeastern COE student story for SEIS — NEU brand, Liam narrates in third person, batch of 112 |
+| [`seis-ai`](skills/make/seis-ai/SKILL.md) | The SEIS unit's own AI explainer ("SEIS & the future of AI"), corpus-first, ≤5 min |
+| [`seis-extract`](skills/make/seis-extract/SKILL.md) | Alumni interview (Teams/Zoom mp4) → branded Q&A clips: Bella asks on a SEIS page, the alum answers with captions and a lower third |
+| [`seis-composite`](skills/make/seis-composite/SKILL.md) | Assemble seis-extract clips into the SEIS alumni impact film from an editing-brief timeline |
+| [`medhavy-walkthrough`](skills/make/medhavy-walkthrough/SKILL.md) | Real Medhavy Hub browser capture with Liam riffs; optional textbook bookends |
+| [`cc-explainer`](skills/make/cc-explainer/SKILL.md) | Terminal-first Claude Code explainer: cold open → idea → definitions → loop → conduct/human |
+| [`musinique-bookend`](skills/make/musinique-bookend/SKILL.md) | Musinique intro/outro cards around a raw music film |
+| [`lyric-overlay`](skills/make/lyric-overlay/SKILL.md) | Karaoke-style word timing over a song (real transcription, never guessed lyrics) |
+| [`post`](skills/make/post/SKILL.md) | Stage a verified 4K master into the one upload folder (`./art post`) |
+
+## Brands (what a SEIS or Northeastern user needs, all in this repo)
+
+| File | What it holds |
+|---|---|
+| [`brands/neu.md`](brands/neu.md) | Northeastern palette (NU Red `#C8102E`, black, white, gold), Lato type, logo rules, layout laws |
+| [`brands/seis.md`](brands/seis.md) | The SEIS unit variant: unit marks, Spotlight register, Liam/Bella voices, bookends |
+| [`runtime/design/NEU-DESIGN.md`](runtime/design/NEU-DESIGN.md) | The full NEU visual constitution (from brand.northeastern.edu) |
+| `runtime/remotion/src/tokens/neu.ts`, `tokens/lato.ts` | The values the scenes read; `useLato()` loads the bundled face per scene |
+| `runtime/remotion/public/fonts/Lato-*.ttf` | Lato Regular + Bold (SIL OFL, license alongside) |
+| [`logos/seis/`](logos/seis/README.md) | Official NU Primary Marks (eps/png/svg) + the two SEIS unit marks in `unit/`; RGB SVGs at `runtime/remotion/public/northeastern/official/` |
+| `runtime/remotion/public/seis/` | The two unit marks for `staticFile()`; per-reel photos are NOT shipped (rights) — the scripts copy them in from the story corpus |
+
+Nothing else is needed from any laptop: clone, `./setup --install`, and the SEIS skills run on these files.
 
 ## Personas
 

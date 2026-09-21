@@ -43,7 +43,7 @@ repeals a parent law; this file only adds the genre's own contracts.
 - **Closing block** → the `your-turn` skill's three-beat standard: VERDICT
   recap (`ClaudeVerdictArtifact`) → YOUR TURN prompt Liam reads in full
   (`ClaudeComposerAsk`, greeting `Your turn.`) → TITLE re-read
-  (`ClaudeTitleOutro`). **@NikBearBrown outro card is locked** — exact title restate, hardcoded `@NikBearBrown` handle, one of the 18 crisp-safe mascots (slug-seeded), NO subline; claude-liam reels only. See `OUTRO-LOCK.md`.
+  (`ClaudeTitleOutro`). **@NikBearBrown outro card is locked** — exact title restate, hardcoded `@NikBearBrown` handle, one of the 18 crisp-safe mascots (slug-seeded), NO subline; spoken not scored (Liam: title, then "At Nik Bear Brown"; no jingle); claude-liam reels only. See `OUTRO-LOCK.md`.
 - **How graphics are MADE** → `../explainer/` doctrine: MOTION.md,
   EQUATIONS.md (equation tangents), REMOTION.md, the two-axis shot system,
   the slot contract, the pantry law, the slate system, `manim/animated_graphics.py`.

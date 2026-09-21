@@ -120,7 +120,7 @@ Standard mode opens on the game/architecture and proceeds into development.
    and invites one bounded code change plus prediction/test, not blind copying.
 
 Both modes end with the locked `ClaudeTitleOutro`: exact title, @NikBearBrown,
-one slug-seeded crisp mascot, no subline, existing stock jingle only. Liam signs
+one slug-seeded crisp mascot, no subline, Liam re-reading the title then "At Nik Bear Brown" (no jingle, ever). Liam signs
 off in Your Turn. No narration, game SFX or themed voices on the final card.
 
 ## Build and finish

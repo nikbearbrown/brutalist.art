@@ -87,7 +87,7 @@ label; slate is structure. (Retired here too: `NAVY`, `DUSTY-BLUE`, `TERRACOTTA`
 
 ## `neu` — Northeastern brand (for NEU class videos)
 
-Governed by Northeastern brand law (`brutalist/… NEU-DESIGN.md`). **Red = brand,
+Governed by Northeastern brand law (`runtime/design/NEU-DESIGN.md`). **Red = brand,
 never state.** Because red cannot encode "bad," NEU carries good/bad by **label +
 position only** — no color-coding of state at all. Typeface is **Lato** (required),
 not EB Garamond/Montserrat.

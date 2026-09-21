@@ -3,6 +3,7 @@ import {Composition, Folder} from 'remotion';
 import {WalkerGodotSetup, walkerGodotSetupSchema} from './scenes/WalkerGodotSetup';
 import {GodotDevWorkbench, godotDevWorkbenchSchema} from './scenes/GodotDevWorkbench';
 import {GodotDesignBoard, godotDesignBoardSchema} from './scenes/GodotDesignBoard';
+import {GodotDesignFigure, godotDesignFigureSchema} from './scenes/GodotDesignFigure';
 import {BarChart, barChartSchema} from './scenes/BarChart';
 import {OutroSeries, outroSeriesSchema} from './scenes/OutroSeries';
 import {OutroCTA, outroCtaSchema} from './scenes/OutroCTA';
@@ -13,6 +14,19 @@ import {MedhavyTerminalAsk, medhavyTerminalAskSchema} from './scenes/MedhavyTerm
 import {MedhavyCodeBlock, medhavyCodeBlockSchema} from './scenes/MedhavyCodeBlock';
 import {MedhavyOpen, medhavyOpenSchema} from './scenes/MedhavyOpen';
 import {MedhavyOutro, medhavyOutroSchema} from './scenes/MedhavyOutro';
+import {SeisSpotlightOpen, seisSpotlightOpenSchema} from './scenes/SeisSpotlightOpen';
+import {SeisCard, seisCardSchema} from './scenes/SeisCard';
+import {SeisProfileCredit, seisProfileCreditSchema} from './scenes/SeisProfileCredit';
+import {SeisOutro, seisOutroSchema} from './scenes/SeisOutro';
+import {SeisTribute, seisTributeSchema} from './scenes/SeisTribute';
+import {SeisShowcase, seisShowcaseSchema} from './scenes/SeisShowcase';
+import {SeisWall, seisWallSchema} from './scenes/SeisWall';
+import {SeisStoriesRoll, seisStoriesRollSchema} from './scenes/SeisStoriesRoll';
+import {SeisReadAlong, seisReadAlongSchema} from './scenes/SeisReadAlong';
+import {SeisSongReadAlong, seisSongReadAlongSchema} from './scenes/SeisSongReadAlong';
+import {SeisQA, seisQASchema} from './scenes/SeisQA';
+import {SeisFilm, seisFilmSchema} from './scenes/SeisFilm';
+import {SeisLogoTechnique, seisLogoTechniqueSchema} from './scenes/SeisLogoTechnique';
 import {NikBearBrownOpen, nikBearBrownOpenSchema} from './scenes/NikBearBrownOpen';
 import {NikBearBrownOutro, nikBearBrownOutroSchema} from './scenes/NikBearBrownOutro';
 import {NikBearBrownTerminalAsk, nikBearBrownTerminalAskSchema} from './scenes/NikBearBrownTerminalAsk';
@@ -46,6 +60,9 @@ import {MusiniqueSortBranch, musiniqueSortBranchSchema} from './scenes/Musinique
 import {MusiniqueMismatch, musiniqueMismatchSchema} from './scenes/MusiniqueMismatch';
 import {MusiniqueHearingLimit, musiniqueHearingLimitSchema} from './scenes/MusiniqueHearingLimit';
 import {MusiniqueArsenal, musiniqueArsenalSchema} from './scenes/MusiniqueArsenal';
+// musinique-bookend skill — silent open/close cards for a finished standalone film
+import {MusiniqueIntroCard, musiniqueIntroCardSchema, musiniqueIntroCardDefaultProps, MusiniqueIntroCardDemo, musiniqueIntroCardDemoSchema, musiniqueIntroCardDemoDefaultProps} from './scenes/MusiniqueIntroCard';
+import {MusiniqueOutroCard, musiniqueOutroCardSchema, musiniqueOutroCardDefaultProps, MusiniqueOutroCardDemo, musiniqueOutroCardDemoSchema, musiniqueOutroCardDemoDefaultProps} from './scenes/MusiniqueOutroCard';
 import {ClaudeVerdictArtifact, claudeVerdictArtifactSchema} from './scenes/ClaudeVerdictArtifact';
 import {ClaudeVerdictArtifact916, claudeVerdictArtifact916Schema} from './scenes/ClaudeVerdictArtifact916';
 import {ClaudeTitleOutro, claudeTitleOutroSchema} from './scenes/ClaudeTitleOutro';
@@ -1137,6 +1154,138 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
+        id="SeisSpotlightOpen"
+        component={SeisSpotlightOpen}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisSpotlightOpenSchema}
+        defaultProps={{eyebrow: 'Student spotlight', name: 'Ashlesha Donde', program: 'MS in Information Systems', term: 'Spring 2027', unit: 'Software Engineering and Information Systems', school: 'Northeastern University · College of Engineering', photo: '', photoCredit: '', logo: 'northeastern/official/notched-n-wordmark-red-black.svg'}}
+      />
+      <Composition
+        id="SeisCard"
+        component={SeisCard}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisCardSchema}
+        defaultProps={{label: 'Ashlesha Donde', lines: ['Technology is most powerful', 'when it is applied with purpose.'], emphasis: -1}}
+      />
+      <Composition
+        id="SeisProfileCredit"
+        component={SeisProfileCredit}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisProfileCreditSchema}
+        defaultProps={{name: 'Ashlesha Donde', role: 'MS in Information Systems · Spring 2027', links: [], storyUrl: 'https://coe.northeastern.edu/news/from-analytics-to-application-ashlesha-dondes-path-in-information-systems/', storyDate: 'April 21, 2026', storyAuthor: ''}}
+      />
+      <Composition
+        id="SeisOutro"
+        component={SeisOutro}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisOutroSchema}
+        defaultProps={{unit: 'Software Engineering and Information Systems', school: 'Northeastern University · College of Engineering', series: 'SEIS student spotlights', handle: '@nu_seis', url: '', logo: 'northeastern/official/notched-n-wordmark-red-black.svg'}}
+      />
+      <Composition
+        id="SeisTribute"
+        component={SeisTribute}
+        durationInFrames={3816}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisTributeSchema}
+        defaultProps={{title: 'For the Unconquerable Souls', dedication: 'for the international students of SEIS', credit: 'adapted from Invictus — William Ernest Henley (1875) · music by Nik Bear Brown', unit: 'Software Engineering and Information Systems · Northeastern University', titleFrames: 150, wallStart: 3335}}
+      />
+      <Composition
+        id="SeisShowcase"
+        component={SeisShowcase}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisShowcaseSchema}
+        defaultProps={{eyebrow: 'SEIS · student work', name: 'Naimisha Kaza', project: 'FitPath', line: 'AI health platform — AR coaching, meal scanning, telehealth', index: '1 / 9', photo: ''}}
+      />
+      <Composition
+        id="SeisWall"
+        component={SeisWall}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisWallSchema}
+        defaultProps={{lines: ['about 250 films', '36 fellows', 'four in five came through SEIS'], emphasis: 2, cols: 14}}
+      />
+      <Composition
+        id="SeisStoriesRoll"
+        component={SeisStoriesRoll}
+        durationInFrames={12421}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisStoriesRollSchema}
+        defaultProps={{title: 'Student Spotlights', subtitle: '112 stories · Software Engineering and Information Systems'}}
+      />
+      <Composition
+        id="SeisReadAlong"
+        component={SeisReadAlong}
+        durationInFrames={8610}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisReadAlongSchema}
+        defaultProps={{}}
+      />
+      <Composition
+        id="SeisSongReadAlong"
+        component={SeisSongReadAlong}
+        durationInFrames={8610}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisSongReadAlongSchema}
+        defaultProps={{}}
+      />
+      <Composition
+        id="SeisQA"
+        component={SeisQA}
+        durationInFrames={390}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisQASchema}
+        defaultProps={{question: 'What did the program change for you?', questionAudio: '', questionFrames: 90, clip: '', clipFrames: 300, name: 'Alum Name', program: 'MS Information Systems · SEIS', gradYear: '', title: '', company: '', captions: [], logo: 'seis/seis-button-logo.jpg', lockup: 'seis/seis-logo.png'}}
+        calculateMetadata={({props}) => ({durationInFrames: props.questionFrames + props.clipFrames})}
+      />
+      <Composition
+        id="SeisFilm"
+        component={SeisFilm}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisFilmSchema}
+        defaultProps={{items: [], music: '', musicGain: 0.12}}
+        calculateMetadata={({props}) => ({durationInFrames: Math.max(30, props.items.reduce((a, it) => a + it.frames, 0))})}
+      />
+      <Composition
+        id="SeisLogoTechnique"
+        component={SeisLogoTechnique}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisLogoTechniqueSchema}
+        defaultProps={{technique: 'spring-entrance', logo: 'seis/seis-logo.png', label: 'Spring Entrance', index: '1 / 17', markWidth: 0.46, square: false}}
+      />
+      <Composition
         id="MedhavyOpen"
         component={MedhavyOpen}
         durationInFrames={300}
@@ -1444,6 +1593,51 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames={450} fps={30} width={1920} height={1080}
         schema={musiniqueArsenalSchema}
         defaultProps={{ sparkLine: 'This season is an arsenal.' }} />
+      {/* ── musinique-bookend skill — silent 4K-matched intro/outro cards for a
+           finished standalone film. width/height/fps come from calculateMetadata
+           so musinique_bookend.py can hand each render the source's exact
+           ffprobe'd canvas; base durationInFrames/fps/width/height below are the
+           Studio preview defaults only. ── */}
+      <Composition id="MusiniqueIntroCard" component={MusiniqueIntroCard}
+        durationInFrames={75} fps={30} width={1920} height={1080}
+        schema={musiniqueIntroCardSchema}
+        defaultProps={musiniqueIntroCardDefaultProps}
+        calculateMetadata={({props}) => ({
+          durationInFrames: Math.max(1, Math.round(props.durationS * props.fps)),
+          width: props.width,
+          height: props.height,
+          fps: props.fps,
+        })} />
+      <Composition id="MusiniqueIntroCardDemo" component={MusiniqueIntroCardDemo}
+        durationInFrames={75} fps={30} width={1920} height={1080}
+        schema={musiniqueIntroCardDemoSchema}
+        defaultProps={musiniqueIntroCardDemoDefaultProps}
+        calculateMetadata={({props}) => ({
+          durationInFrames: Math.max(1, Math.round(props.durationS * props.fps)),
+          width: props.width,
+          height: props.height,
+          fps: props.fps,
+        })} />
+      <Composition id="MusiniqueOutroCard" component={MusiniqueOutroCard}
+        durationInFrames={75} fps={30} width={1920} height={1080}
+        schema={musiniqueOutroCardSchema}
+        defaultProps={musiniqueOutroCardDefaultProps}
+        calculateMetadata={({props}) => ({
+          durationInFrames: Math.max(1, Math.round(props.durationS * props.fps)),
+          width: props.width,
+          height: props.height,
+          fps: props.fps,
+        })} />
+      <Composition id="MusiniqueOutroCardDemo" component={MusiniqueOutroCardDemo}
+        durationInFrames={90} fps={30} width={1920} height={1080}
+        schema={musiniqueOutroCardDemoSchema}
+        defaultProps={musiniqueOutroCardDemoDefaultProps}
+        calculateMetadata={({props}) => ({
+          durationInFrames: Math.max(1, Math.round(props.durationS * props.fps)),
+          width: props.width,
+          height: props.height,
+          fps: props.fps,
+        })} />
       <Composition id="ClaudeVerdictArtifact" component={ClaudeVerdictArtifact}
         durationInFrames={1020} fps={30} width={1920} height={1080}
         calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 34) * 30)})}
@@ -3870,6 +4064,14 @@ export const RemotionRoot: React.FC = () => {
         <Composition id="GodotDesignBoard916" component={GodotDesignBoard}
           schema={godotDesignBoardSchema} width={1080} height={1920} fps={30} durationInFrames={600}
           defaultProps={godotDesignBoardSchema.parse({title:'Design to evidence',section:'GDD',excerpt:'Supply an exact document excerpt.',source:'Source required',status:'PROPOSED',visualLabel:'Design explanation',cards:[{label:'Intent',text:'Supply the actual design requirement.'}]})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
+        <Composition id="GodotDesignFigure" component={GodotDesignFigure}
+          schema={godotDesignFigureSchema} width={1920} height={1080} fps={30} durationInFrames={600}
+          defaultProps={godotDesignFigureSchema.parse({title:'Design figure',status:'PROPOSED',image:'',source:'Source required',cards:[{label:'Intent',text:'Supply the design requirement.'}]})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
+        <Composition id="GodotDesignFigure916" component={GodotDesignFigure}
+          schema={godotDesignFigureSchema} width={1080} height={1920} fps={30} durationInFrames={600}
+          defaultProps={godotDesignFigureSchema.parse({title:'Design figure',status:'PROPOSED',image:'',source:'Source required',cards:[{label:'Intent',text:'Supply the design requirement.'}]})}
           calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
         <Composition id="GodotDevWorkbench" component={GodotDevWorkbench}
           durationInFrames={450} fps={30} width={1920} height={1080}
