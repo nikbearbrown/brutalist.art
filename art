@@ -73,6 +73,7 @@ case "$cmd" in
     printf '%-22s %s\n' "medhavy-walkthrough" "builder — real Medhavy Hub browser capture + Liam riffs; optional textbook bookends"
     printf '%-22s %s\n' "riff"           "utility — render/inspect, then critique what visibly happens"
     printf '%-22s %s\n' "deep-explainer" "builder — 5-10 min documentary episode (vox pantry beats)"
+    printf '%-22s %s\n' "show-tell"      "builder — one drawn isometric image per beat (Claude palette), minimal labels, Liam's voice explains; pure Manim, spoken outro"
     printf '%-22s %s\n' "anthropics"     "builder — reads Anthropic artifacts against their own claims; practitioner-report register"
     printf '%-22s %s\n' "fashionista"    "builder — AI fashion-call experiment; sports-announcer call + correction ask; Kokoro am_onyx"
     printf '%-22s %s\n' "fellows"        "builder — wraps a HAI fellow's video report in Claude bookends for @HumanitariansAI"
