@@ -38,7 +38,8 @@ brutalist.art is a Brutalist video toolkit for Humanitarians AI fellows and coll
 |---|---|
 | `deep-explainer` | Multi-layered concept depth passes on the ai-explainer chassis (5–10 min, act-structured; vox stills only where the still IS the evidence) |
 | `cli-explainer` | Claude session + live code + output as a moving vox beat |
-| `show-tell` | Very simple, direct explainers: every beat is ONE drawn isometric illustration in the Claude palette (shared `templates/iso_kit.py`), a few words of label at most, and Liam (Kokoro `am_onyx`) explains in the voiceover. Opens hesitant writer → key terms, drawn Manim body, Your Turn in the Claude.ai composer, spoken @NikBearBrown outro; no verdict card |
+| `tldr` | The point first, then earned: TL;DR cold open → THE QUESTION (hesitant writer) → TERMS → one or more LEARN sections on the 3Blue1Brown template (pure Manim, transform-don't-cut) → your-turn close. A chapter or report is first cut into learning sections (GATE S), one film per section |
+| `show-tell` | Very simple, direct explainers: every beat is ONE drawn isometric illustration in the Claude palette (shared `templates/iso_kit.py`) or, only where it passes the card test, one of 16 stop-motion `ShowTellCard` kinds; no length cap, a few words of label at most, and Liam (Kokoro `am_onyx`) explains in the voiceover. Opens hesitant writer → key terms, drawn Manim body, Your Turn in the Claude.ai composer, spoken @NikBearBrown outro; no verdict card |
 | `nbb` | NikBearBrown/Teardown register — Kokoro am_onyx voice (free, local) |
 
 ---

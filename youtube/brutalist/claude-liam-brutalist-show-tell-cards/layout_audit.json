@@ -1,0 +1,12 @@
+{
+  "scene": "scenes",
+  "snapshots": 9,
+  "errors": 0,
+  "warnings": 0,
+  "safe_area": [
+    6.3,
+    3.4
+  ],
+  "min_overlap": 0.12,
+  "findings": []
+}

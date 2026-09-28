@@ -72,3 +72,73 @@ Five skills exist ONLY here and are real work: `anthropics`, `finance`, `guests`
   `REMOTION-STANDARDS.md` (component-authoring contract — this cut's rule 8
   already assumes it), `SHOT-FORM-SYSTEM.md`, `SHOTS.md`, `GLOSSARY.md`,
   `VOICE-LOCK.md`, `BRAND-LOCKS.md`, `TEMPLATE-MISSES.md`, `CAPABILITIES.md`.
+
+## Batch — 2026-09-22 · the `tldr` skill and its TERMS card
+
+**Why:** Bear's new skill (chapter/report → learning sections → per-section film on
+the 3Blue1Brown template). It needed the retired tree's Brown Blue pedagogy and a
+cream-stage definitions card; neither existed here.
+
+| Action | File |
+|---|---|
+| added | `skills/make/tldr/SKILL.md` (+ `reference/pedagogy.md`, `reference/sectioning.md`, `reference/example-tldr-beat_sheet.json`) |
+| ported (rewritten) | `brutalist-art/skills/make/math-explainer/reference/pedagogy.md` → `skills/make/tldr/reference/pedagogy.md` — the 3b1b gates, extended with the seven-stage template, the scene-level unit, the three learning checks |
+| added | `runtime/remotion/src/scenes/ClaudeDefinitions.tsx` (+ Root.tsx import/composition) — the Claude-register port of the sandbox's `CCDefinitions` (dark CC shell, NOT ported: the CC kit and `tokens/claudecode.ts` are absent here, so `cc-explainer` in this tree still references a card it cannot render) |
+| updated | `art` (`--list` row), `CLAUDE.md` (ADVANCED table), `skills/TIERS.md` |
+
+**NOT ported:** the CC kit (`CCSession`, `CCShell`, `CCDefinitions`, …) and the
+math-explainer scripts (`silent_run.py`, `burn_captions.py`, …) — tldr runs on the
+shared `run.sh` / `compile.py` belt like every other builder here.
+
+
+## Fix — 2026-09-22 · hesitant writer phrase triggers; ClaudeDefinitions GATE T sizes
+
+| Action | File |
+|---|---|
+| fixed | `runtime/remotion/src/scenes/BrutalistHesitantWriter.tsx` — multi-word `triggerWords` ("can do", "why not just") now merge into one token and replace as a phrase; previously only single words matched, so every phrase trigger silently never fired (ai-explainer doctrine tells authors to use phrases). Single-word sheets render identically. |
+| updated | `runtime/remotion/src/scenes/ClaudeDefinitions.tsx` — meaning 48, title 54 @ 0.06em, chip 32: GATE T measures lowercase runs at x-height and tracked titles as single glyphs; 40/36/24 failed the 41px floor at 4K. |
+
+## Added — 2026-09-22 · the two TL;DR cards (tldr cold open)
+
+Bear: "TLDR intro beat needs a NEW template, not the Claude.ai interface" → then "TLDR needs two beats: 1. what is this film about? 2. why should you care?"
+
+| Action | File |
+|---|---|
+| added | `runtime/remotion/src/scenes/ClaudeTldrWhat.tsx` — TL;DR page, card one: wordmark "TL;DR." (terracotta period), greeting + course line, heading "What This Film Is About", the question writes on word by word, numbered lines land on `cues` (seconds), active numeral terracotta |
+| added | `runtime/remotion/src/scenes/ClaudeTldrWhy.tsx` — card two: same header (page turn), heading "Why You Should Care", the stake writes on, dashed consequence lines land on cues |
+| updated | `Root.tsx` (two compositions, `durationSeconds` → calculateMetadata), `runtime/scripts/bookend_check.py` (`metadata.skill == "tldr"` accepts `ClaudeTldrWhat` as the cold open), `scenes.json` via `./art scene-index` |
+| GATE T sizes | heading 50 · course line 50 · greeting 52 · question 64 · lines 48 · numerals 60 · chip 32 — every lowercase run is measured at x-height at 4K (41px floor); headings in INK, never terracotta (2.74:1 on cream) |
+
+## Ported — 2026-09-26 · the Claude Code (CC) scene kit
+
+Bear approved porting the CC Remotion kit from `brutalist-art/` (the retired sandbox) into this toolkit, so `skills/make/cc-explainer` has the components it names.
+
+| Action | File |
+|---|---|
+| added | `runtime/remotion/src/scenes/CC*.tsx` (16): CCBoondoggleScore, CCDefinitions, CCDiff, CCHarnessMap, CCHumanLedger, CCPlainShell, CCPlanCard, CCPromptBar, CCSession, CCShell, CCSkepticAudit, CCStatusVerb, CCThemePicker, CCToolCall, CCWalkthroughDemo, CCWebHome |
+| added | `runtime/remotion/src/scenes/CC-TEMPLATES.md`, `runtime/remotion/src/tokens/claudecode.ts` |
+| added | `runtime/remotion/src/scenes/CursorLayer.tsx`: the anchor registry that CCShell, CCSession and others import. It was missing here |
+| reused | `ClaudeMascotScene.tsx` (same as the sandbox copy), `GitHubCodeDiff.tsx` (only the default `caption` differs; `diffLineSchema` is the same) |
+| updated | `Root.tsx`: the `CursorLayer` composition, plus a `<Folder name="CC">` with all 31 CC compositions (16 components + 15 Demos). Ids, durations, schemas and defaultProps match the sandbox Root.tsx. `scenes.json` was rebuilt with `./art scene-index` |
+
+## Added — 2026-09-27 · show-tell CARD family (`ShowTellCard`)
+
+Bear, with a reference sheet of sixteen interface motion studies: "For the show-tell skill keep all typography and colors but add more stop motion cards beyond just the isometric graphics ... the skill should never force but more choices can add".
+
+| Action | File |
+|---|---|
+| added | `runtime/remotion/src/scenes/ShowTellCard.tsx` — one composition, 16 `kind`s: player, search, workspace, tabs, chart, dashboard, stack, dock, masked, elastic, layout, reveal, perspective, focus, paths, particles. Claude palette + iso_kit kraft, EB Garamond / UI sans / mono, shot on twos (`onTwos`, default true), solid kraft offset shadows, no blur or gradients. Motion done by ~70% of `durationSeconds`; type settled by 45% (GATE T samples the midpoint) |
+| updated | `Root.tsx` (composition `ShowTellCard`, calculateMetadata from `durationSeconds`), `scenes.json` via `./art scene-index` |
+| updated | `skills/make/show-tell/SKILL.md` — new **Card family — optional** section (menu, not a quota; kind → when-to-use table; props; card laws; beat-sheet shape `lane: "card"`, `shot.remotion.pattern: "ShowTellCard"`); law 1 and the BODY rule now allow a card per beat |
+| film | `youtube/brutalist/claude-liam-brutalist-show-tell-cards/` — "Show-Tell: Drawings and Cards", three drawn beats + eight card kinds |
+
+## Updated — 2026-09-27 · show-tell: no length cap + the card test
+
+Bear: "there's no hard cap on the show tell length it's as long as it should be but it should just be to the point no bullshit ... use these new cards only if they actually make sense no using a card just for using a card".
+
+| Action | File |
+|---|---|
+| removed | length caps: frontmatter "Short, 60–180 s", Spine "6–10 drawn beats of 5–12 s", batch brief "6–9 beats / Target 100–160 s" (`anthropics/youtube/SHOW-TELL-BATCH.md`) |
+| added | SKILL.md law 9 AS LONG AS IT NEEDS, NO LONGER; a **Length** paragraph (the content sets the length; split beats past ~15 s; cut repeats and padding) |
+| added | SKILL.md **THE CARD TEST** (three questions, any "no" means a drawing; real numbers only; a "why a card" column in SHOTLIST.md; re-check if more than a third of the body is cards); law 1 and the Card laws rewritten to match; the "all cards" option removed |
+| updated | `art --list` line, `CLAUDE.md`, and books/CLAUDE.md show-tell rows |

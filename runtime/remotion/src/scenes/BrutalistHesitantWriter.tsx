@@ -118,7 +118,43 @@ function buildActs(p: BrutalistHesitantWriterProps): Act[] {
   const roll = () => random(`${p.seed}-roll-${n++}`);
   const pick = (lo: number, hi: number) => lo + random(`${p.seed}-span-${n++}`) * (hi - lo);
 
-  const tokens = p.text.split(/(\s+)/);
+  const rawTokens = p.text.split(/(\s+)/);
+
+  // PHRASE TRIGGERS (2026-09-22): a trigger may be several words ("can do",
+  // "why not just"). Consecutive tokens whose cores spell a phrase trigger are
+  // merged into ONE token so the whole phrase is typed, reconsidered and
+  // replaced. Single-word sheets tokenize exactly as before.
+  const phraseTriggers = triggers.map((t) => t.split(/\s+/)).filter((w) => w.length > 1);
+  const tokens: string[] = [];
+  for (let i = 0; i < rawTokens.length; i++) {
+    const tok = rawTokens[i];
+    let merged = false;
+    if (tok.trim() !== '' && phraseTriggers.length) {
+      for (const words of phraseTriggers) {
+        const span = words.length * 2 - 1;
+        if (i + span > rawTokens.length) continue;
+        let ok = true;
+        for (let k = 0; k < words.length; k++) {
+          const cand = rawTokens[i + 2 * k];
+          if (cand === undefined || cand.trim() === '') { ok = false; break; }
+          const core = k === 0 ? splitToken(cand)[1] + splitToken(cand)[2]
+                     : k === words.length - 1 ? splitToken(cand)[0] + splitToken(cand)[1]
+                     : cand;
+          const want = words[k];
+          const bare = k === 0 ? splitToken(cand)[1] : k === words.length - 1 ? splitToken(cand)[1] : cand;
+          if (bare.toLowerCase() !== want && core.toLowerCase() !== want) { ok = false; break; }
+          if (k > 0 && k < words.length - 1 && splitToken(cand)[1].toLowerCase() !== want) { ok = false; break; }
+        }
+        if (ok) {
+          tokens.push(rawTokens.slice(i, i + span).join(''));
+          i += span - 1;
+          merged = true;
+          break;
+        }
+      }
+    }
+    if (!merged) tokens.push(tok);
+  }
 
   for (const token of tokens) {
     if (token.trim() === '') {
@@ -130,7 +166,7 @@ function buildActs(p: BrutalistHesitantWriterProps): Act[] {
     }
 
     const [lead, core, tail] = splitToken(token);
-    const ti = triggers.indexOf(core.toLowerCase());
+    const ti = triggers.indexOf(core.toLowerCase().replace(/\s+/g, ' '));
 
     if (ti !== -1 && replacements[ti]) {
       // Type the core, stop, delete ONLY the core, type the replacement,

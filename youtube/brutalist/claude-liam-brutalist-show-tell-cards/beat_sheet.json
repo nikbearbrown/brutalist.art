@@ -1,0 +1,848 @@
+{
+  "metadata": {
+    "slug": "claude-liam-brutalist-show-tell-cards",
+    "title": "Show-Tell: Drawings and Cards",
+    "topic": "BRUTALIST · SHOW-TELL",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "Māori (Kia ora)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "show-tell style (Bear, 2026-09-26): opens on the hesitant writer + terms card, no verdict card; Your Turn is the Claude.ai composer; spoken outro stays.",
+    "audience": "fellows and collaborators making explainer films with the brutalist.art toolkit",
+    "source_doc": "brutalist.art/skills/make/show-tell/SKILL.md (Card family, 2026-09-27); runtime/remotion/src/scenes/ShowTellCard.tsx; Bear's reference sheet of 16 interface motion studies (2026-09-27)",
+    "playlist": "Claude & Agentic AI",
+    "chapter_number": 0,
+    "tags": [
+      "show-tell",
+      "motion graphics",
+      "stop motion",
+      "Remotion",
+      "Manim",
+      "explainer video",
+      "Claude",
+      "brutalist.art",
+      "Nik Bear Brown"
+    ],
+    "build": {
+      "at": "2026-09-27T14:04:57",
+      "cut": "master",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Kia ora. This is Liam, in for Bear. Show-tell used to draw every picture. So the question isn't whether every picture has to be a drawing. It's whether each picture earns its motion.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'Does every picture'"
+          },
+          {
+            "at": 0.55,
+            "event": "'have to be a drawing' → 'earn its motion'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Does every picture\nhave to be a drawing?",
+            "triggerWords": "have to be a drawing",
+            "replacementWords": "earn its motion",
+            "fontSize": 70,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "claude-liam-brutalist-show-tell-cards",
+            "banner": "",
+            "durationSeconds": 10.411
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer types the naive question and corrects it to the real one: does the picture earn its motion.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 10.411,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 10.416666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "terms",
+      "lane": "bookend",
+      "proof_gate": "CARD",
+      "narration_text": "Four terms. Show-tell: one picture per beat, and the voice explains. A beat: a sentence or two of narration, and the picture under it. A card: an interface picture, like a player, a chart or a search. And on twos: each drawing held for two frames, the way stop motion is shot.",
+      "estimated_duration_s": 20.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.12,
+            "event": "'show-tell'"
+          },
+          {
+            "at": 0.35,
+            "event": "'beat'"
+          },
+          {
+            "at": 0.55,
+            "event": "'card'"
+          },
+          {
+            "at": 0.75,
+            "event": "'on twos'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "show-tell",
+                "meaning": "one picture per beat; the voice explains"
+              },
+              {
+                "term": "beat",
+                "meaning": "a sentence or two of narration, and the picture under it"
+              },
+              {
+                "term": "card",
+                "meaning": "an interface picture: a player, a chart, a search"
+              },
+              {
+                "term": "on twos",
+                "meaning": "each drawing held for two frames, as stop motion is shot"
+              }
+            ],
+            "folderLabel": "@NikBearBrown",
+            "durationSeconds": 14.784
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "TERMS card: four prerequisites, one line each."
+      },
+      "actual_duration_s": 14.784,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 14.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Show-tell has one rule. Every beat gets one picture, and the voice does the explaining. The picture shows. The voice tells.",
+      "estimated_duration_s": 8.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A sealed kraft box drops onto the stage; beside it a row of voice bars grows and pulses; 'show' under the box, 'tell' under the bars.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "box drops"
+          },
+          {
+            "at": 0.4,
+            "event": "voice bars grow"
+          },
+          {
+            "at": 0.75,
+            "event": "labels"
+          }
+        ],
+        "manim": {
+          "class": "B00_ShowTell"
+        },
+        "motion_claim": "A sealed kraft box drops onto the stage; beside it a row of voice bars grows and pulses; 'show' under the box, 'tell' under the bars."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style (Bear, 2026-09-26): one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.125,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 7.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Until now, every picture came from one kit of isometric drawings. Cardboard boxes, dark blocks, flat pages, all in Claude's colours.",
+      "estimated_duration_s": 8.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The box opens; two dark blocks rise out to the left and two flat pages to the right, each group labelled once.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "lid lifts"
+          },
+          {
+            "at": 0.4,
+            "event": "blocks rise"
+          },
+          {
+            "at": 0.65,
+            "event": "pages rise"
+          }
+        ],
+        "manim": {
+          "class": "B01_Kit"
+        },
+        "motion_claim": "The box opens; two dark blocks rise out to the left and two flat pages to the right, each group labelled once."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style (Bear, 2026-09-26): one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.512,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 8.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "Now there's a second choice: sixteen stop-motion cards. Same fonts, same colours, and every card is shot on twos, so each drawing holds for two frames, like paper under a camera.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "dashboard card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "dashboard",
+            "heading": "Card kinds",
+            "word": "16",
+            "sub": "opt-in",
+            "durationSeconds": 10.496
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-27T17:34:03.984590+00:00"
+          }
+        }
+      },
+      "motion_claim": "The camera zooms onto one metric and it counts up from 0 to 16.",
+      "actual_duration_s": 10.496,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 10.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ShowTellCard",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "Each card is an interface you already know, moving the way it moves on screen. A player. Search. Tabs. A chart. A stack. A dock. Flowing paths. And more.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "dock card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "dock",
+            "items": [
+              {
+                "label": "Player"
+              },
+              {
+                "label": "Search"
+              },
+              {
+                "label": "Tabs"
+              },
+              {
+                "label": "Chart"
+              },
+              {
+                "label": "Stack"
+              },
+              {
+                "label": "Dock"
+              },
+              {
+                "label": "Paths"
+              }
+            ],
+            "focus": 6,
+            "durationSeconds": 9.173
+          }
+        }
+      },
+      "motion_claim": "A cursor sweeps a dock of seven card kinds; each icon swells and names itself as it passes.",
+      "actual_duration_s": 9.173,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 9.208333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "The drawings stay the default. A card is optional. You choose, beat by beat, and a film can be all drawings, all cards, or a mix.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "stack card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "stack",
+            "items": [
+              {
+                "label": "Per beat",
+                "value": "you pick"
+              },
+              {
+                "label": "Card",
+                "value": "optional"
+              },
+              {
+                "label": "Drawing",
+                "value": "default"
+              }
+            ],
+            "durationSeconds": 7.723
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-27T17:31:15.686983+00:00"
+          }
+        }
+      },
+      "motion_claim": "Three choice cards spring in, fan out, settle, and the top one, 'Per beat', is ticked.",
+      "actual_duration_s": 7.723,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 7.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ShowTellCard",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "Pick a card when the idea is an interface. A search card types the query, then drops the results in one at a time, so the voice can say 'you ask, it returns' while it happens.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "search card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "search",
+            "heading": "show-tell cards",
+            "items": [
+              {
+                "label": "Search card",
+                "sub": "a query, then results"
+              },
+              {
+                "label": "Chart card",
+                "sub": "bars become a line"
+              },
+              {
+                "label": "Dock card",
+                "sub": "tools swell on hover"
+              }
+            ],
+            "durationSeconds": 9.813
+          }
+        }
+      },
+      "motion_claim": "The query types letter by letter; three results drop in one at a time; the first is picked.",
+      "actual_duration_s": 9.813,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 9.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "Pick one when the idea is a set of numbers. These are the beat lengths of the first show-tell film, in seconds. The bars grow, then melt into a line: the same numbers, a different shape.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "chart card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "chart",
+            "heading": "Beat lengths, first film",
+            "sub": "seconds",
+            "values": [
+              4.8,
+              11.9,
+              8.8,
+              8.1,
+              11.2,
+              8.7,
+              8.3,
+              10.5
+            ],
+            "labels": [
+              "B00",
+              "B01",
+              "B02",
+              "B03",
+              "B04",
+              "B05",
+              "B06",
+              "B07"
+            ],
+            "durationSeconds": 10.261
+          }
+        }
+      },
+      "motion_claim": "Eight bars grow to the measured beat lengths, then melt into a line whose last point is tagged.",
+      "actual_duration_s": 10.261,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 10.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "Or when the idea is a single word. The word fills from below, inside its own outline, while the voice says what it means.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "masked card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "masked",
+            "word": "SHOW",
+            "sub": "the voice tells",
+            "durationSeconds": 6.976
+          }
+        }
+      },
+      "motion_claim": "An outlined word fills with ink from the bottom up; a line under it rises with the fill.",
+      "actual_duration_s": 6.976,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 7.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "Under the hood, nothing new. The beat sheet drives the audio, the Manim drawings and the cards, and all three meet in one master.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "paths card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "paths",
+            "items": [
+              {
+                "label": "Sheet"
+              },
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "Master"
+              },
+              {
+                "label": "Manim"
+              },
+              {
+                "label": "Cards"
+              }
+            ],
+            "focus": 2,
+            "durationSeconds": 7.381
+          }
+        }
+      },
+      "motion_claim": "Edges draw from the sheet through audio, Manim and cards into the master; dots flow along them.",
+      "actual_duration_s": 7.381,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 7.416666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "card",
+      "proof_gate": "SHOW",
+      "narration_text": "And the laws still hold. Labels stay at one to three words. Terracotta is an accent, never text. Type stays at forty-eight pixels or more. Every card moves on twos, with a flat paper shadow and no blur.",
+      "estimated_duration_s": 15.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "focus card, shot on twos"
+          }
+        ],
+        "remotion": {
+          "pattern": "ShowTellCard",
+          "props": {
+            "kind": "focus",
+            "heading": "Card laws",
+            "focus": 3,
+            "items": [
+              {
+                "label": "Labels",
+                "value": "1–3 words"
+              },
+              {
+                "label": "Accent",
+                "value": "never text"
+              },
+              {
+                "label": "Type",
+                "value": "≥ 48 px"
+              },
+              {
+                "label": "Frames",
+                "value": "on twos"
+              },
+              {
+                "label": "Shadows",
+                "value": "no blur"
+              }
+            ],
+            "durationSeconds": 11.797
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-27T17:34:29.118767+00:00"
+          }
+        }
+      },
+      "motion_claim": "A lens slides down the table row by row as each law is spoken, stopping on 'Frames'.",
+      "actual_duration_s": 11.797,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 11.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ShowTellCard",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So mix them. Keep at least two drawn beats. Never put two cards of the same kind back to back. And choose a card only when its motion is the point.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A film strip draws across the stage; a kraft box drops into one frame and a flat card drops into the next; a check appears.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "strip draws"
+          },
+          {
+            "at": 0.4,
+            "event": "box drops in"
+          },
+          {
+            "at": 0.6,
+            "event": "card drops in"
+          },
+          {
+            "at": 0.85,
+            "event": "check"
+          }
+        ],
+        "manim": {
+          "class": "B10_Mix"
+        },
+        "motion_claim": "A film strip draws across the stage; a kraft box drops into one frame and a flat card drops into the next; a check appears."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style (Bear, 2026-09-26): one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.469,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 8.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude: I'm making a 90-second explainer about [your topic]. Plan it as a show-tell film: one picture per beat, six to ten beats. For each beat, write the one or two sentences the voice says, then choose the picture: an isometric drawing, or one card, but only if the idea is an interface, a set of numbers, or a single word. Say in one line how the picture's motion carries that beat's claim. Then check two things yourself. Does each picture move with the sentence it sits under? And is any beat just a slide of words? If it is, draw it again.",
+      "estimated_duration_s": 43.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer opens — 'Your turn.'"
+          },
+          {
+            "at": 0.1,
+            "event": "the prompt types in full"
+          },
+          {
+            "at": 0.8,
+            "event": "two check lines land"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CLAUDE · YOUR TURN",
+            "segment": "Plan A Show-Tell Film",
+            "command": "I'm making a 90-second explainer about [your topic]. Plan it as a show-tell film: one picture per beat, six to ten beats. For each beat, write the one or two sentences the voice says, then choose the picture: an isometric drawing, or one card, but only if the idea is an interface, a set of numbers, or a single word. Say in one line how the picture's motion carries that beat's claim.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: each picture moves with its sentence.",
+              "Check: no beat is a slide of words."
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Opus 5.5",
+            "effortLabel": "High"
+          }
+        }
+      },
+      "actual_duration_s": 28.928,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "render_duration_s": 28.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Show-Tell: Drawings and Cards. At Nik Bear Brown.",
+      "estimated_duration_s": 4.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; handle; mascot"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Show-Tell: Drawings and Cards",
+            "slug": "claude-liam-brutalist-show-tell-cards",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 4.563,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 4.583333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-09-27T14:04:57"
+      }
+    }
+  ]
+}

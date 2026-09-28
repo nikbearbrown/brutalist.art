@@ -726,6 +726,11 @@ import {FinanceStackedBar,  financeStackedBarSchema}  from './scenes/FinanceStac
 import {FinanceDotPlot,     financeDotPlotSchema}     from './scenes/FinanceDotPlot';
 // ── claude-liam-hesitant — Beat 2 executive summary, typed and corrected ──
 import {BrutalistHesitantWriter, brutalistHesitantWriterSchema, brutalistHesitantWriterDemoDefaultProps} from './scenes/BrutalistHesitantWriter';
+// ── tldr — the TERMS beat on the cream stage (Claude-register port of CCDefinitions) ──
+import {ClaudeDefinitions, claudeDefinitionsSchema, claudeDefinitionsDefaultProps} from './scenes/ClaudeDefinitions';
+import {ClaudeTldrWhat, claudeTldrWhatSchema, claudeTldrWhatDefaultProps} from './scenes/ClaudeTldrWhat';
+import {ClaudeTldrWhy, claudeTldrWhySchema, claudeTldrWhyDefaultProps} from './scenes/ClaudeTldrWhy';
+import {ShowTellCard, showTellCardSchema, showTellCardDefaultProps} from './scenes/ShowTellCard';
 // ── fashionista modifier — photo-critique beat components ──
 import {LookPlate,      lookPlateSchema}      from './scenes/LookPlate';
 import {LookPlate916,   lookPlate916Schema}   from './scenes/LookPlate916';
@@ -737,6 +742,24 @@ import {GitHubCodeDiff,    gitHubCodeDiffSchema}    from './scenes/GitHubCodeDif
 import {GitHubCallChain,   gitHubCallChainSchema}   from './scenes/GitHubCallChain';
 import {GitHubChurn,       gitHubChurnSchema}       from './scenes/GitHubChurn';
 import {BadgeReveal}                               from './scenes/BadgeReveal';
+// ── Claude Code (CC) terminal session kit (ported from brutalist-art 2026-09-26) ──
+import {CursorLayer, cursorLayerSchema} from './scenes/CursorLayer';
+import {CCShell, ccShellSchema, ccShellDemoSchema, CCShellDemo, ccShellDemoDefaultProps} from './scenes/CCShell';
+import {CCPromptBar, ccPromptBarSchema, ccPromptBarDemoSchema, CCPromptBarDemo, ccPromptBarDemoDefaultProps} from './scenes/CCPromptBar';
+import {CCToolCall, ccToolCallSchema, ccToolCallDemoSchema, CCToolCallDemo, ccToolCallDemoDefaultProps} from './scenes/CCToolCall';
+import {CCDiff, ccDiffSchema, ccDiffDemoSchema, CCDiffDemo, ccDiffDemoDefaultProps} from './scenes/CCDiff';
+import {CCStatusVerb, ccStatusVerbSchema, ccStatusVerbDemoSchema, CCStatusVerbDemo, ccStatusVerbDemoDefaultProps} from './scenes/CCStatusVerb';
+import {CCSession, ccSessionSchema, ccSessionDemoSchema, CCSessionDemo, ccSessionDemoDefaultProps} from './scenes/CCSession';
+import {CCPlanCard, ccPlanCardSchema, ccPlanCardDemoSchema, CCPlanCardDemo, ccPlanCardDemoDefaultProps} from './scenes/CCPlanCard';
+import {CCSkepticAudit, ccSkepticAuditSchema, ccSkepticAuditDemoSchema, CCSkepticAuditDemo, ccSkepticAuditDemoDefaultProps} from './scenes/CCSkepticAudit';
+import {CCBoondoggleScore, ccBoondoggleScoreSchema, ccBoondoggleScoreDemoSchema, CCBoondoggleScoreDemo, ccBoondoggleScoreDemoDefaultProps} from './scenes/CCBoondoggleScore';
+import {CCHumanLedger, ccHumanLedgerSchema, ccHumanLedgerDemoSchema, CCHumanLedgerDemo, ccHumanLedgerDemoDefaultProps} from './scenes/CCHumanLedger';
+import {CCHarnessMap, ccHarnessMapSchema, ccHarnessMapDemoSchema, CCHarnessMapDemo, ccHarnessMapDemoDefaultProps} from './scenes/CCHarnessMap';
+import {CCPlainShell, ccPlainShellSchema, ccPlainShellDemoSchema, CCPlainShellDemo, ccPlainShellDemoDefaultProps} from './scenes/CCPlainShell';
+import {CCDefinitions, ccDefinitionsSchema, ccDefinitionsDemoSchema, CCDefinitionsDemo, ccDefinitionsDemoDefaultProps} from './scenes/CCDefinitions';
+import {CCThemePicker, ccThemePickerSchema, ccThemePickerDemoSchema, CCThemePickerDemo, ccThemePickerDemoDefaultProps} from './scenes/CCThemePicker';
+import {CCWebHome, ccWebHomeSchema, ccWebHomeDemoSchema, CCWebHomeDemo, ccWebHomeDemoDefaultProps} from './scenes/CCWebHome';
+import {CCWalkthroughDemo, ccWalkthroughDemoSchema} from './scenes/CCWalkthroughDemo';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -4105,6 +4128,54 @@ export const RemotionRoot: React.FC = () => {
           schema={brutalistHesitantWriterSchema}
           defaultProps={brutalistHesitantWriterDemoDefaultProps}
         />
+        {/* tldr — B00 WHAT: the TL;DR page, card one (not the composer); question writes on, lines land on cues */}
+        <Composition
+          id="ClaudeTldrWhat"
+          component={ClaudeTldrWhat}
+          durationInFrames={780}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 26) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={claudeTldrWhatSchema}
+          defaultProps={claudeTldrWhatDefaultProps}
+        />
+        {/* tldr — B01 WHY: the TL;DR page, card two — the relevance; stake writes on, consequences land on cues */}
+        <Composition
+          id="ClaudeTldrWhy"
+          component={ClaudeTldrWhy}
+          durationInFrames={600}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 20) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={claudeTldrWhySchema}
+          defaultProps={claudeTldrWhyDefaultProps}
+        />
+        {/* show-tell — the CARD family (opt-in beside iso drawings): 16 stop-motion interface cards, one `kind` per beat, shot on twos */}
+        <Composition
+          id="ShowTellCard"
+          component={ShowTellCard}
+          durationInFrames={240}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 8) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={showTellCardSchema}
+          defaultProps={showTellCardDefaultProps}
+        />
+        {/* tldr — TERMS beat: 2–5 jargon rows landing one at a time, cream stage */}
+        <Composition
+          id="ClaudeDefinitions"
+          component={ClaudeDefinitions}
+          durationInFrames={420}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 14) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={claudeDefinitionsSchema}
+          defaultProps={claudeDefinitionsDefaultProps}
+        />
         <Composition
           id="BrutalistHesitantWriter916"
           component={BrutalistHesitantWriter}
@@ -4363,6 +4434,140 @@ export const RemotionRoot: React.FC = () => {
           badgeScale: 0.5,
         }}
       />
+
+      <Composition id="CursorLayer" component={CursorLayer}
+        durationInFrames={150} fps={30} width={1920} height={1080}
+        schema={cursorLayerSchema}
+        defaultProps={cursorLayerSchema.parse({})} />
+
+      {/* ── Claude Code (CC) terminal session kit ── */}
+      <Folder name="CC">
+        <Composition id="CCShell" component={CCShell}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccShellSchema}
+          defaultProps={ccShellSchema.parse({})} />
+        <Composition id="CCShellDemo" component={CCShellDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccShellDemoSchema}
+          defaultProps={ccShellDemoDefaultProps} />
+        <Composition id="CCPromptBar" component={CCPromptBar}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccPromptBarSchema}
+          defaultProps={ccPromptBarSchema.parse({})} />
+        <Composition id="CCPromptBarDemo" component={CCPromptBarDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccPromptBarDemoSchema}
+          defaultProps={ccPromptBarDemoDefaultProps} />
+        <Composition id="CCToolCall" component={CCToolCall}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccToolCallSchema}
+          defaultProps={ccToolCallSchema.parse({})} />
+        <Composition id="CCToolCallDemo" component={CCToolCallDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccToolCallDemoSchema}
+          defaultProps={ccToolCallDemoDefaultProps} />
+        <Composition id="CCDiff" component={CCDiff}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccDiffSchema}
+          defaultProps={ccDiffSchema.parse({})} />
+        <Composition id="CCDiffDemo" component={CCDiffDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccDiffDemoSchema}
+          defaultProps={ccDiffDemoDefaultProps} />
+        <Composition id="CCStatusVerb" component={CCStatusVerb}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccStatusVerbSchema}
+          defaultProps={ccStatusVerbSchema.parse({})} />
+        <Composition id="CCStatusVerbDemo" component={CCStatusVerbDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccStatusVerbDemoSchema}
+          defaultProps={ccStatusVerbDemoDefaultProps} />
+        <Composition id="CCSession" component={CCSession}
+          durationInFrames={600} fps={30} width={1920} height={1080}
+          schema={ccSessionSchema}
+          defaultProps={ccSessionSchema.parse({})} />
+        <Composition id="CCSessionDemo" component={CCSessionDemo}
+          durationInFrames={600} fps={30} width={1920} height={1080}
+          schema={ccSessionDemoSchema}
+          defaultProps={ccSessionDemoDefaultProps} />
+        <Composition id="CCPlanCard" component={CCPlanCard}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccPlanCardSchema}
+          defaultProps={ccPlanCardSchema.parse({})} />
+        <Composition id="CCPlanCardDemo" component={CCPlanCardDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccPlanCardDemoSchema}
+          defaultProps={ccPlanCardDemoDefaultProps} />
+        <Composition id="CCThemePicker" component={CCThemePicker}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccThemePickerSchema}
+          defaultProps={ccThemePickerSchema.parse({})} />
+        <Composition id="CCThemePickerDemo" component={CCThemePickerDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccThemePickerDemoSchema}
+          defaultProps={ccThemePickerDemoDefaultProps} />
+        <Composition id="CCWebHome" component={CCWebHome}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccWebHomeSchema}
+          defaultProps={ccWebHomeSchema.parse({})} />
+        <Composition id="CCWebHomeDemo" component={CCWebHomeDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccWebHomeDemoSchema}
+          defaultProps={ccWebHomeDemoDefaultProps} />
+        <Composition id="CCWalkthroughDemo" component={CCWalkthroughDemo}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccWalkthroughDemoSchema}
+          defaultProps={ccWalkthroughDemoSchema.parse({})} />
+        {/* cc-explainer — the three closing-block beats (SKEPTIC / CONDUCT / HUMAN) */}
+        <Composition id="CCSkepticAudit" component={CCSkepticAudit}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccSkepticAuditSchema}
+          defaultProps={ccSkepticAuditSchema.parse({ moves: [{ name: 'Descartes' }] })} />
+        <Composition id="CCSkepticAuditDemo" component={CCSkepticAuditDemo}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccSkepticAuditDemoSchema}
+          defaultProps={ccSkepticAuditDemoDefaultProps} />
+        <Composition id="CCBoondoggleScore" component={CCBoondoggleScore}
+          durationInFrames={420} fps={30} width={1920} height={1080}
+          schema={ccBoondoggleScoreSchema}
+          defaultProps={ccBoondoggleScoreSchema.parse({ steps: [{ n: 1, labor: 'human' }] })} />
+        <Composition id="CCBoondoggleScoreDemo" component={CCBoondoggleScoreDemo}
+          durationInFrames={420} fps={30} width={1920} height={1080}
+          schema={ccBoondoggleScoreDemoSchema}
+          defaultProps={ccBoondoggleScoreDemoDefaultProps} />
+        <Composition id="CCHumanLedger" component={CCHumanLedger}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccHumanLedgerSchema}
+          defaultProps={ccHumanLedgerSchema.parse({ human: [{ tier: 'MUST' }], ai: [{ tier: 'CAN' }] })} />
+        <Composition id="CCHumanLedgerDemo" component={CCHumanLedgerDemo}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccHumanLedgerDemoSchema}
+          defaultProps={ccHumanLedgerDemoDefaultProps} />
+        <Composition id="CCHarnessMap" component={CCHarnessMap}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccHarnessMapSchema}
+          defaultProps={ccHarnessMapSchema.parse({ rings: [{ label: 'HARNESS' }] })} />
+        <Composition id="CCHarnessMapDemo" component={CCHarnessMapDemo}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccHarnessMapDemoSchema}
+          defaultProps={ccHarnessMapDemoDefaultProps} />
+        <Composition id="CCPlainShell" component={CCPlainShell}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccPlainShellSchema}
+          defaultProps={ccPlainShellSchema.parse({})} />
+        <Composition id="CCPlainShellDemo" component={CCPlainShellDemo}
+          durationInFrames={300} fps={30} width={1920} height={1080}
+          schema={ccPlainShellDemoSchema}
+          defaultProps={ccPlainShellDemoDefaultProps} />
+        <Composition id="CCDefinitions" component={CCDefinitions}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccDefinitionsSchema}
+          defaultProps={ccDefinitionsSchema.parse({ terms: [{ term: 'term' }] })} />
+        <Composition id="CCDefinitionsDemo" component={CCDefinitionsDemo}
+          durationInFrames={360} fps={30} width={1920} height={1080}
+          schema={ccDefinitionsDemoSchema}
+          defaultProps={ccDefinitionsDemoDefaultProps} />
+      </Folder>
     </>
   );
 };

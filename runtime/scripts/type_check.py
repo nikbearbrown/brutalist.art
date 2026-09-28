@@ -104,6 +104,12 @@ STRUCTURAL_TERRACOTTA_PATTERNS = {
     # image content, not display typography — exempt from acc_mask and §8.1 min-size.
     "B01_FigureGrid",
     "B03_Thesis",
+    # tldr-design-intent (prompting-ai): every LEARN scene is led by large REAL Higgsfield
+    # stills of stitched dolls (the film is about that image run). Their pixels trip the
+    # typography checks — burnt-orange fur reads as terracotta accent text, stitch dashes as
+    # sub-floor text runs, dark regions as low-contrast or overlapping labels. Image content,
+    # not designed typography; the captions and labels around them are INK, 32pt+.
+    "B10_SixtySix", "B11_OneLineThirtyAnimals", "B12_TheMangerGrewAFace", "B13_RollAgain", "B14_SortTheLines", "B15_Commit", "B16_ThreeLinesOut", "B17_NameIt", "B18_TwoIntents", "B19_Payoff",
     # Verdict reel: bar-chart and comparison-box Manim scenes. Terracotta is a structural
     # fill (chart bars, box borders) — not typography. Aspect ratio of bars is 13–14×,
     # just below the 15× flat-bar filter, so must be explicitly exempt.
@@ -344,6 +350,17 @@ MANIM_MATH_CANVAS_PATTERNS: set[str] = set()
 # "medium-dark local background" around a "dark text blob" (the card background pixel cluster).
 # These are structural brand marks, not typography — §8.3b is inapplicable.
 DARK_BACKGROUND_MARK_PATTERNS = {
+    # GodotDesignFigure: a full-width figure slot holding a supplied photo, capture, or design
+    # image (character sheets, film frames). Blouse whites, hair, and foliage read as low-contrast
+    # "text blobs" against their local pixels. Image content, not designed typography; the
+    # title, status tag, and cards around it are INK or cream-on-ink and stay checked by §8.3.
+    "GodotDesignFigure", "GodotDesignFigure916",
+    # tldr-design-intent (prompting-ai): every LEARN scene is led by large REAL Higgsfield
+    # stills of stitched dolls (the film is about that image run). Their pixels trip the
+    # typography checks — burnt-orange fur reads as terracotta accent text, stitch dashes as
+    # sub-floor text runs, dark regions as low-contrast or overlapping labels. Image content,
+    # not designed typography; the captions and labels around them are INK, 32pt+.
+    "B10_SixtySix", "B11_OneLineThirtyAnimals", "B12_TheMangerGrewAFace", "B13_RollAgain", "B14_SortTheLines", "B15_Commit", "B16_ThreeLinesOut", "B17_NameIt", "B18_TwoIntents", "B19_Payoff",
     "GuidebookPage",    # B23 (online variant: DARK card with CREAM MonogramMark),
                         # B32 (contact variant: DARK left panel with CREAM SignatureMark)
     "MbgSocialCrops",   # B24 (DARK banner strip with CREAM SignatureMark)
@@ -363,6 +380,12 @@ DARK_BACKGROUND_MARK_PATTERNS = {
 # ~9-11× is below the 15× flat-bar filter → detected as a text blob → false overlap.
 # These are design-correct layouts, not real readability bugs.
 BBOX_OVERLAP_EXEMPT_PATTERNS = {
+    # tldr-design-intent (prompting-ai): every LEARN scene is led by large REAL Higgsfield
+    # stills of stitched dolls (the film is about that image run). Their pixels trip the
+    # typography checks — burnt-orange fur reads as terracotta accent text, stitch dashes as
+    # sub-floor text runs, dark regions as low-contrast or overlapping labels. Image content,
+    # not designed typography; the captions and labels around them are INK, 32pt+.
+    "B10_SixtySix", "B11_OneLineThirtyAnimals", "B12_TheMangerGrewAFace", "B13_RollAgain", "B14_SortTheLines", "B15_Commit", "B16_ThreeLinesOut", "B17_NameIt", "B18_TwoIntents", "B19_Payoff",
     "B03_ClusterTopology",   # AICR tier cards: INK border frame ≠ text run; labels inside by design
     "B02_GPUNodeTable",      # AICR GPU node table: INK header box border ≠ text run; headers inside by design
     "B03_HookMechanism",     # simple-hooks: flow-diagram nodes (RoundedRectangle + interior label); design-correct
@@ -590,6 +613,11 @@ HAND_DRAWN_PATTERNS = {
     # embedded text at sub-floor sizes. That text is image pixel content, not designed
     # typography — skip §8.1 for the same reason as hand-drawn hachure strokes.
     "B01_FigureGrid", "B03_Thesis",
+    # tldr-design-intent (prompting-ai): twelve real Higgsfield stills of stitched dolls per
+    # beat — their stitch dashes and button eyes read as 35–39px "text runs". Image pixel
+    # content, not designed typography; the captions and labels around them are 32pt+ and
+    # pass in the sibling beats that carry the same stills.
+    "B10_SixtySix", "B11_OneLineThirtyAnimals", "B12_TheMangerGrewAFace", "B13_RollAgain", "B14_SortTheLines", "B15_Commit", "B16_ThreeLinesOut", "B17_NameIt", "B18_TwoIntents", "B19_Payoff",
     # mas-short-verdict / mas-* reels: matplotlib figure animation rendered by render_lib.py
     # (anthropics/research/multiagent-systems/_dive-scripts/). The chart uses its own type
     # floor ("14pt @1080 baseline == 37px on the 4K master" per render_lib docstring), which
@@ -2293,7 +2321,9 @@ def run_check(reel_dir: str, skip_pixels: bool = False) -> int:
         # STILL is an archival/documentary photograph — embedded captions are diegetic, not ours.
         # SCREEN is a browser capture of an HTML simulation — its typography belongs to the sim's
         # own UI, not to our designed palette; pixel checks would flag sim labels as false positives.
-        is_raw_video_shot = shot_type_field.lower() in ("video", "ai-video", "still", "i2v", "t2v", "gen-video", "source-cut", "screen")
+        # SOURCE_REPORT is supplied footage played as is (docs/PIPELINE-SAFETY.md): its frames are
+        # the source's own content, not our typography — same exemption as raw video.
+        is_raw_video_shot = shot_type_field.lower() in ("video", "ai-video", "still", "i2v", "t2v", "gen-video", "source-cut", "screen", "source_report")
         is_manim = (build_status == "MANIM" or lane == "MANIM") and not is_remotion_shot
         _remotion = _shot.get("remotion", {}) if isinstance(_shot, dict) else {}
         _manim = _shot.get("manim", {}) if isinstance(_shot, dict) else {}

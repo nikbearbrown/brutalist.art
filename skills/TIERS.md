@@ -20,6 +20,7 @@ make a video.
 |---|---|
 | deep-explainer | Multi-layered concept depth passes |
 | cli-explainer | Claude session + live code + output as vox beat |
+| tldr | Chapter/report → learning sections → per-section film: TL;DR up front, THE QUESTION, TERMS, then a 3Blue1Brown-template LEARN body in pure Manim; your-turn close; Liam, regular outro |
 | godot-waikthrough | Real Godot feature walkthrough with Liam riffs; `walker` adds Claude/GDD bookends; regular outro |
 | godot-gamedev | Detailed Godot code/component/art teardown; source-backed editor views and optional `walker` bookends; Liam and regular outro |
 | medhavy-walkthrough | Real Medhavy Hub (hub.medhavy.com) browser walkthrough with Liam riffs; `textbook` adds Claude bookends; seeded tenant + human sign-in required; regular outro |

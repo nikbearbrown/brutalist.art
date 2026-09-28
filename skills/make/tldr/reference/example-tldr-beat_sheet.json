@@ -1,0 +1,778 @@
+{
+  "metadata": {
+    "slug": "tldr-matrix-order",
+    "title": "Why Matrix Order Matters",
+    "topic": "TL;DR · LINEAR ALGEBRA",
+    "skill": "tldr",
+    "style_preset": "tldr",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "learn_canvas": "cream",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "audience": "a smart reader who skimmed the chapter and wants the point, then the why",
+    "source_doc": "SOURCES.md — the chapter section this film sections (bookloop law: not named on screen)",
+    "sections": [
+      {
+        "n": 1,
+        "title": "Order Is Composition",
+        "key_case": "a rotation and a shear applied both ways to the same arrow"
+      }
+    ],
+    "greeting_language": "Swedish (Hej)",
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "outro_policy": "OUTRO-LOCK §Voice: spoken title + 'At Nik Bear Brown', 1.0 s silent tail, no jingle.",
+    "bookloop_policy": "The film teaches the idea standalone; the book, chapter and course are not named on screen or in narration.",
+    "tags": [
+      "linear algebra",
+      "matrix multiplication",
+      "3Blue1Brown style",
+      "Claude",
+      "Nik Bear Brown"
+    ]
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "tldr · what",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hej. This is Liam, in for Bear. This film is about why multiplying two matrices in the other order gives a different answer: a matrix is a move, not a number, and two moves in the other order land somewhere else. By the end you'll see it on a grid. The trap is treating AB like three times four.",
+      "estimated_duration_s": 19,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "'TL;DR.' wordmark lands; 'Hej, Liam' + topic"
+          },
+          {
+            "at": 0.06,
+            "event": "the question writes on, word by word"
+          },
+          {
+            "at": 0.29,
+            "event": "line 1 lands — terracotta numeral"
+          },
+          {
+            "at": 0.53,
+            "event": "line 2 lands; line 1 settles"
+          },
+          {
+            "at": 0.74,
+            "event": "line 3 lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTldrWhat",
+          "props": {
+            "eyebrow": "TL;DR",
+            "greeting": "Hej, Liam",
+            "topic": "Linear Algebra",
+            "question": "Why does the order you multiply two matrices in change the answer?",
+            "lines": [
+              "A matrix is a move, not a number — two moves in the other order land somewhere else.",
+              "You will see it on a grid: follow where the two basis arrows go.",
+              "The trap: treating AB like 3 × 4. Order only drops out in one special case."
+            ],
+            "cues": [
+              1.2,
+              5.5,
+              10.0,
+              14.0
+            ],
+            "durationSeconds": 19,
+            "folderLabel": "@NikBearBrown",
+            "heading": "What This Film Is About"
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "tldr · why",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Why should you care? Every rotation, every neural-network layer, every camera move is matrices applied in order. Get the order wrong and the picture is wrong, silently — no error, just a different answer. See a matrix as a move, and the rule for composing them stops being a formula to memorize.",
+      "estimated_duration_s": 18,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "page turn: same header, heading 'Why You Should Care'"
+          },
+          {
+            "at": 0.08,
+            "event": "the stake writes on"
+          },
+          {
+            "at": 0.45,
+            "event": "dash 1 lands"
+          },
+          {
+            "at": 0.75,
+            "event": "dash 2 lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTldrWhy",
+          "props": {
+            "eyebrow": "TL;DR",
+            "heading": "Why You Should Care",
+            "topic": "Linear Algebra",
+            "lead": "Every rotation, every neural-network layer, every camera move is matrices applied in order.",
+            "lines": [
+              "Get the order wrong and the picture is wrong, silently — no error, just a different answer.",
+              "Once you see a matrix as a move, the rule for composing them stops being a formula to memorize."
+            ],
+            "cues": [
+              1.0,
+              8.0,
+              13.0
+            ],
+            "durationSeconds": 18,
+            "folderLabel": "@NikBearBrown"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "TL;DR card two — text lands on cues by design."
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "The question this film is really asking: why is matrix multiplication order-dependent? Not why it's hard to compute — the arithmetic is the easy part, and it's the part that hides the answer.",
+      "estimated_duration_s": 12,
+      "lead_silence_s": 0.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'Why is matrix multiplication so hard to compute?'"
+          },
+          {
+            "at": 0.35,
+            "event": "backspaces 'so hard to compute' → 'order-dependent' on the spoken correction"
+          },
+          {
+            "at": 0.8,
+            "event": "caret holds on the corrected question"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Why is matrix multiplication\nso hard to compute?",
+            "triggerWords": "so hard to compute",
+            "replacementWords": "order-dependent",
+            "fontSize": 72,
+            "charMs": 26,
+            "hesitateBetween": 8,
+            "hesitateWithin": 1,
+            "mistakeRate": 5,
+            "jitter": 20,
+            "seed": "tldr-matrix-order",
+            "banner": ""
+          }
+        }
+      },
+      "motion_claim": "The writer types the naive question and replaces the phrase that makes it the wrong question, on the spoken word.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "terms",
+      "lane": "bookend",
+      "proof_gate": "CARD",
+      "narration_text": "Three words you'll hear. A vector: an arrow from the origin. A basis vector: the two arrows every other arrow is built from. A matrix: a box of numbers — we'll find out what it records.",
+      "estimated_duration_s": 14,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "row 1 'vector' lands, terracotta; meaning slides in"
+          },
+          {
+            "at": 0.45,
+            "event": "row 2 'basis vector' lands; row 1 settles to ink"
+          },
+          {
+            "at": 0.75,
+            "event": "row 3 'matrix' lands; row 2 settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "vector",
+                "meaning": "an arrow from the origin; two numbers say where its tip is"
+              },
+              {
+                "term": "basis vector",
+                "meaning": "the two arrows every other arrow in the plane is built from"
+              },
+              {
+                "term": "matrix",
+                "meaning": "a 2×2 box of numbers — this film finds out what it records"
+              }
+            ],
+            "durationSeconds": 14,
+            "folderLabel": "@NikBearBrown"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "TERMS card: rows landing one at a time are the motion; prerequisites only (the abstraction 'composition' is NOT here)."
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "learn 1",
+      "section": 1,
+      "role": "HOOK",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "Same two boxes of numbers, multiplied both ways — why two different answers?",
+        "action": "Show A·B and B·A computed on screen; both boxes fill; they differ.",
+        "observation": "The arithmetic is fine both times. The results just disagree.",
+        "inference": "The numbers can't explain it; something about what a matrix IS must.",
+        "next_question": "What does a 2×2 box of numbers actually do?"
+      },
+      "narration_text": "Two boxes of numbers. Multiply them this way, you get one answer. Multiply them the other way — a different one. Both computations are correct. So the arithmetic isn't the story.",
+      "estimated_duration_s": 14,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two 2×2 MathTex matrices A and B; the product AB fills entry by entry, then BA; the two results sit side by side and the differing entries ring in terracotta.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "A and B land"
+          },
+          {
+            "at": 0.25,
+            "event": "AB computes, entries filling on 'this way'"
+          },
+          {
+            "at": 0.55,
+            "event": "BA computes on 'the other way'"
+          },
+          {
+            "at": 0.85,
+            "event": "differing entries ring terracotta on 'a different one'"
+          }
+        ],
+        "manim": {
+          "class": "B11_TwoAnswers"
+        }
+      },
+      "motion_claim": "The entries filling twice and the ring on the mismatch are the claim; the two results are persistent objects that return in B18."
+    },
+    {
+      "beat_id": "B12",
+      "act": "learn 1",
+      "section": 1,
+      "role": "INSTANCE",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "What does a box of numbers do?",
+        "action": "Put a grid on screen; apply A: watch the basis arrows and the whole grid move.",
+        "observation": "Grid lines stay parallel and evenly spaced; the two basis arrows land on A's columns.",
+        "inference": "A matrix is a move of the plane, recorded by where the basis arrows land.",
+        "next_question": "Does the second box do the same kind of thing?"
+      },
+      "narration_text": "Put the numbers away and put a grid down. Watch the two basis arrows — the ones every other arrow is built from — when A acts. They land exactly on A's columns. The whole grid follows them.",
+      "estimated_duration_s": 16,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "NumberPlane with basis arrows; apply_matrix(A) morphs the grid; the arrow tips land on the column entries of A, which highlight in terracotta as they land.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "grid + two basis arrows (ink)"
+          },
+          {
+            "at": 0.4,
+            "event": "grid morphs under A; arrows move on 'when A acts'"
+          },
+          {
+            "at": 0.7,
+            "event": "A's columns highlight terracotta on 'exactly on A's columns'"
+          }
+        ],
+        "manim": {
+          "class": "B12_GridUnderA"
+        }
+      },
+      "motion_claim": "apply_matrix is the concept: the grid moving IS what a matrix is."
+    },
+    {
+      "beat_id": "B13",
+      "act": "learn 1",
+      "section": 1,
+      "role": "INSTANCE",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "Is B a move too?",
+        "action": "Reset the grid; apply B; the arrows land on B's columns.",
+        "observation": "Same rule, different move — a shear instead of a rotation.",
+        "inference": "Every matrix is a move; the columns are the record.",
+        "next_question": "So what is 'multiplying' two moves?"
+      },
+      "narration_text": "Same grid, now B. Different move — a shear — same rule: the arrows land on B's columns. Two matrices, two moves. So what does it mean to multiply two moves?",
+      "estimated_duration_s": 12,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The grid resets (ReplacementTransform back to identity), then shears under B; B's columns highlight as the arrows land.",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "grid morphs back to identity"
+          },
+          {
+            "at": 0.3,
+            "event": "grid shears under B on 'now B'"
+          },
+          {
+            "at": 0.6,
+            "event": "B's columns highlight on 'B's columns'"
+          }
+        ],
+        "manim": {
+          "class": "B13_GridUnderB"
+        }
+      },
+      "motion_claim": "The second parametrized instance: vary the matrix, replay the move."
+    },
+    {
+      "beat_id": "B14",
+      "act": "learn 1",
+      "section": 1,
+      "role": "NAIVE",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "Can't we just multiply the numbers and read the answer?",
+        "action": "Compute AB entry by entry with the dot-product rule, slowly.",
+        "observation": "Eight multiplications, four sums. It produces a box. It says nothing about why.",
+        "inference": "The rule is a recipe for the record, not an explanation of the move.",
+        "next_question": "What if we followed the arrows instead?"
+      },
+      "narration_text": "The obvious thing — the thing the chapter's rule tells you — is to multiply the numbers. Row times column, eight products, four sums. Here's the box. It's right. And it tells you nothing about why the other order is different.",
+      "estimated_duration_s": 16,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Row-times-column: a row of A and a column of B highlight in turn, products appear, sum into an entry of AB; the finished box sits there; a dim caption: 'correct — and mute'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "row 1 of A and column 1 of B highlight; products write"
+          },
+          {
+            "at": 0.5,
+            "event": "the four entries fill in order"
+          },
+          {
+            "at": 0.85,
+            "event": "caption 'correct — and mute' fades in, dim"
+          }
+        ],
+        "manim": {
+          "class": "B14_RowTimesColumn"
+        }
+      },
+      "motion_claim": "The natural attempt walked to its limit: the box appears and explains nothing."
+    },
+    {
+      "beat_id": "B15",
+      "act": "learn 1",
+      "section": 1,
+      "role": "SHIFT",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "predict": true,
+      "learn": {
+        "question": "What if we followed the arrows instead of the numbers?",
+        "action": "Reframe: 'AB' means do B first, then A. Put the grid back. Before it moves: predict where the red arrow ends.",
+        "observation": "The viewer commits to a landing spot.",
+        "inference": "The representation is the grid; multiplication is 'follow the moves in order'.",
+        "next_question": "Where does the arrow actually land, both ways?"
+      },
+      "narration_text": "Here's the reframe. A B doesn't mean a number times a number. It means: do B, then A. Follow the arrow. Before it moves — commit. Where does the terracotta arrow land if we shear first, then rotate?",
+      "estimated_duration_s": 15,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The product AB slides up; under it 'do B, then A' writes in serif; the grid returns with one terracotta arrow; the arrow holds still on 'commit' for ≥ 2 s.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "'do B, then A' writes under AB"
+          },
+          {
+            "at": 0.45,
+            "event": "grid + one terracotta arrow return"
+          },
+          {
+            "at": 0.8,
+            "event": "HOLD — nothing moves on 'commit'"
+          }
+        ],
+        "manim": {
+          "class": "B15_FollowTheArrow"
+        }
+      },
+      "motion_claim": "The reframe writes on the spoken word and the arrow holds — the predict-before-reveal beat."
+    },
+    {
+      "beat_id": "B16",
+      "act": "learn 1",
+      "section": 1,
+      "role": "TRANSFORM",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "Where does the arrow land, both ways?",
+        "action": "Shear then rotate — the arrow lands. Reset. Rotate then shear — it lands somewhere else.",
+        "observation": "Two different landing spots for the same two moves.",
+        "inference": "Order changes the destination; that is all AB ≠ BA ever meant.",
+        "next_question": "Can we say that in general?"
+      },
+      "narration_text": "Shear, then rotate. Now the other way. Look at it.",
+      "estimated_duration_s": 14,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One continuous morph: apply B then A (arrow lands, a ghost copy stays); grid morphs back; apply A then B (arrow lands elsewhere); both landing spots remain on screen, the gap between them ringed.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "B then A: grid morphs twice, arrow lands; ghost stays"
+          },
+          {
+            "at": 0.4,
+            "event": "grid morphs back to identity"
+          },
+          {
+            "at": 0.55,
+            "event": "A then B: arrow lands elsewhere"
+          },
+          {
+            "at": 0.85,
+            "event": "both landings held; the gap ringed on 'Look at it'"
+          }
+        ],
+        "manim": {
+          "class": "B16_TwoPathsCollide"
+        }
+      },
+      "motion_claim": "The aha is the morph itself; the narration is three short sentences so run_time fills the measured audio."
+    },
+    {
+      "beat_id": "B17",
+      "act": "learn 1",
+      "section": 1,
+      "role": "ABSTRACTION",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "Can we say this in general?",
+        "action": "The two landing spots become the two boxes from the HOOK; the equation (AB)v = A(Bv) writes beside the arrow it describes.",
+        "observation": "The box is the record of the landing; the equation says 'apply B, then A'.",
+        "inference": "Matrix multiplication is composition of moves, and composition is not commutative.",
+        "next_question": "What does each symbol in that line mean?"
+      },
+      "narration_text": "This thing we keep pointing at deserves a name. Multiplying matrices is composing moves — and composing is not commutative. The two boxes from the start were the two landing spots all along.",
+      "estimated_duration_s": 15,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The two landing arrows ReplacementTransform into the AB and BA boxes from B11; MathTex (AB)\\vec v = A(B\\vec v) writes beside the arrow; the word 'composition' lands in serif as the name.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "landings morph into the two boxes"
+          },
+          {
+            "at": 0.45,
+            "event": "equation writes beside the arrow on 'composing'"
+          },
+          {
+            "at": 0.8,
+            "event": "'composition' names it, serif"
+          }
+        ],
+        "manim": {
+          "class": "B17_NameIt"
+        }
+      },
+      "motion_claim": "The abstraction arrives as an endpoint: the objects morph into the notation, not the other way round."
+    },
+    {
+      "beat_id": "B18",
+      "act": "learn 1",
+      "section": 1,
+      "role": "TANGENT",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "What does each symbol mean?",
+        "action": "Equation persists on the MAIN side; zones write into the SIDE band: LHS/RHS as sentences, the '=' as a claim, the glossary with roles, one worked value.",
+        "observation": "Every symbol maps back to an arrow or a move on screen.",
+        "inference": "The notation is a description of what was watched.",
+        "next_question": "So — the original two boxes?"
+      },
+      "narration_text": "Read the line. Left side: the combined move, applied to the arrow. Right side: B's move, then A's move, one after the other. The equals sign is a promise — those are the same arrow. v is the arrow; A and B are moves; the parentheses are the order.",
+      "estimated_duration_s": 24,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Split stage: the MathTex equation persists left; right band writes LHS sentence, RHS sentence, '= : the same arrow', then a three-row glossary (v · arrow · the input; A, B · moves · what acts; ( ) · order · which first); the symbol being explained highlights terracotta in the equation and its row at once.",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "LHS sentence writes; (AB)v highlights"
+          },
+          {
+            "at": 0.3,
+            "event": "RHS sentence writes; A(Bv) highlights"
+          },
+          {
+            "at": 0.55,
+            "event": "'=' claim writes"
+          },
+          {
+            "at": 0.7,
+            "event": "glossary rows land one at a time"
+          }
+        ],
+        "manim": {
+          "class": "B18_Tangent"
+        }
+      },
+      "motion_claim": "One moving spotlight across equation, sentence and glossary row — the equation tangent template."
+    },
+    {
+      "beat_id": "B19",
+      "act": "learn 1",
+      "section": 1,
+      "role": "PAYOFF",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "learn": {
+        "question": "So — the original two boxes?",
+        "action": "Bring back B11's two boxes beside the two landing arrows; the mismatch ring returns, now beside the gap between landings.",
+        "observation": "The differing entries ARE the different landing coordinates.",
+        "inference": "The HOOK is resolved by the abstraction.",
+        "next_question": ""
+      },
+      "narration_text": "Back to the start. Two boxes, two answers — because two orders, two landings. The entries that disagreed are the coordinates of two different places. What this film did not do: tell you when order does NOT matter. That's your turn.",
+      "estimated_duration_s": 16,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "B11's boxes return (same objects) beside the two landing arrows; the terracotta ring moves from the mismatched entries to the gap between landings and back; a dim boundary caption: 'not taught here: when AB = BA'.",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "the two boxes return beside the arrows"
+          },
+          {
+            "at": 0.4,
+            "event": "ring travels entries → landings on 'two landings'"
+          },
+          {
+            "at": 0.8,
+            "event": "boundary caption, dim"
+          }
+        ],
+        "manim": {
+          "class": "B19_Payoff"
+        }
+      },
+      "motion_claim": "The HOOK's persistent objects resolve on screen; the boundary is one dim line."
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Let's recap with Claude. A matrix is a move, recorded by where the basis arrows land. Multiplying matrices is doing one move after another. Doing them in the other order lands somewhere else — that is all A B is not B A ever meant. The row-times-column rule is correct and mute; the grid is where the reason lives.",
+      "estimated_duration_s": 26,
+      "lead_silence_s": 0.5,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "artifact page opens"
+          },
+          {
+            "at": 0.2,
+            "event": "four verdict lines land in narration order"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "Why Matrix Order Matters",
+            "artifactLines": [
+              "A matrix is a move; its columns record where the basis arrows land.",
+              "Multiplying matrices is composing moves, one after another.",
+              "The other order lands somewhere else — AB ≠ BA is just that.",
+              "Row-times-column is correct and mute; the grid holds the reason."
+            ]
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Mandated ClaudeVerdictArtifact bookend."
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude: Give me two 2×2 matrices that DO commute, and two that don't. For each pair, describe both matrices as moves of the plane, then predict — before computing — whether AB equals BA, and say why in terms of the moves. Then compute both products and check. What do the commuting pairs have in common as moves? Look for two things in the answer: did it predict from the moves before touching the numbers, and did it name the geometric reason, not just 'the entries match'.",
+      "estimated_duration_s": 38,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer opens — 'Your turn.'"
+          },
+          {
+            "at": 0.1,
+            "event": "the prompt types in full"
+          },
+          {
+            "at": 0.75,
+            "event": "two rubric lines land"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "LINEAR ALGEBRA · YOUR TURN",
+            "segment": "When Does Order Not Matter?",
+            "command": "Give me two 2×2 matrices that DO commute and two that don't. For each pair: describe both matrices as moves of the plane; predict, before computing, whether AB = BA and why in terms of the moves; then compute both products and check. What do the commuting pairs have in common as moves?",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: it predicted from the moves before touching the numbers.",
+              "Check: it named the geometric reason, not just 'the entries match'."
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High"
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "kind": "outro_voice",
+      "narration_text": "Why Matrix Order Matters. At Nik Bear Brown.",
+      "estimated_duration_s": 5,
+      "tail_silence_s": 1.0,
+      "hold_note": "spoken outro + 1.0 s silent tail (apad); no jingle (OUTRO-LOCK §Voice)",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; handle; slug-seeded mascot. Liam reads the title, then 'At Nik Bear Brown'."
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Why Matrix Order Matters",
+            "slug": "tldr-matrix-order",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          }
+        }
+      }
+    }
+  ]
+}

@@ -49,6 +49,9 @@ COLD_OPEN_PATTERNS = {'ClaudeComposerAsk', 'ClaudeComposerAsk916', 'ClaudeCodeBe
 # legal cold opens are the CC kit's session surfaces. Recap / Your Turn / Outro
 # rules are unchanged for it, like every other skill.
 CC_COLD_OPEN_PATTERNS = {'CCSession', 'CCWebHome', 'CCShell', 'CCPromptBar'}
+# tldr (metadata.skill == "tldr") opens on the TL;DR page — its own template, not the
+# composer (Bear, 2026-09-22). Recap / Your Turn / Outro rules are unchanged for it.
+TLDR_COLD_OPEN_PATTERNS = {'ClaudeTldrWhat', 'ClaudeTldr'}
 RECAP_PATTERNS     = {'ClaudeVerdictArtifact', 'ClaudeVerdictArtifact916'}
 OUTRO_PATTERNS     = {'ClaudeTitleOutro', 'ClaudeTitleOutro916'}
 DEFAULT_HANDLE     = '@NikBearBrown'
@@ -109,6 +112,10 @@ def run(reel_dir: str) -> int:
                 f'COLD-OPEN ({skill}): first beat shot.type={_type!r} — HOST LAW expects a '
                 f'generated host beat (AI-VIDEO) or ClaudeComposerAsk'
             )
+    elif skill == 'tldr':
+        if first_pat not in COLD_OPEN_PATTERNS | TLDR_COLD_OPEN_PATTERNS:
+            failures.append(
+                f'COLD-OPEN (tldr): first beat pattern={first_pat!r} — expected ClaudeTldrWhat (or the composer)')
     elif skill == 'cc-explainer':
         if first_pat not in COLD_OPEN_PATTERNS | CC_COLD_OPEN_PATTERNS:
             failures.append(
