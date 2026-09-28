@@ -3,9 +3,10 @@ name: show-tell
 description: >
   Build a SHOW-TELL film: very simple, direct explanations where every beat is
   ONE drawn isometric illustration in the Claude palette (cream stage, warm ink,
-  terracotta tape), with a few words of label at most, and Liam's voiceover
+  terracotta tape) or, optionally, one stop-motion interface card from the
+  ShowTellCard family (16 kinds), with a few words of label at most, and Liam's voiceover
   carrying the explanation. Liam, in for Bear, narrates by default (Kokoro
-  `am_onyx`, free). Pure Manim, one scene per beat, drawn from a shared
+  `am_onyx`, free). One scene per beat, drawn in Manim from a shared
   isometric kit (boxes, MCP blocks, skill pages, servers, conveyors, dashboards).
   Fixed bookends (Bear, 2026-09-26): BIDEA hesitant writer first (greeting +
   the naive question corrected), BDEFS key terms second (ClaudeDefinitions, as
@@ -14,7 +15,8 @@ description: >
   Use when the user types `show-tell` or `show tell` (+ a paste, URL or topic),
   asks for an explainer "with an image every beat", "minimal text, the voice
   explains", or for an isometric or illustrated product or announcement
-  explainer. Short, 60–180 s. Never publishes.
+  explainer. No length cap: as long as the idea needs and not a second
+  longer, to the point, no filler. Never publishes.
 ---
 
 # show-tell — the image shows, the voice tells
@@ -54,13 +56,17 @@ the all do."*
 - Dropped: the composer cold open and the verdict card. Declare
   `metadata.bookend_exempt: ["cold-open","bvdt"]` with a
   `bookend_exempt_reason`; `bookend_check.py` passes it.
-- The BODY is all drawings: no Remotion text cards between BDEFS and BHTF.
+- The BODY is drawings. Isometric Manim is the default; a beat MAY instead
+  use one card from the optional `ShowTellCard` family (see **Card family**).
+  No other Remotion text cards between BDEFS and BHTF.
 
 ## The laws
 
 1. **ONE IMAGE PER BEAT.** Each beat is one scene, and each scene is one
    drawing that changes as the voice speaks. Never a text slide, a bullet list,
-   or a card of words.
+   or a card of words. The picture is an isometric Manim drawing by default.
+   A `ShowTellCard` replaces it only when the beat passes the card test (see
+   **Card family**), never for variety.
 2. **THE VOICE EXPLAINS.** Narration carries every idea. On screen, labels only:
    one to three words, at most two or three per beat (`plugin`, `MCP`, `skill`,
    `GitHub repo`, `Submit`). The one exception is a single hero number (`110×`),
@@ -85,6 +91,13 @@ the all do."*
 8. **ATTRIBUTE THIN NUMBERS.** A figure that exists only in a social post or a
    single source is attributed aloud ("Claude's developer team says") and
    captioned on screen ("per Claude's developer team").
+9. **AS LONG AS IT NEEDS, NO LONGER.** There is no length cap and no length
+   target (Bear, 2026-09-27: *"it's as long as it should be but it should just
+   be to the point no bullshit"*). The content sets the length: one beat per
+   step the viewer actually needs, and no more. Cut any beat that repeats,
+   pads, recaps what was just shown, or exists to hit a length. Never merge or
+   rush two real steps to come in shorter. If a topic needs 25 beats, it gets 25.
+   If it needs 5, it gets 5.
 
 ## Spine
 
@@ -99,8 +112,12 @@ the all do."*
 | BHTF | your turn | `ClaudeComposerAsk` (the Claude.ai composer) |
 | BOUT | spoken outro | `ClaudeTitleOutro` |
 
-Keep it to 6–10 drawn beats of 5–12 s each. The measured audio sets the length
-(the first film came to 127.6 s).
+**Length.** Law 9 governs: no cap, no target. Count the steps the viewer needs
+and give each one beat. A beat runs as long as its sentence or two takes to
+say (usually 5–12 s; a beat that runs past ~15 s is usually two ideas and
+should be split). The measured audio sets the film's length. For reference only:
+the first films came to 1.5–2.6 min because their topics needed that much, not
+because of a limit.
 
 ## Drawing kit and laws
 
@@ -225,6 +242,41 @@ the kit. Never retint.
   spelling them all out.
 - Gate A's stub returns plain lists from `get_center()`. Wrap them in
   `np.array(...)` before subtracting.
+- GATE T reads a thin ink outline along a long diagonal edge, or grey dashes
+  on a pale belt, as small low-contrast text. Give belt edges dark kraft and
+  make the centre dashes pale ghost grey.
+- `generate_audio_kokoro.py` re-voices EVERY beat on each run unless you pass
+  `--only`, which silently drops BOUT's 1.0 s pad. Use `--only <BID>` for
+  re-voices, and re-pad and re-measure BOUT after any full run.
+- The kit's `DARK_R` face (30,27,24) sits within GATE T's ink tolerance of
+  INK. A dense lattice of dark blocks (a tool wall) breaks into false "text"
+  blobs under codec noise. Make large dark walls darker, or space the blocks
+  apart.
+- A slanted terracotta tape band on a box can fail GATE T contrast as
+  accent text. If it does, use a grey strap with one spark-sized terracotta
+  seal.
+- Pipes or cables edged in ink join the objects they connect into one wide
+  "text" blob, and GATE T then fails anything drawn inside it. Edge
+  connectors in deep kraft (`#9C8462`).
+- Keep references to the objects on screen. `FadeOut` of a NEW copy of a
+  label leaves the original on screen; two builders hit this.
+- Keep terracotta sparks inside a block's top face. A spark crossing the
+  corner outline leaves a small ink fragment under the GATE T size floor.
+- Cards fanned along a diagonal have overlapping bounding boxes, which GATE T
+  reads as stacked labels. Line them up in a row. Small tabs inside ink cards
+  take grey outlines.
+- A pale kraft block on its own fails Gate V contrast; set it on a dark
+  plinth.
+- A dark header band inside an ink-outlined card reads as two overlapping
+  labels under GATE T. Make the band grey (`BAR1`).
+- Gate V counts any surface more than 28 per channel away from the stage as
+  ink. Darkening a pale belt LOWERS the contrast average, so keep belts and
+  pads within 28 of the stage, and carry contrast with small dark parts
+  (ports, lamps).
+- Tiny icons (keys, locks) outlined in dark kraft read as sub-floor text.
+  Draw them larger, with ink outlines.
+- A beam or highlight that fades out after a guarded move can still be on
+  screen at the midpoint. Guard the move AND the fade as one span.
 - `MoveAlongPath` and `.animate` on the same object in one `play` silently
   cancels the move. Split them into two plays, or animate a wrapper group.
 - **`ClaudeDefinitions` truncates a term longer than about 17 characters**
@@ -242,6 +294,110 @@ the kit. Never retint.
   `runtime/scripts/`.
 - `bookend_check.py` lives in `runtime/scripts/`, not `runtime/qc/`. Gate F
   runs at `art run`, so write the paperwork before the first run.
+- Lines drawn on pages that sit inside an ink-outlined tray cut each page's
+  thin outline loose from the tray, and GATE T §8.6b then reads each page as a
+  stacked label. Put maps and paths BESIDE the tray, not on its pages
+  (`show-tell-what-is-claude-code`, B07 and B09).
+- A kraft card with an ink outline parked over a dark terminal fails GATE T's
+  per-blob contrast. Keep light cards off dark panels.
+- `Indicate` on one part of a group brings that part to the front, where it
+  covers the other parts at the same z-index (it hid a page's grey lines).
+  Indicate the whole group.
+- A beat whose only new shape is created, moved and then removed can still
+  fail Gate A with "shapes never change". The stub snapshots only after each
+  `play` and ignores moves, and with no beat sheet its first snapshot already
+  holds the new shape. Add a membership change after the first play (a ring
+  that grows, then fades) (`show-tell-choosing-the-right-claude-model`, B06).
+- Kokoro fuses "four Claude models" into "foreclawed". Whisper-check any
+  number spoken right before "Claude" and reword if it fuses.
+
+## Card family — optional (Bear, 2026-09-27)
+
+Bear, 2026-09-27: *"keep all typography and colors but add more stop motion
+cards beyond just the isometric graphics ... the skill should never force but
+more choices can add"*, then: *"the ability to use these new cards only if they
+actually make sense no using a card just for using a card"*. So the cards are a
+**menu, not a quota**. The drawing is the default for every beat, and a film
+with zero cards is a normal, complete show-tell film.
+
+**THE CARD TEST.** A beat gets a card only if all three answers are yes:
+1. **Is the idea itself an interface, a set of numbers, or one word?** (A
+   search really returning results; a real metric; a real trend; a name.) An
+   idea that is a thing, a part or a flow is a drawing.
+2. **Is the card's motion the beat's claim?** The voice could point at the
+   motion and say "that's what I mean": results arriving IS "you ask, it
+   returns"; bars melting into a line IS "same numbers, different shape".
+3. **Does it beat a drawing of the film's own cast?** If the box, blocks and
+   pages can show it as clearly, draw it.
+
+Any "no" means a drawing. Never use a card for variety, to show off the family,
+to fill a beat, or because a drawing is harder to make. Numbers on a card must
+be real (fact-checked like any other claim), never placeholder data dressed up
+as evidence. Write the reason for each card in SHOTLIST.md (a "why a card"
+column), so a reviewer can check it against the test. (The one film that is ABOUT
+the cards, `claude-liam-brutalist-show-tell-cards`, uses eight because the cards
+are its subject. Don't copy its ratio.)
+
+One Remotion composition, `ShowTellCard`
+(`runtime/remotion/src/scenes/ShowTellCard.tsx`), with one `kind` per beat.
+Each card fills the frame, uses the same palette and fonts as the drawings
+(cream stage, warm ink, kraft, one terracotta accent that is never text; EB
+Garamond words, UI-sans chrome, mono numbers), and is shot **on twos**: every
+drawing is held for two frames, with a solid kraft offset under each card for
+a paper cut-out look. No blur, no gradients.
+
+| kind | the motion | use it when the voice says |
+|---|---|---|
+| `player` | a pill button grows into a video player; the scrubber runs | "press play", something opens into media |
+| `search` | a query types, then results drop in one by one | finding, retrieval, "you ask, it returns" |
+| `workspace` | a small card expands into a full workspace | a tool opens up, "this is where you work" |
+| `tabs` | the tab pill slides; one panel leaves, the next arrives | switching views, compare A then B |
+| `chart` | bars grow, then melt into a line with a value tag | a trend, "the same numbers, a different shape" |
+| `dashboard` | the camera zooms onto one metric; the number counts up | the one number that matters (`word`) |
+| `stack` | cards spring in from below, fan, settle; the top one is chosen | options, choosing one of several |
+| `dock` | a cursor path sweeps a dock; icons swell under it | a toolbox, a set of tools, hovering the one you need |
+| `masked` | a big word fills from below inside its own outline | a name, a title, a single key word (`word`) |
+| `elastic` | letters stretch on a wave, then settle | flexibility, "it bends to fit" (`word`) |
+| `layout` | a loose headline snaps into a laid-out page | raw text becomes a finished page |
+| `reveal` | dark shutters open strip by strip onto the picture | a reveal, the hidden thing |
+| `perspective` | one page tilts into a 3-D stack of pages | many versions, drafts, layers |
+| `focus` | a lens slides down a report row by row | reading a table, finding the one row (`focus`) |
+| `paths` | edges draw between nodes, then dots flow along them | a pipeline, a workflow, "this feeds that" |
+| `particles` | scattered dots assemble into a mark (`bitmap`) | many parts become one thing |
+
+**Props** (all optional; defaults are a neutral demo): `kind`, `heading`,
+`sub`, `word`, `items` / `items2` (`{label, value, sub}` rows), `labels`,
+`values`, `bitmap` (rows of `#` and `.`), `focus`, `cues` (optional move times as fractions of the beat, for `focus` and `tabs`: compute them from the narration so the card moves on the spoken word, and keep every move out of the 45–55% window GATE T samples), `onTwos` (default true),
+`durationSeconds` (the measured audio; the composition sizes itself from it).
+Each kind finishes its motion by about 70% and holds, so the voice lands on a
+finished picture. Type is on screen and settled by 45%, the frame GATE T samples.
+
+**Card laws.** The show-tell laws still hold, and the card test comes first.
+Labels stay at 1–3 words, and data rows are the only longer text. Cards are the
+exception in a body, not the rule: if more than a third of the body beats are
+cards, re-check each against the test. Reuse the film's cast: if the film's
+object is a box, the `search` results are those boxes. Never put a card
+back-to-back with a card of the same kind.
+
+**Beat sheet.** A card beat is `lane: "card"`, `shot.type: "REMOTION"`,
+`shot.remotion.pattern: "ShowTellCard"`, `shot.remotion.props: {kind, …,
+durationSeconds}`, built with the same `remotion()` helper as BDEFS in
+`make_sheet.py`. Write `durationSeconds` from `actual_duration_s` after audio. Render only via
+`runtime/scripts/remotion_scenes.py`. Test a kind first with
+`npx remotion still src/index.ts ShowTellCard out.png --frame=<n> --props='{"kind":"chart"}'`
+at 25%, 50% and 95% of its frames, and look at the stills.
+
+**Card sizes that pass GATE T at 4K:** body text ≥ 48 design px, headings ≥ 50,
+chips ≥ 32; headings in ink, never terracotta.
+
+**Gate traps from the first card film (2026-09-27):** (1) a card whose picture is
+mid-move at 50% gets flagged; `focus` now snaps row to row and holds, and
+`stack` settles by 44%. Keep that rule if you add a kind. (2) A tight stack
+underfills in Gate V, so cards fan out side by side. (3) In a DRAWN beat, a large
+near-black field (a film strip, a dark panel) reads as one giant ink "text" blob
+in GATE T §8.6b, and pale kraft fails Gate V contrast (0.30). Use `DIM` grey for
+big backing shapes. (4) `make_sheet.py` must carry `audio_file` forward, as well as
+`actual_duration_s`, or `art run` refuses with "missing required audio".
 
 ## Workflow (run from `books/`)
 
@@ -261,9 +417,14 @@ the kit. Never retint.
 4. **Stills first.** Render each scene's last frame at low resolution
    (`manim -ql -s`) into the scratchpad and look at a contact sheet before any
    4K render.
-5. **Pre-audit** from a scratch copy of `scenes.py` + `beat_sheet.json`:
-   `runtime/qc/static_scene_check.py scenes.py --class <C>` (Gate A) and
-   `runtime/qc/manim_layout_audit.py scenes.py --class <C> --curve-strict`.
+5. **Pre-audit** Gate A from a scratch folder holding ONLY `scenes.py` (copy nothing else),
+   because that is exactly what `art run`'s Gate A sees. With `beat_sheet.json` beside it,
+   `until()` pacing runs and a scene can pass locally, then fail inside `art run` with "shapes
+   never change" (2026-09-27, two scenes). Run
+   `runtime/qc/static_scene_check.py scenes.py --class <C>` there, and
+   `runtime/qc/manim_layout_audit.py scenes.py --class <C> --curve-strict` in the reel folder.
+   Every scene needs at least one NEW shape (Create/GrowFromCenter/FadeIn of a new object);
+   moves, fills and Transform don't count.
 6. **Render.** `./brutalist.art/art run <reel> --height 2160` (Gates A, B, V
    and the review cut), then look at frames. Then
    `./brutalist.art/art final <reel> --height 2160 --out <reel>/exports/landscape`
