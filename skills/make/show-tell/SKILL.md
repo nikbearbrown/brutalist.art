@@ -1,22 +1,16 @@
 ---
 name: show-tell
 description: >
-  Build a SHOW-TELL film: very simple, direct explanations where every beat is
-  ONE drawn isometric illustration in the Claude palette (cream stage, warm ink,
-  terracotta tape) or, optionally, one stop-motion interface card from the
-  ShowTellCard family (16 kinds), with a few words of label at most, and Liam's voiceover
-  carrying the explanation. Liam, in for Bear, narrates by default (Kokoro
-  `am_onyx`, free). One scene per beat, drawn in Manim from a shared
-  isometric kit (boxes, MCP blocks, skill pages, servers, conveyors, dashboards).
-  Fixed bookends (Bear, 2026-09-26): BIDEA hesitant writer first (greeting +
-  the naive question corrected), BDEFS key terms second (ClaudeDefinitions, as
-  in tldr), the drawn body, BHTF Your Turn in the Claude.ai composer
-  (ClaudeComposerAsk), and the spoken @NikBearBrown outro. No verdict card.
-  Use when the user types `show-tell` or `show tell` (+ a paste, URL or topic),
-  asks for an explainer "with an image every beat", "minimal text, the voice
-  explains", or for an isometric or illustrated product or announcement
-  explainer. No length cap: as long as the idea needs and not a second
-  longer, to the point, no filler. Never publishes.
+  Build SHOW-TELL films: one simple isometric Manim illustration per beat,
+  minimal labels, and Liam's narration (free Kokoro am_onyx) explaining the
+  action. Claude palette: cream, warm ink, terracotta accents. Optional
+  ShowTellCard interface scenes only when they teach better than drawings.
+  Shared vector kit includes 25 original layered props for context, tools, human review,
+  permissions, evidence, and workflows. Fixed bookends: hesitant writer,
+  key terms, Your Turn composer, spoken @NikBearBrown outro; no verdict card.
+  Use for show-tell/show tell, "an image every beat", "minimal text, the voice
+  explains", and isometric illustrated explainers. Content determines length;
+  no filler. Never publishes.
 ---
 
 # show-tell — the image shows, the voice tells
@@ -120,6 +114,15 @@ the first films came to 1.5–2.6 min because their topics needed that much, not
 because of a limit.
 
 ## Drawing kit and laws
+
+For context, tools, human review, permissions, evidence, and workflow objects,
+use [the approved 25 original props](reference/original-props-25.md): editable
+SVGs and a self-contained native Manim template, drawn from scratch in the
+house style. Bear approved this set for the skill on 2026-10-01. Prefer these
+and the original box/page/server primitives for new films. The Isocons-derived
+packs were rejected; their files remain only for existing-film reproducibility,
+not as recommendations for new work. Choose props whose action teaches the
+beat; there is no quota and no obligation to use a catalog object.
 
 Paste `templates/iso_kit.py` into the top of `scenes.py`. **Do not import it:
 Gate A copies only `scenes.py`.** It provides:
