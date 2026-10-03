@@ -1,0 +1,767 @@
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:07] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/19 [00:00<?, ?it/s]                                                                                              Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]                                                                                    [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:08] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]                                                                                              Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:09] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/21 [00:00<?, ?it/s]                                                                                              Animation 5: FadeIn(VGroup of 4 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:10] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]                                                                                              Animation 6: FadeIn(VGroup of 4 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:12] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              Animation 7: FadeIn(VGroup of 4 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                    [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:13] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: Create(Line):   0%|          | 0/12 [00:00<?, ?it/s]                                                                 Animation 5: FadeIn(Dot):   0%|          | 0/5 [00:00<?, ?it/s]                                                               Animation 7: _MethodAnimation(Dot):   0%|          | 0/23 [00:00<?, ?it/s]                                                                          [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:14] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]                                                                                              Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:15] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(Dot):   0%|          | 0/15 [00:00<?, ?it/s]                                                                          Animation 7: _MethodAnimation(Dot):   0%|          | 0/15 [00:00<?, ?it/s]                                                                          [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:16] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              Animation 6: Create(Line):   0%|          | 0/9 [00:00<?, ?it/s]                                                                [audit] scenes: 12 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:17] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 6: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                              Animation 7: Create(VGroup of 2 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]                                                                                    [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:19] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/21 [00:00<?, ?it/s]                                                                                                    Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:20] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]                                                                                              Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:21] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              Animation 8: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              [audit] scenes: 16 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:22] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 6: _MethodAnimation(Arc):   0%|          | 0/6 [00:00<?, ?it/s]                                                                         Animation 8: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]                                                                                              [audit] scenes: 16 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:24] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/20 [00:00<?, ?it/s]                                                                                              Animation 7: Create(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:25] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: Create(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                              Animation 7: _MethodAnimation(Line):   0%|          | 0/12 [00:00<?, ?it/s]                                                                           [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:26] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 3: Indicate(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                      Animation 4: Create(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   [audit] scenes: 10 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:27] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                              Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 12 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:28] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects), etc.:   0%|          | 0/17 [00:00<?, ?it/s]                                                                                                    Animation 5: Create(Line):   0%|          | 0/11 [00:00<?, ?it/s]                                                                 [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:30] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: Create(VMobject):   0%|          | 0/10 [00:00<?, ?it/s]                                                                     Animation 5: Create(VMobject):   0%|          | 0/10 [00:00<?, ?it/s]                                                                     Animation 7: Create(VMobject):   0%|          | 0/10 [00:00<?, ?it/s]                                                                     [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:31] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: Create(VGroup of 4 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                    Animation 5: FadeIn(Dot):   0%|          | 0/5 [00:00<?, ?it/s]                                                               Animation 6: _MethodAnimation(Dot):   0%|          | 0/14 [00:00<?, ?it/s]                                                                          Animation 8: FadeIn(Dot):   0%|          | 0/5 [00:00<?, ?it/s]                                                               Animation 9: _MethodAnimation(Dot):   0%|          | 0/14 [00:00<?, ?it/s]                                                                          [audit] scenes: 16 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:32] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(Dot):   0%|          | 0/5 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(Dot):   0%|          | 0/11 [00:00<?, ?it/s]                                                                          Animation 6: FadeIn(Dot):   0%|          | 0/3 [00:00<?, ?it/s]                                                               Animation 7: _MethodAnimation(Dot), etc.:   0%|          | 0/15 [00:00<?, ?it/s]                                                                                [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:33] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]                                                                                              Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:35] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]                                                                                              Animation 6: Create(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+/bin/sh: sox: command not found
+[09/30/26 22:37:36] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Animation 0: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                              Animation 1: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+[audit] scenes: 4 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+/bin/sh: sox: command not found
+[09/30/26 22:37:37] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             0_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B00_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             1_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B01_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 5: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             2_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B02_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 6: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             3_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B03_Prop                      scene.py:278
+                             Played 8 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 7: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             4_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B04_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                Animation 5: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 7: _MethodAnimation(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             5_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B05_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             6_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B06_Prop                      scene.py:278
+                             Played 8 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                                         Animation 7: _MethodAnimation(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             7_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B07_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 6: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                [09/30/26 22:37:38] INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             8_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B08_Prop                      scene.py:278
+                             Played 8 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 6: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 7: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B0                         
+                             9_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B09_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                   Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             0_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B10_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             1_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B11_Prop                      scene.py:278
+                             Played 8 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 8: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                                 INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             2_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B12_Prop                      scene.py:278
+                             Played 10 animations                               
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 6: _MethodAnimation(Arc):   0%|          | 0/1 [00:00<?, ?it/s]                                                                         Animation 8: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                                 INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             3_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B13_Prop                      scene.py:278
+                             Played 10 animations                               
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 7: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             4_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B14_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 7: _MethodAnimation(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                              INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             5_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B15_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 3: Indicate(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                     Animation 4: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             6_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B16_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             7_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B17_Prop                      scene.py:278
+                             Played 8 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                   Animation 5: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             8_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B18_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: Create(VMobject):   0%|          | 0/1 [00:00<?, ?it/s]                                                                    Animation 5: Create(VMobject):   0%|          | 0/1 [00:00<?, ?it/s]                                                                    Animation 7: Create(VMobject):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                        INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B1                         
+                             9_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B19_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: Create(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 5: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 6: _MethodAnimation(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                                         Animation 8: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 9: _MethodAnimation(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B2                         
+                             0_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B20_Prop                      scene.py:278
+                             Played 11 animations                               
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                                         Animation 6: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 7: _MethodAnimation(Dot), etc.:   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                   INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B2                         
+                             1_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B21_Prop                      scene.py:278
+                             Played 9 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B2                         
+                             2_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B22_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 6: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                [09/30/26 22:37:39] INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/B2                         
+                             3_Prop_ManimCE_v0.20.1.png                         
+                             '                                                  
+                                                                                
+                    INFO     Rendered B23_Prop                      scene.py:278
+                             Played 8 animations                                
+Animation 0: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 1: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/_q                         
+                             c/preview/images/scenes/BC                         
+                             REDIT_Attribution_ManimCE_                         
+                             v0.20.1.png'                                       
+                                                                                
+                    INFO     Rendered BCREDIT_Attribution           scene.py:278
+                             Played 3 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+Preflight and previews complete; scratch: /var/folders/f4/xpgg8_rd1m50b2z8w_0xpnt80000gn/T/show-tell-props-audit-zes4in37

@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1697911619_3142935987_3828890534.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1167814662_1445927807_2333606656.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1167814662_1971561045_2053440608.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1167814662_1482898694_3680222078.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1167814662_2481654401_278134796.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1167814662_515432342_3411010439.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/media/videos/scenes/2160p24/partial_movie_files/B16_Prop/1167814662_2417588755_593749292.mp4'

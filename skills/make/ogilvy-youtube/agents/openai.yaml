@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ogilvy YouTube"
+  short_description: "Clear YouTube metadata for finished films"
+  default_prompt: "Use $ogilvy-youtube to write the title, description, hashtags, and keyword tags for this finished film."

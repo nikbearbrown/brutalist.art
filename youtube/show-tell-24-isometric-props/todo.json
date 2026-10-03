@@ -1,0 +1,371 @@
+{
+  "video": "show-tell-24-isometric-props",
+  "metadata": {
+    "slug": "show-tell-24-isometric-props",
+    "title": "Show-Tell: 24 Props That Explain",
+    "topic": "CLAUDE \u00b7 SHOW-TELL",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "playlist": "Claude",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "Show-tell opens with hesitant writer and definitions; no verdict. Your Turn and locked spoken outro retained.",
+    "source_doc": "SOURCES.md; Isocons selected references and local native vector rig",
+    "tags": [
+      "Show-Tell",
+      "Isometric Icons",
+      "Conducting AI",
+      "Computational Skepticism",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-30T22:40:25",
+      "cut": "review",
+      "filled": 29,
+      "of": 29,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' \u2014 COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 29,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "status": "filled",
+      "on_disk": "media/BIDEA.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BIDEA.mp4",
+      "label": "Hallo. This is Liam, in for Bear. Better teaching pictures do more than decorate. These twenty-four "
+    },
+    {
+      "beat_id": "BDEFS",
+      "status": "filled",
+      "on_disk": "media/BDEFS.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BDEFS.mp4",
+      "label": "Three terms. A prop is a reusable drawing. A state tells us what condition it is in. An action chang"
+    },
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "manim/B00.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B00.mp4",
+      "label": "Start with a dataset. Lift one record out of the collection. The motion distinguishes the evidence w"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "manim/B01.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B01.mp4",
+      "label": "Linked data adds a relationship. Join the connector to the records. A link tells us where material c"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "manim/B02.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B02.mp4",
+      "label": "Layers separate responsibilities. Lift the top layer while the others stay put. Use this to distingu"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "manim/B03.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B03.mp4",
+      "label": "A reference gives the worker a procedure when it is needed. Pull out the marked section. Keep instru"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "manim/B04.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B04.mp4",
+      "label": "The terminal takes a request and returns a result. Watch the evidence slip enter, then a different s"
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "manim/B05.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B05.mp4",
+      "label": "Connected services exchange something specific. Draw the connection, then send a packet across it. D"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "Deployment moves a package into its operating position. Lower the code onto its platform. This shows"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "manim/B07.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B07.mp4",
+      "label": "A network offers more than one route. Follow one packet through the nodes. Showing the chosen path i"
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "manim/B08.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B08.mp4",
+      "label": "The raised hand means stop and ask. Raise it before the action continues. Human intervention belongs"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "manim/B09.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B09.mp4",
+      "label": "A reviewer inspects a proposed result before approving it. Bring the evidence to the person, then ad"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "manim/B10.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B10.mp4",
+      "label": "Agreement needs two sides. Bring the hands together only after both are present. Use this for accept"
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "manim/B11.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B11.mp4",
+      "label": "A handoff transfers responsibility. Move the same evidence slip from one person to another. The obje"
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "manim/B12.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B12.mp4",
+      "label": "A policy is a constraint that changes behavior. Let a request approach the boundary and stop. If the"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "manim/B13.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B13.mp4",
+      "label": "Permission is a gate. Keep the lock closed until access is granted, then open it. The shield represe"
+    },
+    {
+      "beat_id": "B14",
+      "status": "filled",
+      "on_disk": "manim/B14.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B14.mp4",
+      "label": "Uncertainty should change the route. Send the unresolved case away for review. A question mark is us"
+    },
+    {
+      "beat_id": "B15",
+      "status": "filled",
+      "on_disk": "manim/B15.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B15.mp4",
+      "label": "A key grants a particular capability. Move it to the access point. In your own lesson, name what it "
+    },
+    {
+      "beat_id": "B16",
+      "status": "filled",
+      "on_disk": "manim/B16.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B16.mp4",
+      "label": "Cross-check two records before adding either check mark. These symbols show the comparison step. The"
+    },
+    {
+      "beat_id": "B17",
+      "status": "filled",
+      "on_disk": "manim/B17.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B17.mp4",
+      "label": "Inspection is an active search. Move the lens across the source, then mark the selected finding. Fin"
+    },
+    {
+      "beat_id": "B18",
+      "status": "filled",
+      "on_disk": "manim/B18.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B18.mp4",
+      "label": "Revision needs a before and an after. Separate the versions and reveal the changed line. Keep enough"
+    },
+    {
+      "beat_id": "B19",
+      "status": "filled",
+      "on_disk": "manim/B19.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B19.mp4",
+      "label": "A process record accumulates as work happens. Add each row in order. Record the action, the evidence"
+    },
+    {
+      "beat_id": "B20",
+      "status": "filled",
+      "on_disk": "manim/B20.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B20.mp4",
+      "label": "Delegation starts with a responsible owner. Draw the branches, then send work to each destination. D"
+    },
+    {
+      "beat_id": "B21",
+      "status": "filled",
+      "on_disk": "manim/B21.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B21.mp4",
+      "label": "A decision changes the path. Split the moving token into two possible routes. In a real workflow, st"
+    },
+    {
+      "beat_id": "B22",
+      "status": "filled",
+      "on_disk": "manim/B22.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B22.mp4",
+      "label": "Rebase is a code-history metaphor. Move the branch to a later base. This is a simplified illustratio"
+    },
+    {
+      "beat_id": "B23",
+      "status": "filled",
+      "on_disk": "manim/B23.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B23.mp4",
+      "label": "A conveyor makes progress visible. Move the package along the belt, then stop it for review. Finishi"
+    },
+    {
+      "beat_id": "BCREDIT",
+      "status": "filled",
+      "on_disk": "manim/BCREDIT.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/BCREDIT.mp4",
+      "label": "These props are simplified redraws adapted from Isocons under Creative Commons Attribution four poin"
+    },
+    {
+      "beat_id": "BHTF",
+      "status": "filled",
+      "on_disk": "media/BHTF.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BHTF.mp4",
+      "label": "Your turn. Paste this into Claude: Use Show-Tell to explain my workflow with three props. Show one h"
+    },
+    {
+      "beat_id": "BOUT",
+      "status": "filled",
+      "on_disk": "media/BOUT.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BOUT.mp4",
+      "label": "Show-Tell: 24 Props That Explain. At Nik Bear Brown."
+    }
+  ]
+}

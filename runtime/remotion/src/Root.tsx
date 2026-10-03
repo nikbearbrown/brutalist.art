@@ -731,6 +731,8 @@ import {ClaudeDefinitions, claudeDefinitionsSchema, claudeDefinitionsDefaultProp
 import {ClaudeTldrWhat, claudeTldrWhatSchema, claudeTldrWhatDefaultProps} from './scenes/ClaudeTldrWhat';
 import {ClaudeTldrWhy, claudeTldrWhySchema, claudeTldrWhyDefaultProps} from './scenes/ClaudeTldrWhy';
 import {ShowTellCard, showTellCardSchema, showTellCardDefaultProps} from './scenes/ShowTellCard';
+import {BrowserCapture, browserCaptureSchema, browserCaptureDefaultProps} from './scenes/BrowserCapture';
+import {LibraryIconRow, libraryIconRowSchema, libraryIconRowDefaultProps} from './scenes/LibraryIconRow';
 // ── fashionista modifier — photo-critique beat components ──
 import {LookPlate,      lookPlateSchema}      from './scenes/LookPlate';
 import {LookPlate916,   lookPlate916Schema}   from './scenes/LookPlate916';
@@ -4164,6 +4166,30 @@ export const RemotionRoot: React.FC = () => {
           schema={showTellCardSchema}
           defaultProps={showTellCardDefaultProps}
         />
+        {/* lecture — SHOW-THE-THING: a real captured web page in a browser window; camera pushes in, one terracotta ring */}
+        <Composition
+          id="BrowserCapture"
+          component={BrowserCapture}
+          durationInFrames={300}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 10) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={browserCaptureSchema}
+          defaultProps={browserCaptureDefaultProps}
+        />
+        {/* lecture — 2-D icons lane: 2–4 named things, one LARGE library icon each, landing on cue */}
+        <Composition
+          id="LibraryIconRow"
+          component={LibraryIconRow}
+          durationInFrames={240}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 8) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={libraryIconRowSchema}
+          defaultProps={libraryIconRowDefaultProps}
+        />
         {/* tldr — TERMS beat: 2–5 jargon rows landing one at a time, cream stage */}
         <Composition
           id="ClaudeDefinitions"
@@ -4553,6 +4579,7 @@ export const RemotionRoot: React.FC = () => {
           defaultProps={ccHarnessMapDemoDefaultProps} />
         <Composition id="CCPlainShell" component={CCPlainShell}
           durationInFrames={300} fps={30} width={1920} height={1080}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 10) * 30)})}
           schema={ccPlainShellSchema}
           defaultProps={ccPlainShellSchema.parse({})} />
         <Composition id="CCPlainShellDemo" component={CCPlainShellDemo}

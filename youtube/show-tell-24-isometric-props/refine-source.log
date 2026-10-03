@@ -1,0 +1,18 @@
+/bin/sh: sox: command not found
+29 beats; estimated 303 seconds
+[09/30/26 22:37:06] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/build_reel.py:10: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+  logo.set_width(.65).move_to([5.7,-3.05,0])
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/build_reel.py:11: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  logo_data=[m.get_points().round(6).tolist() for m in logo.family_members_with_points() if m.get_fill_opacity()>.5]
+Self-contained scenes and paperwork written.

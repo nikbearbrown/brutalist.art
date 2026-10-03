@@ -28,6 +28,8 @@ export const ccPlainShellSchema = z.object({
   startCue: z.number().int().default(10),
   /** Frames between lines. Commands get an extra beat before their output. */
   lineGap:  z.number().int().default(14),
+  /** Optional: the beat's measured audio. Sizes the composition so cues can run past 10 s. */
+  durationSeconds: z.number().optional(),
 });
 export type CCPlainShellProps = z.infer<typeof ccPlainShellSchema>;
 

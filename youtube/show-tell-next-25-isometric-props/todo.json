@@ -1,0 +1,382 @@
+{
+  "video": "show-tell-next-25-isometric-props",
+  "metadata": {
+    "slug": "show-tell-next-25-isometric-props",
+    "title": "Show-Tell: 25 More Props for Design and Learning",
+    "topic": "CLAUDE \u00b7 SHOW-TELL",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "playlist": "Claude",
+    "chapter_number": 2,
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "Show-Tell uses hesitant writer, definitions, Your Turn and locked spoken outro; no verdict.",
+    "tags": [
+      "Show-Tell",
+      "Isometric Icons",
+      "Conducting AI",
+      "Computational Skepticism",
+      "Educational AI"
+    ],
+    "build": {
+      "at": "2026-09-30T23:25:16",
+      "cut": "review",
+      "filled": 30,
+      "of": 30,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' \u2014 COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 30,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "status": "filled",
+      "on_disk": "media/BIDEA.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BIDEA.mp4",
+      "label": "Bonjour. This is Liam, in for Bear. Here are twenty-five more candidate props. Each one shows a desi"
+    },
+    {
+      "beat_id": "BDEFS",
+      "status": "filled",
+      "on_disk": "media/BDEFS.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BDEFS.mp4",
+      "label": "Three terms. A control changes a setting. Recovery returns work to a usable state. Evidence supports"
+    },
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "manim/B00.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B00.mp4",
+      "label": "A suggestion offers a starting point. Move the proposed instruction toward the arrow, then leave roo"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "manim/B01.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B01.mp4",
+      "label": "Clarification sends a question back before work continues. Separate the two directions. Use this whe"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "manim/B02.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B02.mp4",
+      "label": "A token can stand for a unit in a budget. Separate one segment from the rest. This is a teaching met"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "manim/B03.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B03.mp4",
+      "label": "A filter narrows a collection according to a rule. Move a record past successive levels. The rule mu"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "manim/B04.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B04.mp4",
+      "label": "Sorting changes order without changing the collection. Swap the short and long bars. Name the orderi"
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "manim/B05.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B05.mp4",
+      "label": "An adaptive form asks a follow-up question only when it applies. Reveal the second field after the f"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "Responsive design preserves the task across different screens. Separate the desktop, tablet, and pho"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "manim/B07.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B07.mp4",
+      "label": "A slider makes a range adjustable. Move the handle along its track. Name what changes and provide a "
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "manim/B08.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B08.mp4",
+      "label": "A toggle expresses a two-state choice. Move it from one end to the other. For a consequential action"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "manim/B09.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B09.mp4",
+      "label": "Accessibility is support for completing a task, not a decorative badge. Bring the support into place"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "manim/B10.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B10.mp4",
+      "label": "Keyboard focus shows where the next action will land. Move the focus marker between controls. A visi"
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "manim/B11.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B11.mp4",
+      "label": "A data warning interrupts an assumption. Reveal the warning, then pull out the affected record. The "
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "manim/B12.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B12.mp4",
+      "label": "A failed exchange should stop the next handoff. Bring the outgoing record to the broken connection a"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "manim/B13.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B13.mp4",
+      "label": "Undo returns from a recent action to its earlier state. Move the same record back. Keep it distinct "
+    },
+    {
+      "beat_id": "B14",
+      "status": "filled",
+      "on_disk": "manim/B14.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B14.mp4",
+      "label": "Restore recovers a saved state. Bring the snapshot back into the recovery ring. Name which snapshot "
+    },
+    {
+      "beat_id": "B15",
+      "status": "filled",
+      "on_disk": "manim/B15.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B15.mp4",
+      "label": "Release history connects a deployed package to earlier decisions. Move the clock beside the package,"
+    },
+    {
+      "beat_id": "B16",
+      "status": "filled",
+      "on_disk": "manim/B16.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B16.mp4",
+      "label": "A work board makes status visible. Move one task between columns. Define what the destination means;"
+    },
+    {
+      "beat_id": "B17",
+      "status": "filled",
+      "on_disk": "manim/B17.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B17.mp4",
+      "label": "A timeline preserves sequence. Follow the events in order. This schematic has no time scale, so the "
+    },
+    {
+      "beat_id": "B18",
+      "status": "filled",
+      "on_disk": "manim/B18.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B18.mp4",
+      "label": "A metric needs a question. Move the lens toward the change in this illustrative trend. Ask what was "
+    },
+    {
+      "beat_id": "B19",
+      "status": "filled",
+      "on_disk": "manim/B19.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B19.mp4",
+      "label": "A table keeps records comparable. Pull one row aside while the other rows remain. Use this when the "
+    },
+    {
+      "beat_id": "B20",
+      "status": "filled",
+      "on_disk": "manim/B20.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B20.mp4",
+      "label": "A quiz asks the learner to try before seeing the answer. Move the question aside and reveal a respon"
+    },
+    {
+      "beat_id": "B21",
+      "status": "filled",
+      "on_disk": "manim/B21.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B21.mp4",
+      "label": "Reference reading connects a person to material they can inspect. Open the two pages around the read"
+    },
+    {
+      "beat_id": "B22",
+      "status": "filled",
+      "on_disk": "manim/B22.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B22.mp4",
+      "label": "An experiment changes something so its consequences can be examined. Lower the instrument toward the"
+    },
+    {
+      "beat_id": "B23",
+      "status": "filled",
+      "on_disk": "manim/B23.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B23.mp4",
+      "label": "A map reveals relationships that one isolated location cannot show. Unfold the three panels. For a w"
+    },
+    {
+      "beat_id": "B24",
+      "status": "filled",
+      "on_disk": "manim/B24.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B24.mp4",
+      "label": "A milestone marks a condition worth checking. Raise the flag after the work reaches that point. Keep"
+    },
+    {
+      "beat_id": "BCREDIT",
+      "status": "filled",
+      "on_disk": "manim/BCREDIT.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/BCREDIT.mp4",
+      "label": "These twenty-five candidates are simplified adaptations of Isocons, under Creative Commons Attributi"
+    },
+    {
+      "beat_id": "BHTF",
+      "status": "filled",
+      "on_disk": "media/BHTF.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BHTF.mp4",
+      "label": "Your turn. Paste this into Claude: Use Show-Tell to explain a task I teach. Choose three props. Show"
+    },
+    {
+      "beat_id": "BOUT",
+      "status": "filled",
+      "on_disk": "media/BOUT.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BOUT.mp4",
+      "label": "Show-Tell: 25 More Props for Design and Learning. At Nik Bear Brown."
+    }
+  ]
+}

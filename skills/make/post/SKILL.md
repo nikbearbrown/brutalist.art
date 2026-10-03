@@ -141,8 +141,9 @@ to produce a further-upscaled version that ALSO sits in TOPOST
 1. **check** — verify preconditions (complete, GATE T green, audio locked).
 2. **4k-audit** — probe every beat; re-render any sub-4K beat at 2160; recompile.
 3. **final** — `./art final <slug>`; frame-assert no markers/burn-in.
-4. **describe** — write/refresh `<slug>.md` (timestamped chapters from measured
-   offsets + boilerplate).
+4. **describe** — follow `skills/make/ogilvy-youtube/SKILL.md` to write or
+   refresh `<slug>.md`: benefit-led hook, factual description, measured chapters,
+   sources/credits, 3–5 hashtags, and 10–15 keyword tags.
 5. **move** — move master + `.md` into TOPOST.
 6. **topaz** — detect Topaz ffmpeg; upscale into TOPOST (or log-and-skip).
 7. **log** — upsert the `staged.json` entry (files, res, duration, dates, meta).

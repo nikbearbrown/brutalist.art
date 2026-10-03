@@ -1,0 +1,357 @@
+{
+  "count": 24,
+  "props": [
+    {
+      "id": "dataset",
+      "source_name": "Dataset",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "9007e754a8b7c41d4d4419cb511da19c78ab977e2e528cd6146460ce2f35fb40",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "body",
+        "cells"
+      ],
+      "svg": "svg/dataset.svg",
+      "adapted_sha256": "760efc3d4da733dbd0302becd9639722476fdf1a21ee07744408fffbe0457d60"
+    },
+    {
+      "id": "dataset-linked",
+      "source_name": "Dataset linked",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "a2eb0c6a454908e3e3428eb6771fdee332890931fd35097d7541cb5e421e6373",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "body",
+        "cells",
+        "link"
+      ],
+      "svg": "svg/dataset-linked.svg",
+      "adapted_sha256": "a013b29a5b6ced864d1be940688cb029d61de45a7c05fc40e6bea2bfb77cbdb0"
+    },
+    {
+      "id": "layers",
+      "source_name": "Layers",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "88c2d6b4ab890e9f0d3be126d89feee3c8bd67e512de56163456d00156f602a2",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "layer0",
+        "layer1",
+        "layer2"
+      ],
+      "svg": "svg/layers.svg",
+      "adapted_sha256": "8a507b6b113352c22e534fb3452ca9903770612f67bddfb913f37d600687c558"
+    },
+    {
+      "id": "quick-reference",
+      "source_name": "Quick reference",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "e83c45ec3d03903b33a506602de221e1c25b5d758745879940d6bf29f20c7a42",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "body",
+        "lines",
+        "bookmark"
+      ],
+      "svg": "svg/quick-reference.svg",
+      "adapted_sha256": "f01fd6024d151513bf1ce227816745dba026645e2d7b6a596e4e4e17eb834006"
+    },
+    {
+      "id": "terminal",
+      "source_name": "Terminal",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "c8413673b8d79e44aeff0ada864545631591299041cd19707a8417a6e0600e81",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "body",
+        "prompt",
+        "cursor"
+      ],
+      "svg": "svg/terminal.svg",
+      "adapted_sha256": "682805205eea2b625d11b940780b90431f055f666de3f880df8426c9ea0e86e5"
+    },
+    {
+      "id": "linked-services",
+      "source_name": "Linked services",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "48738c70f7e14ccf75d5e55a01458c6336dad01a11f70fd170d53a0e56d69ff6",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "left",
+        "right",
+        "connector"
+      ],
+      "svg": "svg/linked-services.svg",
+      "adapted_sha256": "3fbfd61a35395dbb290ae4a17305e81bf02dc3b8d1b86c703649dd3bbbbf514a"
+    },
+    {
+      "id": "deployed-code",
+      "source_name": "Deployed code",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "476dc5382aa7d2a7efb3ed69b797b068814282eff88506b29fe469054802d7e6",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "platform",
+        "package",
+        "brackets"
+      ],
+      "svg": "svg/deployed-code.svg",
+      "adapted_sha256": "24eeeabb42514860280d395254447bb4f3d5842b1c029a716f3b9a5313e2a082"
+    },
+    {
+      "id": "network-node",
+      "source_name": "Network node",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "ab77af787e46f7e3b8f16e055b9a30b7c3ea823305a39e53dfb01d6a80f72fc7",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "edges",
+        "nodes"
+      ],
+      "svg": "svg/network-node.svg",
+      "adapted_sha256": "91b9dd22155337eef29cd326d1e11139cf5cf270c0a9f9bfc0b0e11d3075f3a2"
+    },
+    {
+      "id": "person-raised-hand",
+      "source_name": "Person raised hand",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "c91f33d0550b6267106233918fefca861d1fbe14e09a35dba1aa2bd24a6fa505",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "person",
+        "arm",
+        "hand"
+      ],
+      "svg": "svg/person-raised-hand.svg",
+      "adapted_sha256": "1865ef7cd7f203a7610c0954908803ba07e2e5bce520e1aaa672aaad45f21556"
+    },
+    {
+      "id": "person-check",
+      "source_name": "Person check",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "68ac2aed08750598e20920b928551bbc090cbe0554f8fe5d084f13f221d3c5b9",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "person",
+        "check"
+      ],
+      "svg": "svg/person-check.svg",
+      "adapted_sha256": "3c94e68ae9d95499dd13de1dd6fb59275da1cb7c1fcbf943add1f48e1c53784a"
+    },
+    {
+      "id": "handshake",
+      "source_name": "Handshake",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "b7965e0a0a042a5525a3afbd6729194ebfa5d9fbbf7c31ef6316f53093a7d92e",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "left",
+        "right"
+      ],
+      "svg": "svg/handshake.svg",
+      "adapted_sha256": "ee913b3e43672914557a0536ed68b8e61750b19277fd795c157e55279ae3281b"
+    },
+    {
+      "id": "partner-exchange",
+      "source_name": "Partner exchange",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "25fe3aa9319bacc01a58b406397b543cd49253c38d7886f45da68c3fb0065859",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "left",
+        "right",
+        "handoff"
+      ],
+      "svg": "svg/partner-exchange.svg",
+      "adapted_sha256": "5dc16c42beb794d0d5a83683812289dc39816d17f3ffaf8703f2136503ae2431"
+    },
+    {
+      "id": "policy",
+      "source_name": "Policy",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "91f21f877a87a8a71ffa9cbafeaf0810dbd8c671685c6690b71e9072d2af5214",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "body",
+        "rules",
+        "gate"
+      ],
+      "svg": "svg/policy.svg",
+      "adapted_sha256": "9f350d8191a6b9dba0bfded0493b33deabd7c3db1c54baecfa91bd7207fa2306"
+    },
+    {
+      "id": "shield-lock",
+      "source_name": "Shield lock",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "f65569eaa522306359cd79f0b83e403b493872f3d5921f2d8695bc07b0483824",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "shield",
+        "shackle",
+        "lock"
+      ],
+      "svg": "svg/shield-lock.svg",
+      "adapted_sha256": "d173e0d66c0da5a0c3f5c1d4133ac4ad6371d4bbda0159a6a4d9597594fffdc9"
+    },
+    {
+      "id": "shield-question",
+      "source_name": "Shield question",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "cb90d341d6b9ea4e67643fe49f511c9d754c4c33f08e1fae53f10389c4547f24",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "shield",
+        "question",
+        "dot"
+      ],
+      "svg": "svg/shield-question.svg",
+      "adapted_sha256": "1bb56fda4e856937139fe7186a34f9ea69680cb1b5a6943d208fa2a3caa90e1a"
+    },
+    {
+      "id": "vpn-key",
+      "source_name": "VPN key",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "68015ab6ee0ea2693ff72cc33dc61e8cc0f80abb02b56157c2b00c6e010e9600",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "bow",
+        "shaft"
+      ],
+      "svg": "svg/vpn-key.svg",
+      "adapted_sha256": "1c8cf66b8bb31bbf8f701ecb0ca4cd739826ae032da89141fbaa19e84e9f86b7"
+    },
+    {
+      "id": "data-check-double",
+      "source_name": "Data check double",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "e09807a0e0e46733279a3c77cc40fa5f19a41f0d8786063c77ba41952dfc385e",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "records",
+        "checks"
+      ],
+      "svg": "svg/data-check-double.svg",
+      "adapted_sha256": "30a0a4fd6d043b0ef811b9ddf00012cedee98cfd91530d89c61d1444401214ac"
+    },
+    {
+      "id": "search-check-2",
+      "source_name": "Search check 2",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "2614c62b741df9dd5936a9c2ea5e1f0bd73bb5c7823d9176a46feb26135a7135",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "source",
+        "lens",
+        "check"
+      ],
+      "svg": "svg/search-check-2.svg",
+      "adapted_sha256": "eb87530ff9f1bee0de7436bf8062819ce29c3f68da9f1a1025d62fddd2112b75"
+    },
+    {
+      "id": "track-changes",
+      "source_name": "Track changes",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "ae7c31ea85e771567c0e41488ef60529d84cd814252b5a064ee8e3bb520ec3b5",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "before",
+        "after",
+        "revision"
+      ],
+      "svg": "svg/track-changes.svg",
+      "adapted_sha256": "036a0fc794e74a8423cfbbad927b813f45602d2d7611ce250bb8f0566056625b"
+    },
+    {
+      "id": "receipt",
+      "source_name": "Receipt",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "ffd2c29cc4ebabfeca839ed9378cf80586023d97481974e18f2d5d64e3e68441",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "paper",
+        "row0",
+        "row1",
+        "row2"
+      ],
+      "svg": "svg/receipt.svg",
+      "adapted_sha256": "26d620a8206ff7089b36e9f2a9d18eb7f2cac71621227a80e410f0e2951f855a"
+    },
+    {
+      "id": "account-tree",
+      "source_name": "Account tree",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "6532ff517106234dd965f3de0b320207017700d1fa46773895364cf5dda83d88",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "edges",
+        "nodes"
+      ],
+      "svg": "svg/account-tree.svg",
+      "adapted_sha256": "ac801ae8115fa85a624e226989262e98a6189d06014ee8757c48b5ee124134c3"
+    },
+    {
+      "id": "arrow-split",
+      "source_name": "Arrow split",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "bf156a56d3bb42c59331fd8ca90b8769cd814d1e0284c5abd33883c7587a4435",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "stem"
+      ],
+      "svg": "svg/arrow-split.svg",
+      "adapted_sha256": "464a98763bcf4c22aea3f4f62bd64b359fda28f211bd307fd934997491e008c2"
+    },
+    {
+      "id": "rebase",
+      "source_name": "Rebase",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "dacb25148dca91870cabe0eb1e795a68ff8cc55e591bf7b8483cfe1861b629ae",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "trunk",
+        "branch",
+        "commits"
+      ],
+      "svg": "svg/rebase.svg",
+      "adapted_sha256": "925510d7b23f628f1ec9f781699e90ea589f24a1f555fb133d525e729205b7c5"
+    },
+    {
+      "id": "conveyor-belt",
+      "source_name": "Conveyor belt",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "fdb451934ca53188510de1eefcba58c7f39bd37a1cb7d08fc81e04a4cf0b3730",
+      "adaptation": "Simplified native-vector redraw; changed geometry, stroke, palette, and animation rig. Not a verbatim SVG conversion.",
+      "parts": [
+        "belt",
+        "feet",
+        "cargo"
+      ],
+      "svg": "svg/conveyor-belt.svg",
+      "adapted_sha256": "6f44e19ee6702a028cecc532a13e534cdfad0da673c146c3255dfab31b75703a"
+    }
+  ]
+}

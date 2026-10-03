@@ -778,6 +778,18 @@ HAND_DRAWN_PATTERNS = {
     # the fragment is a rendering geometry artifact of the ring-over-text composition, not a
     # designed sub-floor element. Same class as S02Scene/S15Scene/S16Scene TERRA strikethrough.
     "ReqRingWord",
+    # LibraryIconRow (Remotion): Lucide SVG icon glyphs (home, trash, database, eye, pencil,
+    # users, shield) contain sub-elements smaller than the §8.1 floor — e.g. home roof ridge
+    # ~38px, trash-can lid hinge ~36px, database ring highlight ~35px, eye iris edge ~38px.
+    # The main icon body and all text (title ≥72px, label ≥60px, sub ≥44px) are above the
+    # floor. Sub-glyph strokes are pictographic marks, not typography. Same rationale as
+    # FallacyCard916 (fish-eye 31px, dorsal fin 31px) and ClaudeComposerAsk (mic arc 33px).
+    "LibraryIconRow",
+    # TTLTimeline, BestPracticesList (lecture Manim scenes): DashedLine segment endpoints
+    # and antialiased serif glyph strokes produce blobs at 35–38px. All designed text uses
+    # font_size≥0.58*72pt (→≥45px physical at 4K). These are rendering geometry artifacts
+    # (dash endpoints, crossbars, thin-stroke serifs), not sub-floor typography.
+    "TTLTimeline", "BestPracticesList",
 }
 
 # Patterns where the entire colour palette is diegetic — colours encode content,
@@ -2324,7 +2336,7 @@ def run_check(reel_dir: str, skip_pixels: bool = False) -> int:
         # SOURCE_REPORT is supplied footage played as is (docs/PIPELINE-SAFETY.md): its frames are
         # the source's own content, not our typography — same exemption as raw video.
         is_raw_video_shot = shot_type_field.lower() in ("video", "ai-video", "still", "i2v", "t2v", "gen-video", "source-cut", "screen", "source_report")
-        is_manim = (build_status == "MANIM" or lane == "MANIM") and not is_remotion_shot
+        is_manim = (build_status.upper() == "MANIM" or lane.upper() == "MANIM") and not is_remotion_shot
         _remotion = _shot.get("remotion", {}) if isinstance(_shot, dict) else {}
         _manim = _shot.get("manim", {}) if isinstance(_shot, dict) else {}
         # Remotion shots: use the component pattern name; Manim shots: use the class name.

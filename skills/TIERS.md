@@ -21,6 +21,7 @@ make a video.
 | deep-explainer | Multi-layered concept depth passes |
 | cli-explainer | Claude session + live code + output as vox beat |
 | tldr | Chapter/report → learning sections → per-section film: TL;DR up front, THE QUESTION, TERMS, then a 3Blue1Brown-template LEARN body in pure Manim; your-turn close; Liam, regular outro |
+| lecture | A WHOLE chapter or document → one act-structured film, no length cap. Primarily visual: every body beat auditions the full playset (Manim, isometric drawings, ShowTellCard, Remotion patterns, 2-D icons, real code/terminal, the real app or website) and takes the best one; a tool is always shown as itself. Hesitant writer → key terms → acts → recap → Your Turn → channel outro (default @NikBearBrown); Liam |
 | godot-waikthrough | Real Godot feature walkthrough with Liam riffs; `walker` adds Claude/GDD bookends; regular outro |
 | godot-gamedev | Detailed Godot code/component/art teardown; source-backed editor views and optional `walker` bookends; Liam and regular outro |
 | medhavy-walkthrough | Real Medhavy Hub (hub.medhavy.com) browser walkthrough with Liam riffs; `textbook` adds Claude bookends; seeded tenant + human sign-in required; regular outro |

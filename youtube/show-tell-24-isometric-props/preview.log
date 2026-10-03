@@ -1,0 +1,52 @@
+/bin/sh: sox: command not found
+[09/30/26 22:25:51] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 3: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 4: Create(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                       INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/private/tmp/show-tell-pr                         
+                             ops-preview/images/scenes/                         
+                             B00_Prop_ManimCE_v0.20.1.p                         
+                             ng'                                                
+                                                                                
+                    INFO     Rendered B00_Prop                      scene.py:278
+                             Played 6 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 3: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 5: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                [09/30/26 22:25:52] INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/private/tmp/show-tell-pr                         
+                             ops-preview/images/scenes/                         
+                             B08_Prop_ManimCE_v0.20.1.p                         
+                             ng'                                                
+                                                                                
+                    INFO     Rendered B08_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 3: FadeIn(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                   Animation 4: _MethodAnimation(Arc):   0%|          | 0/1 [00:00<?, ?it/s]                                                                         Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                                 INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/private/tmp/show-tell-pr                         
+                             ops-preview/images/scenes/                         
+                             B13_Prop_ManimCE_v0.20.1.p                         
+                             ng'                                                
+                                                                                
+                    INFO     Rendered B13_Prop                      scene.py:278
+                             Played 7 animations                                
+Animation 1: FadeIn(Dot):   0%|          | 0/1 [00:00<?, ?it/s]                                                               Animation 3: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                             Animation 4: Create(Line):   0%|          | 0/1 [00:00<?, ?it/s]                                                                                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/private/tmp/show-tell-pr                         
+                             ops-preview/images/scenes/                         
+                             B23_Prop_ManimCE_v0.20.1.p                         
+                             ng'                                                
+                                                                                
+                    INFO     Rendered B23_Prop                      scene.py:278
+                             Played 6 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim

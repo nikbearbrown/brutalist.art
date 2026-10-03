@@ -1,0 +1,507 @@
+1
+00:00:01,292 --> 00:00:03,000
+Hallo. This is Liam, in for Bear.
+
+2
+00:00:03,042 --> 00:00:04,958
+Better teaching pictures do more than
+decorate.
+
+3
+00:00:05,333 --> 00:00:09,042
+These twenty-four isometric props make
+actions visible: selecting
+
+4
+00:00:09,042 --> 00:00:12,125
+evidence, granting permission, handing off
+work, and recording
+
+5
+00:00:12,125 --> 00:00:12,625
+decisions.
+
+6
+00:00:13,542 --> 00:00:15,792
+Three terms. A prop is a reusable drawing.
+
+7
+00:00:16,042 --> 00:00:18,083
+A state tells us what condition it is in.
+
+8
+00:00:18,292 --> 00:00:20,125
+An action changes that condition.
+
+9
+00:00:20,542 --> 00:00:23,042
+The picture shows the change; the voice
+explains why
+
+10
+00:00:23,042 --> 00:00:23,458
+it matters.
+
+11
+00:00:24,333 --> 00:00:25,667
+Start with a dataset.
+
+12
+00:00:25,708 --> 00:00:27,208
+Lift one record out of the collection.
+
+13
+00:00:27,708 --> 00:00:30,792
+The motion distinguishes the evidence we
+actually inspect from
+
+14
+00:00:30,792 --> 00:00:32,000
+everything we could inspect.
+
+15
+00:00:33,042 --> 00:00:34,500
+Linked data adds a relationship.
+
+16
+00:00:34,875 --> 00:00:36,292
+Join the connector to the records.
+
+17
+00:00:36,833 --> 00:00:39,333
+A link tells us where material connects,
+not whether
+
+18
+00:00:39,333 --> 00:00:40,625
+that material is reliable.
+
+19
+00:00:41,458 --> 00:00:44,625
+Layers separate responsibilities. Lift the
+top layer while the
+
+20
+00:00:44,625 --> 00:00:47,458
+others stay put. Use this to distinguish
+the interface,
+
+21
+00:00:47,708 --> 00:00:49,542
+the agent, and the underlying service.
+
+22
+00:00:50,333 --> 00:00:52,458
+A reference gives the worker a procedure
+when it
+
+23
+00:00:52,458 --> 00:00:54,417
+is needed. Pull out the marked section.
+
+24
+00:00:54,833 --> 00:00:58,208
+Keep instructions visually distinct from
+evidence about the world.
+
+25
+00:00:58,875 --> 00:01:01,417
+The terminal takes a request and returns a
+result.
+
+26
+00:01:01,792 --> 00:01:04,083
+Watch the evidence slip enter, then a
+different slip
+
+27
+00:01:04,083 --> 00:01:07,042
+emerge. An action has an observable
+consequence.
+
+28
+00:01:07,958 --> 00:01:10,583
+Connected services exchange something
+specific.
+
+29
+00:01:10,917 --> 00:01:13,292
+Draw the connection, then send a packet
+across it.
+
+30
+00:01:13,542 --> 00:01:16,083
+Do not use a cable to imply unlimited
+access.
+
+31
+00:01:16,958 --> 00:01:19,625
+Deployment moves a package into its
+operating position.
+
+32
+00:01:19,958 --> 00:01:21,750
+Lower the code onto its platform.
+
+33
+00:01:22,333 --> 00:01:25,125
+This shows delivery, not a guarantee that
+the software
+
+34
+00:01:25,125 --> 00:01:25,958
+works correctly.
+
+35
+00:01:26,708 --> 00:01:28,375
+A network offers more than one route.
+
+36
+00:01:28,667 --> 00:01:30,208
+Follow one packet through the nodes.
+
+37
+00:01:30,708 --> 00:01:33,042
+Showing the chosen path is clearer than
+lighting up
+
+38
+00:01:33,042 --> 00:01:34,250
+every connection at once.
+
+39
+00:01:35,125 --> 00:01:37,042
+The raised hand means stop and ask.
+
+40
+00:01:37,292 --> 00:01:39,083
+Raise it before the action continues.
+
+41
+00:01:39,542 --> 00:01:42,542
+Human intervention belongs inside the
+workflow, not in a
+
+42
+00:01:42,542 --> 00:01:43,583
+disclaimer after it.
+
+43
+00:01:44,250 --> 00:01:47,333
+A reviewer inspects a proposed result
+before approving it.
+
+44
+00:01:47,625 --> 00:01:49,583
+Bring the evidence to the person, then add
+the
+
+45
+00:01:49,583 --> 00:01:52,167
+check. Approval is a decision, not
+decoration.
+
+46
+00:01:53,167 --> 00:01:54,625
+Agreement needs two sides.
+
+47
+00:01:54,875 --> 00:01:57,125
+Bring the hands together only after both
+are present.
+
+48
+00:01:57,667 --> 00:02:00,083
+Use this for accepted terms or a shared
+task
+
+49
+00:02:00,083 --> 00:02:01,875
+boundary, not automatic trust.
+
+50
+00:02:02,667 --> 00:02:04,500
+A handoff transfers responsibility.
+
+51
+00:02:05,000 --> 00:02:07,417
+Move the same evidence slip from one
+person to
+
+52
+00:02:07,417 --> 00:02:10,375
+another. The object persists, so the
+viewer can follow
+
+53
+00:02:10,375 --> 00:02:11,542
+what changed hands.
+
+54
+00:02:12,250 --> 00:02:14,875
+A policy is a constraint that changes
+behavior.
+
+55
+00:02:15,250 --> 00:02:17,500
+Let a request approach the boundary and
+stop.
+
+56
+00:02:17,875 --> 00:02:20,000
+If the rule never affects the action, the
+picture
+
+57
+00:02:20,000 --> 00:02:20,792
+teaches nothing.
+
+58
+00:02:21,583 --> 00:02:22,542
+Permission is a gate.
+
+59
+00:02:22,750 --> 00:02:25,292
+Keep the lock closed until access is
+granted, then
+
+60
+00:02:25,292 --> 00:02:28,583
+open it. The shield represents this
+boundary, not proof
+
+61
+00:02:28,583 --> 00:02:29,708
+that a system is secure.
+
+62
+00:02:30,500 --> 00:02:32,000
+Uncertainty should change the route.
+
+63
+00:02:32,375 --> 00:02:34,583
+Send the unresolved case away for review.
+
+64
+00:02:35,042 --> 00:02:37,417
+A question mark is useful only when the
+workflow
+
+65
+00:02:37,417 --> 00:02:38,500
+does something about it.
+
+66
+00:02:39,208 --> 00:02:41,042
+A key grants a particular capability.
+
+67
+00:02:41,458 --> 00:02:42,708
+Move it to the access point.
+
+68
+00:02:43,042 --> 00:02:45,125
+In your own lesson, name what it unlocks
+and
+
+69
+00:02:45,125 --> 00:02:46,667
+what remains outside its scope.
+
+70
+00:02:47,458 --> 00:02:50,208
+Cross-check two records before adding
+either check mark.
+
+71
+00:02:50,667 --> 00:02:52,667
+These symbols show the comparison step.
+
+72
+00:02:52,875 --> 00:02:55,375
+They cannot tell us whether the underlying
+sources are
+
+73
+00:02:55,375 --> 00:02:56,583
+independent or correct.
+
+74
+00:02:57,375 --> 00:02:58,917
+Inspection is an active search.
+
+75
+00:02:59,333 --> 00:03:01,542
+Move the lens across the source, then mark
+the
+
+76
+00:03:01,542 --> 00:03:05,208
+selected finding. Finding a passage and
+verifying its claim
+
+77
+00:03:05,208 --> 00:03:05,958
+are different jobs.
+
+78
+00:03:06,792 --> 00:03:08,708
+Revision needs a before and an after.
+
+79
+00:03:09,125 --> 00:03:11,500
+Separate the versions and reveal the
+changed line.
+
+80
+00:03:11,917 --> 00:03:14,292
+Keep enough history to explain why the new
+version
+
+81
+00:03:14,292 --> 00:03:14,792
+is better.
+
+82
+00:03:15,583 --> 00:03:17,750
+A process record accumulates as work
+happens.
+
+83
+00:03:18,042 --> 00:03:19,250
+Add each row in order.
+
+84
+00:03:19,708 --> 00:03:22,292
+Record the action, the evidence, and the
+decision, not
+
+85
+00:03:22,292 --> 00:03:23,417
+just the finished artifact.
+
+86
+00:03:24,375 --> 00:03:26,542
+Delegation starts with a responsible
+owner.
+
+87
+00:03:26,875 --> 00:03:29,500
+Draw the branches, then send work to each
+destination.
+
+88
+00:03:30,083 --> 00:03:33,458
+Different workers need explicit tasks, not
+merely different boxes.
+
+89
+00:03:34,292 --> 00:03:35,833
+A decision changes the path.
+
+90
+00:03:36,167 --> 00:03:38,417
+Split the moving token into two possible
+routes.
+
+91
+00:03:38,750 --> 00:03:41,333
+In a real workflow, state the condition
+that selects
+
+92
+00:03:41,333 --> 00:03:42,542
+one route rather than both.
+
+93
+00:03:43,375 --> 00:03:45,083
+Rebase is a code-history metaphor.
+
+94
+00:03:45,500 --> 00:03:46,875
+Move the branch to a later base.
+
+95
+00:03:47,375 --> 00:03:50,208
+This is a simplified illustration of
+changing its starting
+
+96
+00:03:50,208 --> 00:03:52,208
+point, not a complete Git tutorial.
+
+97
+00:03:53,000 --> 00:03:54,625
+A conveyor makes progress visible.
+
+98
+00:03:55,042 --> 00:03:57,125
+Move the package along the belt, then stop
+it
+
+99
+00:03:57,125 --> 00:03:59,792
+for review. Finishing the motion is not
+the same
+
+100
+00:03:59,792 --> 00:04:00,708
+as passing the check.
+
+101
+00:04:01,500 --> 00:04:04,792
+These props are simplified redraws adapted
+from Isocons under
+
+102
+00:04:04,792 --> 00:04:07,792
+Creative Commons Attribution four point
+zero.
+
+103
+00:04:07,833 --> 00:04:10,417
+The shapes, colors, and animation have
+changed.
+
+104
+00:04:10,625 --> 00:04:12,917
+Keep the source and license credit when
+you reuse
+
+105
+00:04:12,917 --> 00:04:13,208
+them.
+
+106
+00:04:13,875 --> 00:04:16,375
+Your turn. Paste this into Claude: Use
+Show-Tell to
+
+107
+00:04:16,375 --> 00:04:18,375
+explain my workflow with three props.
+
+108
+00:04:18,708 --> 00:04:20,792
+Show one human decision and one check of
+the
+
+109
+00:04:20,792 --> 00:04:22,750
+evidence. Then check the film yourself.
+
+110
+00:04:23,167 --> 00:04:24,833
+Does every motion explain a change?
+
+111
+00:04:25,083 --> 00:04:26,542
+Can you tell what the human decided?
+
+112
+00:04:27,875 --> 00:04:29,458
+Show-Tell: 24 Props That Explain.
+
+113
+00:04:29,458 --> 00:04:30,708
+At Nik Bear Brown.

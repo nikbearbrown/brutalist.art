@@ -1,0 +1,947 @@
+[run] skip BCREDIT_Attribution — BCREDIT already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B00_Prop clean
+[gateW] B01_Prop clean
+[gateW] B02_Prop clean
+[gateW] B03_Prop clean
+[gateW] B04_Prop clean
+[gateW] B05_Prop clean
+[gateW] B06_Prop clean
+[gateW] B07_Prop clean
+[gateW] B08_Prop clean
+[gateW] B09_Prop clean
+[gateW] B10_Prop clean
+[gateW] B11_Prop clean
+[gateW] B12_Prop clean
+[gateW] B13_Prop clean
+[gateW] B14_Prop clean
+[gateW] B15_Prop clean
+[gateW] B16_Prop clean
+[gateW] B17_Prop clean
+[gateW] B18_Prop clean
+[gateW] B19_Prop clean
+[gateW] B20_Prop clean
+[gateW] B21_Prop clean
+[gateW] B22_Prop clean
+[gateW] B23_Prop clean
+[run] rendering B00_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:35:42] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+                    INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1697911619_3142935987_2                         
+                             487377888.mp4'                                     
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1167814662_1445927807_3                         
+                             398425651.mp4'                                     
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1167814662_1971561045_8                         
+                             6823257.mp4'                                       
+[09/30/26 22:35:43] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1167814662_2058738612_3                         
+                             41392521.mp4'                                      
+Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/30 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  47%|████▋     | 14/30 [00:00<00:00, 137.62it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  93%|█████████▎| 28/30 [00:00<00:00, 128.35it/s]                                                                                                                            INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1167814662_3443714995_1                         
+                             480918253.mp4'                                     
+Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/16 [00:00<?, ?it/s]                                                                                                        INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1167814662_1821861858_2                         
+                             250404266.mp4'                                     
+[09/30/26 22:35:44] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B00_Pr                         
+                             op/1167814662_1193892708_1                         
+                             89855682.mp4'                                      
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B00_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B00_Prop                      scene.py:278
+                             Played 7 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:35:45] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/19 [00:00<?, ?it/s]                                                                                              Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]                                                                                    [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] rendering B01_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:35:47] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+                    INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1697911619_3142935987_1                         
+                             714193216.mp4'                                     
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1167814662_1445927807_1                         
+                             734902881.mp4'                                     
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1167814662_1971561045_1                         
+                             617693582.mp4'                                     
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1167814662_278768543_29                         
+                             19767336.mp4'                                      
+Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/36 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  39%|███▉      | 14/36 [00:00<00:00, 138.07it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  78%|███████▊  | 28/36 [00:00<00:00, 135.28it/s]                                                                                                        [09/30/26 22:35:48] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1167814662_1604932211_4                         
+                             138671348.mp4'                                     
+Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                                        INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1167814662_1208732426_2                         
+                             67175619.mp4'                                      
+[09/30/26 22:35:49] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B01_Pr                         
+                             op/1167814662_3857710907_3                         
+                             605758513.mp4'                                     
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B01_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B01_Prop                      scene.py:278
+                             Played 7 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:35:50] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]                                                                                              Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] rendering B02_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:35:51] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+[09/30/26 22:35:52] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1697911619_3142935987_1                         
+                             047860046.mp4'                                     
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1167814662_1445927807_6                         
+                             66886561.mp4'                                      
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1167814662_1971561045_2                         
+                             596691319.mp4'                                     
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1167814662_278768543_15                         
+                             15288536.mp4'                                      
+Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/33 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  45%|████▌     | 15/33 [00:00<00:00, 146.37it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  91%|█████████ | 30/33 [00:00<00:00, 145.63it/s]                                                                                                        [09/30/26 22:35:53] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1167814662_3727560917_3                         
+                             258965774.mp4'                                     
+Animation 5: FadeIn(VGroup of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                                        INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1167814662_4148133444_1                         
+                             939043094.mp4'                                     
+[09/30/26 22:35:54] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B02_Pr                         
+                             op/1167814662_3332421279_1                         
+                             809731254.mp4'                                     
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B02_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B02_Prop                      scene.py:278
+                             Played 7 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:35:55] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/21 [00:00<?, ?it/s]                                                                                              Animation 5: FadeIn(VGroup of 4 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] rendering B03_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:35:56] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+                    INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1697911619_3142935987_1                         
+                             842042251.mp4'                                     
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                               [09/30/26 22:35:57] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_1445927807_3                         
+                             261497278.mp4'                                     
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_1971561045_2                         
+                             633403751.mp4'                                     
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_1771994486_2                         
+                             511207125.mp4'                                     
+[09/30/26 22:35:58] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_3741241148_2                         
+                             159949260.mp4'                                     
+Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/29 [00:00<?, ?it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  52%|█████▏    | 15/29 [00:00<00:00, 140.97it/s]                                                                                                                            INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_1936261496_1                         
+                             305193987.mp4'                                     
+Animation 6: FadeIn(VGroup of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                                        INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_2313016171_2                         
+                             991250445.mp4'                                     
+[09/30/26 22:35:59] INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B03_Pr                         
+                             op/1167814662_3529217997_3                         
+                             695477457.mp4'                                     
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B03_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B03_Prop                      scene.py:278
+                             Played 8 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:36:00] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]                                                                                              Animation 6: FadeIn(VGroup of 4 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] rendering B04_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:36:01] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+                    INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1697911619_3142935987_9                         
+                             23176077.mp4'                                      
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_1445927807_3                         
+                             677748351.mp4'                                     
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_1971561045_9                         
+                             86425911.mp4'                                      
+[09/30/26 22:36:02] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_1762311499_2                         
+                             983281635.mp4'                                     
+Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                                        INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_347237333_98                         
+                             0628088.mp4'                                       
+Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/22 [00:00<?, ?it/s]                                                                                                                  INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_519624332_59                         
+                             8688560.mp4'                                       
+[09/30/26 22:36:03] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_1796977515_1                         
+                             803123568.mp4'                                     
+Animation 7: FadeIn(VGroup of 4 submobjects):   0%|          | 0/22 [00:00<?, ?it/s]Animation 7: FadeIn(VGroup of 4 submobjects): 100%|██████████| 22/22 [00:00<00:00, 216.83it/s]                                                                                                                  INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_1173853714_1                         
+                             086017531.mp4'                                     
+                    INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B04_Pr                         
+                             op/1167814662_169252603_22                         
+                             98915986.mp4'                                      
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+[09/30/26 22:36:04] INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B04_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B04_Prop                      scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:36:05] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: FadeIn(VGroup of 4 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 4 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              Animation 7: FadeIn(VGroup of 4 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                    [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] rendering B05_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:36:06] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+                    INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1697911619_3142935987_1                         
+                             077741580.mp4'                                     
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_1445927807_2                         
+                             561339814.mp4'                                     
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_1971561045_1                         
+                             374159339.mp4'                                     
+[09/30/26 22:36:07] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_1771994486_2                         
+                             727325075.mp4'                                     
+Animation 4: Create(Line):   0%|          | 0/20 [00:00<?, ?it/s]                                                                                     INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_1794820613_1                         
+                             163457743.mp4'                                     
+Animation 5: FadeIn(Dot):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_24902349_151                         
+                             1599773.mp4'                                       
+                    INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_3464344254_2                         
+                             826978402.mp4'                                     
+Animation 7: _MethodAnimation(Dot):   0%|          | 0/36 [00:00<?, ?it/s]Animation 7: _MethodAnimation(Dot):  83%|████████▎ | 30/36 [00:00<00:00, 293.70it/s]                                                                                    [09/30/26 22:36:08] INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_1848059264_1                         
+                             079594157.mp4'                                     
+                    INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B05_Pr                         
+                             op/1167814662_4111608475_8                         
+                             3804527.mp4'                                       
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B05_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B05_Prop                      scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:36:09] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: Create(Line):   0%|          | 0/12 [00:00<?, ?it/s]                                                                 Animation 5: FadeIn(Dot):   0%|          | 0/5 [00:00<?, ?it/s]                                                               Animation 7: _MethodAnimation(Dot):   0%|          | 0/23 [00:00<?, ?it/s]                                                                          [audit] scenes: 14 snapshots → CLEAN
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] rendering B06_Prop
+/bin/sh: sox: command not found
+[09/30/26 22:36:11] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+Manim Community v0.20.1
+
+                    INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1697911619_3142935987_2                         
+                             833171864.mp4'                                     
+Animation 1: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_1445927807_4                         
+                             211374246.mp4'                                     
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_1971561045_3                         
+                             051847289.mp4'                                     
+[09/30/26 22:36:12] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_1047514066_6                         
+                             2421784.mp4'                                       
+Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/29 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  76%|███████▌  | 22/29 [00:00<00:00, 211.93it/s]                                                                                                                            INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_456365932_24                         
+                             87324580.mp4'                                      
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_1804188699_2                         
+                             563116443.mp4'                                     
+Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]                                                                                                        INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_82172077_365                         
+                             9310137.mp4'                                       
+[09/30/26 22:36:13] INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             partial_movie_files/B06_Pr                         
+                             op/1167814662_3466666342_1                         
+                             334864762.mp4'                                     
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/bear/Documents/CoW                         
+                             ork/bear-textbooks/books/b                         
+                             rutalist.art/youtube/show-                         
+                             tell-24-isometric-props/me                         
+                             dia/videos/scenes/2160p24/                         
+                             B06_Prop.mp4'                                      
+                                                                                
+                    INFO     Rendered B06_Prop                      scene.py:278
+                             Played 8 animations                                
+You are using manim version v0.20.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim
+/bin/sh: sox: command not found
+[09/30/26 22:36:14] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]                                                                                              Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   Animation 1: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]                                                                                              Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   [audit] annotated frames: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit_frames
+[audit] scenes: 26 snapshots → 1 error(s), 0 warning(s)
+[audit] report: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md
+[run] GATE B FAILED: B06_Prop has layout errors — mp4 NOT slotted.
+[run] see /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/show-tell-24-isometric-props/layout_audit.md and the annotated PNGs beside it.

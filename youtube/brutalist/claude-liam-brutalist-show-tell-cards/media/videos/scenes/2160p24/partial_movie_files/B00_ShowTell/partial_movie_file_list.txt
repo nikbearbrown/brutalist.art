@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1697911619_2931195119_2023860264.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_2795189351_4237137678.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_707637668_3526061154.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_749405419_3907324159.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_531142382_4160708428.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_3220107116_29729809.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_3777846036_2735772300.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_2619854879_2363791646.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B00_ShowTell/1167814662_1073920973_4008335713.mp4'

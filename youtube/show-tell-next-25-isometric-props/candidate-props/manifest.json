@@ -1,0 +1,382 @@
+{
+  "count": 25,
+  "status": "candidate-review",
+  "props": [
+    {
+      "id": "prompt-suggestion",
+      "source_name": "Prompt suggestion",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "294b3cd192dbcb7971df58c48b2c21a7a0fdfa93506689f119fc78a891e68e9e",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "arrow",
+        "suggestion"
+      ],
+      "svg": "svg/prompt-suggestion.svg",
+      "adapted_sha256": "13ac490906cda6b79d50c70fcc3ea3ecad62d431c2661e1311dd01860dffcdfa"
+    },
+    {
+      "id": "question-exchange",
+      "source_name": "Question exchange",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "57bef7e5e32c8674ce8469227d7667bb5b03a2903526d4fc9a0841818d890620",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "upper",
+        "lower",
+        "question"
+      ],
+      "svg": "svg/question-exchange.svg",
+      "adapted_sha256": "72588eaa381347850b0679032bf2e7a4db97ecf4543d69cf883e7411984cd093"
+    },
+    {
+      "id": "token",
+      "source_name": "Token",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "2a75f8f23422f6ecd1931f6cc6b66d26db8d91a41e8168d728fd3f6c87317bd1",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "segment0",
+        "segment1",
+        "segment2",
+        "segment3"
+      ],
+      "svg": "svg/token.svg",
+      "adapted_sha256": "14ad08cf88e462da7a1398644897f1ba29bb660dc91f66b937a68997853127bf"
+    },
+    {
+      "id": "filter",
+      "source_name": "Filter",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "8cd2c51c1d98f3f51343fce569c1f6a955cd9c21dabc8bef9d03d3edb2a3c5e6",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "bar0",
+        "bar1",
+        "bar2"
+      ],
+      "svg": "svg/filter.svg",
+      "adapted_sha256": "91f96a748f08158590e817752eb2ad3b8c8446911a05be0e1cddfee6f8cb9324"
+    },
+    {
+      "id": "sort",
+      "source_name": "Sort",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "60f2e1e72e7d4581c9334cb93b2978cbb5dc9c7343ee26351af59f06fcf1efef",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "bar0",
+        "bar1",
+        "bar2"
+      ],
+      "svg": "svg/sort.svg",
+      "adapted_sha256": "6947fa1ecb1992e84eb8dc14acff21194a6ffd9070822b158b5368c0e0702100"
+    },
+    {
+      "id": "dynamic-form",
+      "source_name": "Dynamic form",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "a1109e2837c931a48f2df6a1176da33033d63baddb795dd3053a88c509fd1b61",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "row0",
+        "row1",
+        "branch"
+      ],
+      "svg": "svg/dynamic-form.svg",
+      "adapted_sha256": "e0985fdeacf7188473c0573ebc1cf353e39ba9aaed8cccd80923fdc20e0c31a2"
+    },
+    {
+      "id": "responsive-layout",
+      "source_name": "Responsive layout",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "78c5323aed6d5e4e2b0d42e7755cf21255f1756a3ef80a29a00cc3b72cd90f5a",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "desktop",
+        "tablet",
+        "phone"
+      ],
+      "svg": "svg/responsive-layout.svg",
+      "adapted_sha256": "7bcf2aa327626b4971664d3c0eaa3bf49371801b4d6021cf745d930a6ab770e0"
+    },
+    {
+      "id": "sliders",
+      "source_name": "Sliders",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "3d6c4c0c632fb442ce7eb90228717265a1611fb1b93c4c29cb755e57a90db008",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "rail",
+        "knob"
+      ],
+      "svg": "svg/sliders.svg",
+      "adapted_sha256": "bd5f7081508c5fa3747e654b613c463aa97d36479b42ef001477b69dabc8bffc"
+    },
+    {
+      "id": "toggle-on",
+      "source_name": "Toggle on",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "9d55548566b0f5ed361b75bc6119959bba7aea9bcc6ab142a36f8b49146d6da0",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "track",
+        "knob"
+      ],
+      "svg": "svg/toggle-on.svg",
+      "adapted_sha256": "b0019abcf1251340c3d3a2a0cc72b61bd88dbeb56eb4249ec52c0c1808b73845"
+    },
+    {
+      "id": "settings-accessibility",
+      "source_name": "Settings Accessibility",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "0c026d11980a5b4a77f9675a4dcb9a8a20a76a4582aa8f65174fdb72438d4b46",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "body",
+        "head",
+        "support"
+      ],
+      "svg": "svg/settings-accessibility.svg",
+      "adapted_sha256": "277d56f4a56bf6094c16ebf38a0b94d6621f89eb5550a008f833d856909e3b20"
+    },
+    {
+      "id": "highlight-keyboard-focus",
+      "source_name": "Highlight keyboard focus",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "af53b88eda407a7ba1607b5e304970de9ce98a92fd4995e56537fa0184ed52cb",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "disc",
+        "caret"
+      ],
+      "svg": "svg/highlight-keyboard-focus.svg",
+      "adapted_sha256": "3f993a92bbb685c4c1de053346526098e075d5ec8a809ff9a87b5ce67e2bb15d"
+    },
+    {
+      "id": "data-alert",
+      "source_name": "Data alert",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "de1c8ff56723d0256401be191ade5aaf7dcc9c0015b8eb857109de060b0ebc8b",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "row0",
+        "row1",
+        "row2",
+        "alert"
+      ],
+      "svg": "svg/data-alert.svg",
+      "adapted_sha256": "a5107815e15058bb895cbb89fc210967fbb1677d7d4149421f4cb29cdc9b24f5"
+    },
+    {
+      "id": "sync-problem",
+      "source_name": "Sync Problem",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "7b94e421a65c00fd9b885a134a64f5d47b4bb9ba9e2ff521befd71ed6772b630",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "upper",
+        "lower",
+        "warning"
+      ],
+      "svg": "svg/sync-problem.svg",
+      "adapted_sha256": "be87ed8ea3392e93fc90d65115d2b3a24d3d49bbb436094aee3b1ef7a03f7e42"
+    },
+    {
+      "id": "undo",
+      "source_name": "Undo",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "7edb32701bd0a360680c2c68d9828fd262c41af42aaf40b11c6a62dc227de072",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "arrow"
+      ],
+      "svg": "svg/undo.svg",
+      "adapted_sha256": "8acb9c52355ed22d413414a410c1513a7a57b6658e817cc5f18757823315fca4"
+    },
+    {
+      "id": "settings-backup-restore",
+      "source_name": "Settings backup restore",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "43b0fbff4291f318e81afbdc82a0d8652b9f396031d8d0231ba4f2889d907343",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "ring",
+        "snapshot"
+      ],
+      "svg": "svg/settings-backup-restore.svg",
+      "adapted_sha256": "8ee11f5ad7624d1325167f856fc4adc530a3409d94c1aac0e63fccf0d14ee84c"
+    },
+    {
+      "id": "deployed-code-history",
+      "source_name": "Deployed code history",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "1b62bc0147bbdd00eba66906956282b99e437acf8670f5ec20b3f73c5528853e",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "package",
+        "clock",
+        "hands"
+      ],
+      "svg": "svg/deployed-code-history.svg",
+      "adapted_sha256": "d2acf9dd0a09b4ce5859fa928a5bd0b85365d5f31d3a6284fdb521ee0307451b"
+    },
+    {
+      "id": "view-kanbab",
+      "source_name": "View Kanbab",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "1cb34457b178d5cea58b6d6f45ed0c1af14280b79e0a3c789a9b5c2850973879",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "board",
+        "column0",
+        "column1",
+        "column2",
+        "card"
+      ],
+      "svg": "svg/view-kanbab.svg",
+      "adapted_sha256": "b6accaafe39ec4143dbe9b1123581cdaa00051d8ceea868c49e5d0ae533ef9e9"
+    },
+    {
+      "id": "timeline",
+      "source_name": "Timeline",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "b75cebfabd0aa70fcd76d959926b0cd73022192b9f73c7266be164af15427409",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "path",
+        "event0",
+        "event1",
+        "event2",
+        "event3"
+      ],
+      "svg": "svg/timeline.svg",
+      "adapted_sha256": "f1e151a9b1c49acf25fec239c26c9929bebb6bd48f77d8c47e6f1c29c77ce728"
+    },
+    {
+      "id": "query-stats",
+      "source_name": "Query Stats",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "64620828884b5c84b0c5dea1dc510135810d6566657f5b26006ca53612381a53",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "trend",
+        "lens"
+      ],
+      "svg": "svg/query-stats.svg",
+      "adapted_sha256": "e228cdbfc016230ae0c45e3d57a63c299536a559e4e867b11677da1d1ff36d8b"
+    },
+    {
+      "id": "data-table",
+      "source_name": "Data table",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "3c0fea3ec397e7682eb1fbfe9e6cfd02fdd8c55c54c39af0ab6b5a822a2044ec",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "row0",
+        "cell0",
+        "row1",
+        "cell1",
+        "row2",
+        "cell2"
+      ],
+      "svg": "svg/data-table.svg",
+      "adapted_sha256": "d685bc26c8e6d6995a75fc2a9c7140e63f73a8a2629541ba51ada767b79cc990"
+    },
+    {
+      "id": "quiz",
+      "source_name": "Quiz",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "5cda0c0e9ad6f23258c23da82a383acc9a3d4bb003c17043b09778a9bd301a0d",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "back",
+        "page",
+        "question"
+      ],
+      "svg": "svg/quiz.svg",
+      "adapted_sha256": "faac46778d568f0d119c307c3654ab7685e8437b6ca9425bb88eb15987a313cd"
+    },
+    {
+      "id": "local-library",
+      "source_name": "Local library",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "b28082dad3031c7c8e29fbdb905e19f76553f3eef17f3f772a5b810ccc2cecea",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "left",
+        "right",
+        "reader"
+      ],
+      "svg": "svg/local-library.svg",
+      "adapted_sha256": "57aafe29ecb34a39526c25290c4b48fccdde3ee3dc458d5ce3057b394c46ed5f"
+    },
+    {
+      "id": "lab-research",
+      "source_name": "Lab research",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "843b2a56dfbfec4d6c2f3e29ee2b85d2e1721c42c80da68d2810b02521072a39",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "base",
+        "arm",
+        "lens",
+        "stage"
+      ],
+      "svg": "svg/lab-research.svg",
+      "adapted_sha256": "98ff5e8d908352fe2622d9d12ee0dcb32d9f704e82ed4a496a0f8378b1a3b128"
+    },
+    {
+      "id": "map",
+      "source_name": "Map",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "3b0380cd94ea33616edd21d16bc27b968c16801cd7d42b5339e8583430f5facd",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "left",
+        "middle",
+        "right"
+      ],
+      "svg": "svg/map.svg",
+      "adapted_sha256": "af81210045eac6781b11c4f19099fb1a42223494e53765526d59dfc8f151c354"
+    },
+    {
+      "id": "flag",
+      "source_name": "Flag",
+      "source_url": "https://www.isocons.app/",
+      "license": "CC-BY-4.0",
+      "reference_sha256": "bd773d5b86405a9319be072268ad7ec39adef4ced83121e68d61baac2b73f9d4",
+      "adaptation": "Simplified native-vector redraw: changed geometry, palette, component separation and motion. Candidate only; not approved for shared library.",
+      "parts": [
+        "pole",
+        "flag"
+      ],
+      "svg": "svg/flag.svg",
+      "adapted_sha256": "2967b166ae3fe44409066289c190c5663a7bed34b6af464df0a13899f9fbe0ca"
+    }
+  ]
+}

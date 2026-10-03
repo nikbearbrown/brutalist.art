@@ -1,0 +1,1318 @@
+{
+  "metadata": {
+    "slug": "show-tell-24-isometric-props",
+    "title": "Show-Tell: 24 Props That Explain",
+    "topic": "CLAUDE · SHOW-TELL",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "playlist": "Claude",
+    "chapter_number": 1,
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "Show-tell opens with hesitant writer and definitions; no verdict. Your Turn and locked spoken outro retained.",
+    "source_doc": "SOURCES.md; Isocons selected references and local native vector rig",
+    "tags": [
+      "Show-Tell",
+      "Isometric Icons",
+      "Conducting AI",
+      "Computational Skepticism",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-30T23:08:40",
+      "cut": "master",
+      "filled": 29,
+      "of": 29,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hallo. This is Liam, in for Bear. Better teaching pictures do more than decorate. These twenty-four isometric props make actions visible: selecting evidence, granting permission, handing off work, and recording decisions.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend content appears and settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Teaching pictures should\ndecorate the explanation.",
+            "triggerWords": "decorate the explanation",
+            "replacementWords": "make the action visible",
+            "fontSize": 78,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "show-tell-24-isometric-props",
+            "banner": ""
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "actual_duration_s": 13.515,
+      "render_duration_s": 13.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Three terms. A prop is a reusable drawing. A state tells us what condition it is in. An action changes that condition. The picture shows the change; the voice explains why it matters.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend content appears and settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "prop",
+                "meaning": "A reusable drawing"
+              },
+              {
+                "term": "state",
+                "meaning": "Its current condition"
+              },
+              {
+                "term": "action",
+                "meaning": "A meaningful change"
+              }
+            ],
+            "folderLabel": "@NikBearBrown",
+            "durationSeconds": 10.773
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "actual_duration_s": 10.773,
+      "render_duration_s": 10.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "media",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Start with a dataset. Lift one record out of the collection. The motion distinguishes the evidence we actually inspect from everything we could inspect.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One cell leaves the dataset",
+        "motion_claim": "One cell leaves the dataset",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Dataset prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "One cell leaves the dataset"
+          }
+        ],
+        "manim": {
+          "class": "B00_Prop"
+        },
+        "prop_id": "dataset"
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 8.512,
+      "render_duration_s": 8.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Linked data adds a relationship. Join the connector to the records. A link tells us where material connects, not whether that material is reliable.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Separate chain joins the record plate",
+        "motion_claim": "Separate chain joins the record plate",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Linked data prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Separate chain joins the record plate"
+          }
+        ],
+        "manim": {
+          "class": "B01_Prop"
+        },
+        "prop_id": "dataset-linked"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 8.555,
+      "render_duration_s": 8.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Layers separate responsibilities. Lift the top layer while the others stay put. Use this to distinguish the interface, the agent, and the underlying service.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Top plane lifts away from two lower planes",
+        "motion_claim": "Top plane lifts away from two lower planes",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Layers prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Top plane lifts away from two lower planes"
+          }
+        ],
+        "manim": {
+          "class": "B02_Prop"
+        },
+        "prop_id": "layers"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 8.853,
+      "render_duration_s": 8.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A reference gives the worker a procedure when it is needed. Pull out the marked section. Keep instructions visually distinct from evidence about the world.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Bookmark pulls away from the reference",
+        "motion_claim": "Bookmark pulls away from the reference",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Reference prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Bookmark pulls away from the reference"
+          }
+        ],
+        "manim": {
+          "class": "B03_Prop"
+        },
+        "prop_id": "quick-reference"
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 8.512,
+      "render_duration_s": 8.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The terminal takes a request and returns a result. Watch the evidence slip enter, then a different slip emerge. An action has an observable consequence.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Request enters terminal and a separate result emerges",
+        "motion_claim": "Request enters terminal and a separate result emerges",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Terminal prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Request enters terminal and a separate result emerges"
+          }
+        ],
+        "manim": {
+          "class": "B04_Prop"
+        },
+        "prop_id": "terminal"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 9.045,
+      "render_duration_s": 9.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Connected services exchange something specific. Draw the connection, then send a packet across it. Do not use a cable to imply unlimited access.",
+      "estimated_duration_s": 9.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Connector draws and packet crosses between service blocks",
+        "motion_claim": "Connector draws and packet crosses between service blocks",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Services prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Connector draws and packet crosses between service blocks"
+          }
+        ],
+        "manim": {
+          "class": "B05_Prop"
+        },
+        "prop_id": "linked-services"
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 8.981,
+      "render_duration_s": 9.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Deployment moves a package into its operating position. Lower the code onto its platform. This shows delivery, not a guarantee that the software works correctly.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Code package lowers onto its platform",
+        "motion_claim": "Code package lowers onto its platform",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Deployment prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Code package lowers onto its platform"
+          }
+        ],
+        "manim": {
+          "class": "B06_Prop"
+        },
+        "prop_id": "deployed-code"
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 9.728,
+      "render_duration_s": 9.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A network offers more than one route. Follow one packet through the nodes. Showing the chosen path is clearer than lighting up every connection at once.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One packet takes two edges in sequence",
+        "motion_claim": "One packet takes two edges in sequence",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Network prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "One packet takes two edges in sequence"
+          }
+        ],
+        "manim": {
+          "class": "B07_Prop"
+        },
+        "prop_id": "network-node"
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 8.384,
+      "render_duration_s": 8.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The raised hand means stop and ask. Raise it before the action continues. Human intervention belongs inside the workflow, not in a disclaimer after it.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Hand and arm rise while a request waits",
+        "motion_claim": "Hand and arm rise while a request waits",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Human review prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Hand and arm rise while a request waits"
+          }
+        ],
+        "manim": {
+          "class": "B08_Prop"
+        },
+        "prop_id": "person-raised-hand"
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 9.109,
+      "render_duration_s": 9.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A reviewer inspects a proposed result before approving it. Bring the evidence to the person, then add the check. Approval is a decision, not decoration.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Evidence arrives before the approval check",
+        "motion_claim": "Evidence arrives before the approval check",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Reviewer prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Evidence arrives before the approval check"
+          }
+        ],
+        "manim": {
+          "class": "B09_Prop"
+        },
+        "prop_id": "person-check"
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 8.896,
+      "render_duration_s": 8.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Agreement needs two sides. Bring the hands together only after both are present. Use this for accepted terms or a shared task boundary, not automatic trust.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two separated hands meet",
+        "motion_claim": "Two separated hands meet",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Agreement prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Two separated hands meet"
+          }
+        ],
+        "manim": {
+          "class": "B10_Prop"
+        },
+        "prop_id": "handshake"
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 9.472,
+      "render_duration_s": 9.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A handoff transfers responsibility. Move the same evidence slip from one person to another. The object persists, so the viewer can follow what changed hands.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Evidence slip moves from one person to another",
+        "motion_claim": "Evidence slip moves from one person to another",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Handoff prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Evidence slip moves from one person to another"
+          }
+        ],
+        "manim": {
+          "class": "B11_Prop"
+        },
+        "prop_id": "partner-exchange"
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 9.557,
+      "render_duration_s": 9.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A policy is a constraint that changes behavior. Let a request approach the boundary and stop. If the rule never affects the action, the picture teaches nothing.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Request hits a rule boundary and returns",
+        "motion_claim": "Request hits a rule boundary and returns",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Policy prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Request hits a rule boundary and returns"
+          }
+        ],
+        "manim": {
+          "class": "B12_Prop"
+        },
+        "prop_id": "policy"
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 9.323,
+      "render_duration_s": 9.333333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Permission is a gate. Keep the lock closed until access is granted, then open it. The shield represents this boundary, not proof that a system is secure.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Shackle lifts before a request passes",
+        "motion_claim": "Shackle lifts before a request passes",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Permission prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Shackle lifts before a request passes"
+          }
+        ],
+        "manim": {
+          "class": "B13_Prop"
+        },
+        "prop_id": "shield-lock"
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 8.896,
+      "render_duration_s": 8.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Uncertainty should change the route. Send the unresolved case away for review. A question mark is useful only when the workflow does something about it.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Unresolved evidence moves away from the shield for review",
+        "motion_claim": "Unresolved evidence moves away from the shield for review",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Uncertainty prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Unresolved evidence moves away from the shield for review"
+          }
+        ],
+        "manim": {
+          "class": "B14_Prop"
+        },
+        "prop_id": "shield-question"
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 8.683,
+      "render_duration_s": 8.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A key grants a particular capability. Move it to the access point. In your own lesson, name what it unlocks and what remains outside its scope.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Key reaches a closed access point, which then opens",
+        "motion_claim": "Key reaches a closed access point, which then opens",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Access key prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Key reaches a closed access point, which then opens"
+          }
+        ],
+        "manim": {
+          "class": "B15_Prop"
+        },
+        "prop_id": "vpn-key"
+      },
+      "audio_file": "mp3/beat-B15.mp3",
+      "actual_duration_s": 8.235,
+      "render_duration_s": 8.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Cross-check two records before adding either check mark. These symbols show the comparison step. They cannot tell us whether the underlying sources are independent or correct.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two records remain visible before two checks appear",
+        "motion_claim": "Two records remain visible before two checks appear",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Cross-check prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Two records remain visible before two checks appear"
+          }
+        ],
+        "manim": {
+          "class": "B16_Prop"
+        },
+        "prop_id": "data-check-double"
+      },
+      "audio_file": "mp3/beat-B16.mp3",
+      "actual_duration_s": 9.899,
+      "render_duration_s": 9.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B16.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B17",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Inspection is an active search. Move the lens across the source, then mark the selected finding. Finding a passage and verifying its claim are different jobs.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Lens sweeps the source before finding is marked",
+        "motion_claim": "Lens sweeps the source before finding is marked",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Inspection prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Lens sweeps the source before finding is marked"
+          }
+        ],
+        "manim": {
+          "class": "B17_Prop"
+        },
+        "prop_id": "search-check-2"
+      },
+      "audio_file": "mp3/beat-B17.mp3",
+      "actual_duration_s": 9.387,
+      "render_duration_s": 9.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B17.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B18",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Revision needs a before and an after. Separate the versions and reveal the changed line. Keep enough history to explain why the new version is better.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Overlapping versions separate and a revision line appears",
+        "motion_claim": "Overlapping versions separate and a revision line appears",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Revision prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Overlapping versions separate and a revision line appears"
+          }
+        ],
+        "manim": {
+          "class": "B18_Prop"
+        },
+        "prop_id": "track-changes"
+      },
+      "audio_file": "mp3/beat-B18.mp3",
+      "actual_duration_s": 8.768,
+      "render_duration_s": 8.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B18.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B19",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A process record accumulates as work happens. Add each row in order. Record the action, the evidence, and the decision, not just the finished artifact.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three record rows arrive sequentially",
+        "motion_claim": "Three record rows arrive sequentially",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Process record prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Three record rows arrive sequentially"
+          }
+        ],
+        "manim": {
+          "class": "B19_Prop"
+        },
+        "prop_id": "receipt"
+      },
+      "audio_file": "mp3/beat-B19.mp3",
+      "actual_duration_s": 8.789,
+      "render_duration_s": 8.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B19.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B20",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Delegation starts with a responsible owner. Draw the branches, then send work to each destination. Different workers need explicit tasks, not merely different boxes.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Edges draw from parent, then task packets reach two workers",
+        "motion_claim": "Edges draw from parent, then task packets reach two workers",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Delegation prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Edges draw from parent, then task packets reach two workers"
+          }
+        ],
+        "manim": {
+          "class": "B20_Prop"
+        },
+        "prop_id": "account-tree"
+      },
+      "audio_file": "mp3/beat-B20.mp3",
+      "actual_duration_s": 9.899,
+      "render_duration_s": 9.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B20.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B21",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A decision changes the path. Split the moving token into two possible routes. In a real workflow, state the condition that selects one route rather than both.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One incoming token becomes two explicitly illustrative alternatives",
+        "motion_claim": "One incoming token becomes two explicitly illustrative alternatives",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Decision prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "One incoming token becomes two explicitly illustrative alternatives"
+          }
+        ],
+        "manim": {
+          "class": "B21_Prop"
+        },
+        "prop_id": "arrow-split"
+      },
+      "audio_file": "mp3/beat-B21.mp3",
+      "actual_duration_s": 9.045,
+      "render_duration_s": 9.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B21.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B22",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Rebase is a code-history metaphor. Move the branch to a later base. This is a simplified illustration of changing its starting point, not a complete Git tutorial.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Side branch moves to a later point on the trunk",
+        "motion_claim": "Side branch moves to a later point on the trunk",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Rebase prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Side branch moves to a later point on the trunk"
+          }
+        ],
+        "manim": {
+          "class": "B22_Prop"
+        },
+        "prop_id": "rebase"
+      },
+      "audio_file": "mp3/beat-B22.mp3",
+      "actual_duration_s": 9.621,
+      "render_duration_s": 9.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B22.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "B23",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A conveyor makes progress visible. Move the package along the belt, then stop it for review. Finishing the motion is not the same as passing the check.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Package advances and stops before the belt ends",
+        "motion_claim": "Package advances and stops before the belt ends",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Workflow prop establishes the example"
+          },
+          {
+            "at": 0.25,
+            "event": "Package advances and stops before the belt ends"
+          }
+        ],
+        "manim": {
+          "class": "B23_Prop"
+        },
+        "prop_id": "conveyor-belt"
+      },
+      "audio_file": "mp3/beat-B23.mp3",
+      "actual_duration_s": 8.491,
+      "render_duration_s": 8.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B23.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "BCREDIT",
+      "act": "credit",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "These props are simplified redraws adapted from Isocons under Creative Commons Attribution four point zero. The shapes, colors, and animation have changed. Keep the source and license credit when you reuse them.",
+      "estimated_duration_s": 13,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A reference sheet becomes a layered reusable prop; source and license remain visible",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "Layers separate, attribution stays"
+          }
+        ],
+        "manim": {
+          "class": "BCREDIT_Attribution"
+        }
+      },
+      "audio_file": "mp3/beat-BCREDIT.mp3",
+      "actual_duration_s": 12.352,
+      "render_duration_s": 12.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BCREDIT.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude: Use Show-Tell to explain my workflow with three props. Show one human decision and one check of the evidence. Then check the film yourself. Does every motion explain a change? Can you tell what the human decided?",
+      "estimated_duration_s": 17.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend content appears and settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CLAUDE · YOUR TURN",
+            "segment": "Make the Action Visible",
+            "command": "Use Show-Tell to explain my workflow with three props. Show one human decision and one check of the evidence.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: every motion explains a change.",
+              "Check: the human decision is visible."
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "largeText": true
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 13.44,
+      "render_duration_s": 13.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-09-30T23:08:40"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Show-Tell: 24 Props That Explain. At Nik Bear Brown.",
+      "estimated_duration_s": 3.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large native-vector prop and two readable labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend content appears and settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Show-Tell: 24 Props That Explain",
+            "slug": "show-tell-24-isometric-props",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 5.203,
+      "render_duration_s": 5.208333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-09-30T23:08:40"
+      }
+    }
+  ]
+}

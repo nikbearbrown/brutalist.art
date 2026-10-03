@@ -1,0 +1,13 @@
+/bin/sh: sox: command not found
+[09/30/26 22:38:21] WARNING  SoX could not be found!              __init__.py:10
+                                                                                
+                                 If you do not have SoX, proceed                
+                             here:                                              
+                                  - - -                                         
+                             http://sox.sourceforge.net/ - - -                  
+                                                                                
+                                 If you do (or think that you                   
+                             should) have SoX, double-check your                
+                                 path variables.                                
+                                                                                
+PASS: 24 unique vector props; original/adapted hashes; named SVG layers; usable movable Manim parts; bounds; no embedded raster assets.

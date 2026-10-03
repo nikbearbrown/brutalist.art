@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1697911619_2207069469_223132457.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_2665451236_1775596247.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_2439045471_1596291288.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_1601760568_2934184093.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_2845114726_1954443681.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_1762848195_3566759570.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_512763774_3774048785.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_897415459_2293050457.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_3812329968_1490869812.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-show-tell-cards/media/videos/scenes/2160p24/partial_movie_files/B10_Mix/1167814662_759487314_845314889.mp4'

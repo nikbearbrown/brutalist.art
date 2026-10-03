@@ -1,0 +1,1375 @@
+{
+  "metadata": {
+    "slug": "show-tell-next-25-isometric-props",
+    "title": "Show-Tell: 25 More Props for Design and Learning",
+    "topic": "CLAUDE · SHOW-TELL",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "playlist": "Claude",
+    "chapter_number": 2,
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "Show-Tell uses hesitant writer, definitions, Your Turn and locked spoken outro; no verdict.",
+    "tags": [
+      "Show-Tell",
+      "Isometric Icons",
+      "Conducting AI",
+      "Computational Skepticism",
+      "Educational AI"
+    ],
+    "build": {
+      "at": "2026-09-30T23:25:16",
+      "cut": "review",
+      "filled": 30,
+      "of": 30,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Bonjour. This is Liam, in for Bear. Here are twenty-five more candidate props. Each one shows a design choice, a recovery step, or a learning action. Judge what the motion explains, not just how the icon looks.",
+      "estimated_duration_s": 14.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Choose a prop for\nhow it looks.",
+            "triggerWords": "how it looks",
+            "replacementWords": "what it explains",
+            "fontSize": 78,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "show-tell-next-25-isometric-props",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/BIDEA.mp4",
+            "at": "2026-10-01T03:22:02.044167+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "actual_duration_s": 12.725,
+      "render_duration_s": 12.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Three terms. A control changes a setting. Recovery returns work to a usable state. Evidence supports a judgment. These drawings are teaching examples, not reports of tests we have run.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "control",
+                "meaning": "Changes a setting"
+              },
+              {
+                "term": "recovery",
+                "meaning": "Returns to a usable state"
+              },
+              {
+                "term": "evidence",
+                "meaning": "Supports a judgment"
+              }
+            ],
+            "folderLabel": "@NikBearBrown",
+            "durationSeconds": 10.859
+          },
+          "rendered": {
+            "out": "media/BDEFS.mp4",
+            "at": "2026-10-01T03:22:28.410014+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "actual_duration_s": 10.859,
+      "render_duration_s": 10.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "remotion:ClaudeDefinitions",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A suggestion offers a starting point. Move the proposed instruction toward the arrow, then leave room to revise it. Suggested does not mean required.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Suggestion slip approaches the arrow",
+        "motion_claim": "Suggestion slip approaches the arrow",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Suggestion appears"
+          },
+          {
+            "at": "Move",
+            "event": "Suggestion slip approaches the arrow"
+          }
+        ],
+        "manim": {
+          "class": "B00_Prop"
+        },
+        "prop_id": "prompt-suggestion"
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 8.96,
+      "render_duration_s": 9.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Clarification sends a question back before work continues. Separate the two directions. Use this when missing context matters more than producing an immediate answer.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Upper and lower arrows separate around the question",
+        "motion_claim": "Upper and lower arrows separate around the question",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Clarification appears"
+          },
+          {
+            "at": "Separate",
+            "event": "Upper and lower arrows separate around the question"
+          }
+        ],
+        "manim": {
+          "class": "B01_Prop"
+        },
+        "prop_id": "question-exchange"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 9.6,
+      "render_duration_s": 9.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A token can stand for a unit in a budget. Separate one segment from the rest. This is a teaching metaphor, not a literal drawing of language tokenization.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One segment leaves the token ring",
+        "motion_claim": "One segment leaves the token ring",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Token appears"
+          },
+          {
+            "at": "Separate",
+            "event": "One segment leaves the token ring"
+          }
+        ],
+        "manim": {
+          "class": "B02_Prop"
+        },
+        "prop_id": "token"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 9.088,
+      "render_duration_s": 9.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A filter narrows a collection according to a rule. Move a record past successive levels. The rule must be stated; filtering alone does not make information trustworthy.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One record passes three filtering levels",
+        "motion_claim": "One record passes three filtering levels",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Filter appears"
+          },
+          {
+            "at": "Move",
+            "event": "One record passes three filtering levels"
+          }
+        ],
+        "manim": {
+          "class": "B03_Prop"
+        },
+        "prop_id": "filter"
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 9.728,
+      "render_duration_s": 9.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Sorting changes order without changing the collection. Swap the short and long bars. Name the ordering rule before interpreting whichever item ends up first.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Short and long bars swap vertical positions",
+        "motion_claim": "Short and long bars swap vertical positions",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Sort appears"
+          },
+          {
+            "at": "Swap",
+            "event": "Short and long bars swap vertical positions"
+          }
+        ],
+        "manim": {
+          "class": "B04_Prop"
+        },
+        "prop_id": "sort"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 9.216,
+      "render_duration_s": 9.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "An adaptive form asks a follow-up question only when it applies. Reveal the second field after the first choice. More fields are not automatically more useful.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Second field appears after an initial choice",
+        "motion_claim": "Second field appears after an initial choice",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Adaptive form appears"
+          },
+          {
+            "at": "Reveal",
+            "event": "Second field appears after an initial choice"
+          }
+        ],
+        "manim": {
+          "class": "B05_Prop"
+        },
+        "prop_id": "dynamic-form"
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 9.493,
+      "render_duration_s": 9.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Responsive design preserves the task across different screens. Separate the desktop, tablet, and phone. The layout can change while the essential decision stays available.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three screen silhouettes spread apart",
+        "motion_claim": "Three screen silhouettes spread apart",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Responsive design appears"
+          },
+          {
+            "at": "Separate",
+            "event": "Three screen silhouettes spread apart"
+          }
+        ],
+        "manim": {
+          "class": "B06_Prop"
+        },
+        "prop_id": "responsive-layout"
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 9.984,
+      "render_duration_s": 10.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A slider makes a range adjustable. Move the handle along its track. Name what changes and provide a way to understand the selected value without guessing from position.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Handle travels on the isometric rail",
+        "motion_claim": "Handle travels on the isometric rail",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Adjustment appears"
+          },
+          {
+            "at": "Move",
+            "event": "Handle travels on the isometric rail"
+          }
+        ],
+        "manim": {
+          "class": "B07_Prop"
+        },
+        "prop_id": "sliders"
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 9.941,
+      "render_duration_s": 9.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A toggle expresses a two-state choice. Move it from one end to the other. For a consequential action, make the current state clear before anything happens.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Knob moves from off position to on position",
+        "motion_claim": "Knob moves from off position to on position",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Explicit choice appears"
+          },
+          {
+            "at": "Move",
+            "event": "Knob moves from off position to on position"
+          }
+        ],
+        "manim": {
+          "class": "B08_Prop"
+        },
+        "prop_id": "toggle-on"
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 8.896,
+      "render_duration_s": 8.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Accessibility is support for completing a task, not a decorative badge. Bring the support into place beneath the figure. Then test the real experience with its users.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Support platform arrives beneath the figure",
+        "motion_claim": "Support platform arrives beneath the figure",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Accessibility appears"
+          },
+          {
+            "at": "Bring",
+            "event": "Support platform arrives beneath the figure"
+          }
+        ],
+        "manim": {
+          "class": "B09_Prop"
+        },
+        "prop_id": "settings-accessibility"
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 9.536,
+      "render_duration_s": 9.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Keyboard focus shows where the next action will land. Move the focus marker between controls. A visible ring should track navigation, not remain around the first item.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Focus marker travels between two control targets",
+        "motion_claim": "Focus marker travels between two control targets",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Keyboard focus appears"
+          },
+          {
+            "at": "Move",
+            "event": "Focus marker travels between two control targets"
+          }
+        ],
+        "manim": {
+          "class": "B10_Prop"
+        },
+        "prop_id": "highlight-keyboard-focus"
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 9.963,
+      "render_duration_s": 10.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A data warning interrupts an assumption. Reveal the warning, then pull out the affected record. The next step is investigation, not turning the warning into a reassuring check.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Warning appears before a record separates",
+        "motion_claim": "Warning appears before a record separates",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Data warning appears"
+          },
+          {
+            "at": "Reveal",
+            "event": "Warning appears before a record separates"
+          }
+        ],
+        "manim": {
+          "class": "B11_Prop"
+        },
+        "prop_id": "data-alert"
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 9.92,
+      "render_duration_s": 9.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A failed exchange should stop the next handoff. Bring the outgoing record to the broken connection and hold it. Do not show movement that suggests delivery succeeded.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Outgoing slip stops at the broken connection",
+        "motion_claim": "Outgoing slip stops at the broken connection",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Sync failure appears"
+          },
+          {
+            "at": "Bring",
+            "event": "Outgoing slip stops at the broken connection"
+          }
+        ],
+        "manim": {
+          "class": "B12_Prop"
+        },
+        "prop_id": "sync-problem"
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 9.493,
+      "render_duration_s": 9.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Undo returns from a recent action to its earlier state. Move the same record back. Keep it distinct from restoring an older backup, which may replace more work.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Record moves out and returns along the same route",
+        "motion_claim": "Record moves out and returns along the same route",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Undo appears"
+          },
+          {
+            "at": "Move",
+            "event": "Record moves out and returns along the same route"
+          }
+        ],
+        "manim": {
+          "class": "B13_Prop"
+        },
+        "prop_id": "undo"
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 9.088,
+      "render_duration_s": 9.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Restore recovers a saved state. Bring the snapshot back into the recovery ring. Name which snapshot you used, and verify what changed after the restoration.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Saved snapshot returns to the recovery ring",
+        "motion_claim": "Saved snapshot returns to the recovery ring",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Restore appears"
+          },
+          {
+            "at": "Bring",
+            "event": "Saved snapshot returns to the recovery ring"
+          }
+        ],
+        "manim": {
+          "class": "B14_Prop"
+        },
+        "prop_id": "settings-backup-restore"
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 9.259,
+      "render_duration_s": 9.291666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Release history connects a deployed package to earlier decisions. Move the clock beside the package, then reveal a record. A timestamp alone cannot explain why the release changed.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Clock and record become visible beside package",
+        "motion_claim": "Clock and record become visible beside package",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Release history appears"
+          },
+          {
+            "at": "Move",
+            "event": "Clock and record become visible beside package"
+          }
+        ],
+        "manim": {
+          "class": "B15_Prop"
+        },
+        "prop_id": "deployed-code-history"
+      },
+      "audio_file": "mp3/beat-B15.mp3",
+      "actual_duration_s": 10.389,
+      "render_duration_s": 10.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A work board makes status visible. Move one task between columns. Define what the destination means; arriving in a done column is not evidence that the work passed review.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One task changes columns on the board",
+        "motion_claim": "One task changes columns on the board",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Work board appears"
+          },
+          {
+            "at": "Move",
+            "event": "One task changes columns on the board"
+          }
+        ],
+        "manim": {
+          "class": "B16_Prop"
+        },
+        "prop_id": "view-kanbab"
+      },
+      "audio_file": "mp3/beat-B16.mp3",
+      "actual_duration_s": 10.091,
+      "render_duration_s": 10.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B16.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B17",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A timeline preserves sequence. Follow the events in order. This schematic has no time scale, so the distances between events do not claim how long anything took.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Marker follows four ordered events",
+        "motion_claim": "Marker follows four ordered events",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Timeline appears"
+          },
+          {
+            "at": "Follow",
+            "event": "Marker follows four ordered events"
+          }
+        ],
+        "manim": {
+          "class": "B17_Prop"
+        },
+        "prop_id": "timeline"
+      },
+      "audio_file": "mp3/beat-B17.mp3",
+      "actual_duration_s": 9.387,
+      "render_duration_s": 9.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B17.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B18",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A metric needs a question. Move the lens toward the change in this illustrative trend. Ask what was measured and what evidence could support a different interpretation.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Lens approaches a bend in a schematic trend",
+        "motion_claim": "Lens approaches a bend in a schematic trend",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Metric inquiry appears"
+          },
+          {
+            "at": "Move",
+            "event": "Lens approaches a bend in a schematic trend"
+          }
+        ],
+        "manim": {
+          "class": "B18_Prop"
+        },
+        "prop_id": "query-stats"
+      },
+      "audio_file": "mp3/beat-B18.mp3",
+      "actual_duration_s": 9.259,
+      "render_duration_s": 9.291666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B18.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B19",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A table keeps records comparable. Pull one row aside while the other rows remain. Use this when the lesson depends on inspecting an individual case within a collection.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Middle row separates from the table",
+        "motion_claim": "Middle row separates from the table",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Table appears"
+          },
+          {
+            "at": "Pull",
+            "event": "Middle row separates from the table"
+          }
+        ],
+        "manim": {
+          "class": "B19_Prop"
+        },
+        "prop_id": "data-table"
+      },
+      "audio_file": "mp3/beat-B19.mp3",
+      "actual_duration_s": 9.621,
+      "render_duration_s": 9.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B19.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B20",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A quiz asks the learner to try before seeing the answer. Move the question aside and reveal a response card. The teaching value comes from the attempt and feedback.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Question yields to a response card after a pause",
+        "motion_claim": "Question yields to a response card after a pause",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Retrieval practice appears"
+          },
+          {
+            "at": "Move",
+            "event": "Question yields to a response card after a pause"
+          }
+        ],
+        "manim": {
+          "class": "B20_Prop"
+        },
+        "prop_id": "quiz"
+      },
+      "audio_file": "mp3/beat-B20.mp3",
+      "actual_duration_s": 9.429,
+      "render_duration_s": 9.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B20.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B21",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Reference reading connects a person to material they can inspect. Open the two pages around the reader. Show the source itself when the lesson turns on its exact wording.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Book pages separate beneath reader",
+        "motion_claim": "Book pages separate beneath reader",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Reference reading appears"
+          },
+          {
+            "at": "Open",
+            "event": "Book pages separate beneath reader"
+          }
+        ],
+        "manim": {
+          "class": "B21_Prop"
+        },
+        "prop_id": "local-library"
+      },
+      "audio_file": "mp3/beat-B21.mp3",
+      "actual_duration_s": 9.408,
+      "render_duration_s": 9.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B21.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B22",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "An experiment changes something so its consequences can be examined. Lower the instrument toward the sample. This prop represents a test; it does not provide a test result.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Instrument approaches the sample stage",
+        "motion_claim": "Instrument approaches the sample stage",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Experiment appears"
+          },
+          {
+            "at": "Lower",
+            "event": "Instrument approaches the sample stage"
+          }
+        ],
+        "manim": {
+          "class": "B22_Prop"
+        },
+        "prop_id": "lab-research"
+      },
+      "audio_file": "mp3/beat-B22.mp3",
+      "actual_duration_s": 9.984,
+      "render_duration_s": 10.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B22.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B23",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A map reveals relationships that one isolated location cannot show. Unfold the three panels. For a workflow map, label the places people actually need to find.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three folded map panels separate",
+        "motion_claim": "Three folded map panels separate",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Orientation appears"
+          },
+          {
+            "at": "Unfold",
+            "event": "Three folded map panels separate"
+          }
+        ],
+        "manim": {
+          "class": "B23_Prop"
+        },
+        "prop_id": "map"
+      },
+      "audio_file": "mp3/beat-B23.mp3",
+      "actual_duration_s": 10.155,
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B23.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "B24",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A milestone marks a condition worth checking. Raise the flag after the work reaches that point. Keep the milestone separate from a claim that the whole project is complete.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Flag rises on pole and a record arrives",
+        "motion_claim": "Flag rises on pole and a record arrives",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "Milestone appears"
+          },
+          {
+            "at": "Raise",
+            "event": "Flag rises on pole and a record arrives"
+          }
+        ],
+        "manim": {
+          "class": "B24_Prop"
+        },
+        "prop_id": "flag"
+      },
+      "audio_file": "mp3/beat-B24.mp3",
+      "actual_duration_s": 9.685,
+      "render_duration_s": 9.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B24.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "BCREDIT",
+      "act": "credit",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "These twenty-five candidates are simplified adaptations of Isocons, under Creative Commons Attribution four point zero. Geometry, colors, and motion have changed. They are awaiting library selection; keep the source credit when reusing them.",
+      "estimated_duration_s": 13,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "Three map panels separate while the license stays visible"
+          }
+        ],
+        "manim": {
+          "class": "BCREDIT_Attribution"
+        }
+      },
+      "audio_file": "mp3/beat-BCREDIT.mp3",
+      "actual_duration_s": 13.973,
+      "render_duration_s": 14.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BCREDIT.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude: Use Show-Tell to explain a task I teach. Choose three props. Show a learner action, a possible failure, and the evidence needed to continue. Review the result. Can you follow the action without reading a paragraph? Does the film distinguish a symbol from evidence?",
+      "estimated_duration_s": 20.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CLAUDE · YOUR TURN",
+            "segment": "Choose What Explains",
+            "command": "Use Show-Tell to explain a task I teach. Choose three props. Show a learner action, a possible failure, and the evidence needed to continue.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: the action is visible.",
+              "Check: symbols are not evidence."
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "largeText": true
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": "2026-10-01T03:23:32.238172+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 15.168,
+      "render_duration_s": 15.208333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-30T23:25:16"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Show-Tell: 25 More Props for Design and Learning. At Nik Bear Brown.",
+      "estimated_duration_s": 4.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one large vector prop with two clear labels; deliberate negative space."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Bookend settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Show-Tell: 25 More Props for Design and Learning",
+            "slug": "show-tell-next-25-isometric-props",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-01T03:23:48.225786+00:00"
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 5.843,
+      "render_duration_s": 5.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-30T23:25:16"
+      }
+    }
+  ]
+}
