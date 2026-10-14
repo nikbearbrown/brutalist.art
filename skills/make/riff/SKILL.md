@@ -51,8 +51,8 @@ Never change apparent gameplay speed to make a sentence fit.
 
 When the user asks for a standalone riff **film**, use
 [ai-explainer](../ai-explainer/SKILL.md) for its bookends and render chassis;
-real clips remain evidence, not Claude UI wallpaper. Follow
-[OUTRO-LOCK.md](../../../OUTRO-LOCK.md): standard title/handle/mascot card,
+real clips remain evidence, not Claude UI wallpaper. Close with the regular
+outro per [OUTRO-LOCK.md](../../../OUTRO-LOCK.md): standard title/handle/mascot card,
 Liam re-reads the title then says "At Nik Bear Brown"; no jingle or music on that card. Do not manufacture
 a scene-themed ending. No burned-in captions unless explicitly requested.
 For a critique-only request, inspect and report; do not launch a film build.

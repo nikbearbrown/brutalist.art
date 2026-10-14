@@ -182,13 +182,28 @@ never-publish). The fellows-specific law set:
 - **SOUND REPAIR (the carve-out inside the carve-out).** "As is" protects the
   fellow's CONTENT and TIMING, not bad audio. If the report's sound is poor —
   quiet, clipped, hummy, roomy, wildly uneven — FIX IT in the transcode step,
-  timing untouched: loudness-normalize to the reel's target
-  (`ffmpeg -af loudnorm=I=-16:TP=-1.5:LRA=11`, two-pass), denoise
+  timing untouched: loudness-normalize to the narration (below), denoise
   (`afftdn`, or `arnndn` for stubborn hiss), high-pass the rumble/hum
   (`highpass=f=80`, plus a notch at 60/50 Hz if needed), and de-ess/limit
   clipping peaks. The MATCH rule is the point: the fellow's segment must sit
   at the same perceived loudness as the selected narrator's narration — a viewer should never
-  reach for the volume knob at the splice. Never pitch-shift, never
+  reach for the volume knob at the splice.
+  **The target is the narration's measured loudness, not a fixed number.** The
+  pipeline does not normalize Kokoro narration (it lands around −21 LUFS), and
+  staged masters must sit in GATE LOUDNESS's −28 to −18 LUFS window
+  (`runtime/scripts/loudness_check.py`), so a fixed −16 would leave the report
+  ~5 LU hot at the splice and can push a report-heavy reel over the ceiling.
+  After step 4, measure the narration, then two-pass `loudnorm` the report to it
+  with `linear=true` (gain only; no dynamics, no timing change):
+  ```bash
+  N=$(ffmpeg -hide_banner -i "concat:$(ls mp3/beat-*.mp3 | paste -sd'|' -)" \
+        -af loudnorm=print_format=summary -f null - 2>&1 | awk '/Input Integrated/{print $3}')
+  # pass 1: ffmpeg -i report.mov -af loudnorm=I=$N:TP=-1.5:LRA=11:print_format=json -f null -
+  # pass 2: loudnorm=I=$N:TP=-1.5:LRA=11:measured_I=…:measured_TP=…:measured_LRA=…:measured_thresh=…:offset=…:linear=true
+  ```
+  If `N` itself falls outside −28 to −18 LUFS, stop and flag it: the narration,
+  not the report, needs attention. Log `N`, both passes' measurements and the
+  final filter in BUILD-LOG.md. Never pitch-shift, never
   time-stretch, never re-voice. Every filter applied is logged in
   BUILD-LOG.md; if the audio is beyond repair (unintelligible passages),
   flag it to the human with timestamps instead of shipping a bad segment.
@@ -229,8 +244,9 @@ never-publish). The fellows-specific law set:
 4. **Audio**: `python3 runtime/scripts/generate_audio_kokoro.py [reel]` — narration
    beats only; B04 is pass-through.
 5. **Transcode the report** into `media/B04.mp4` (letterboxed, own audio) —
-   applying SOUND REPAIR here if the report's audio needs it (measured loudness repair;
-   denoise/high-pass as required; log filters in BUILD-LOG.md).
+   applying SOUND REPAIR here if the report's audio needs it (loudness matched to
+   the narration measured from step 4's MP3s; denoise/high-pass as required; log
+   filters in BUILD-LOG.md).
 6. **Render + assemble**: Remotion beats via
    `runtime/scripts/remotion_scenes.py [reel]` (foreground), then
    `art run [reel]` — review only; conform to audio everywhere and the report's

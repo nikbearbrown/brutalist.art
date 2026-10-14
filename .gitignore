@@ -9,6 +9,7 @@ node_modules/
 runtime/remotion/node_modules/
 __pycache__/
 *.pyc
+.venv/
 .DS_Store
 _qc/
 

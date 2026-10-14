@@ -9,8 +9,9 @@
 # permanently removed. Exit 0 if all required features are ready; exit 1 otherwise.
 #
 # Readiness is decided ONLY by live verification below — importing every
-# Python dep, actually running ffmpeg/ffprobe, and synthesizing + decoding
-# one real Kokoro phrase (mean_volume > -40 dB). An install step's own exit
+# Python dep, actually running ffmpeg/ffprobe, synthesizing + decoding
+# one real Kokoro phrase (mean_volume > -40 dB), and decoding a test tone
+# through faster-whisper's own file loader. An install step's own exit
 # code is reported (INSTALL_FAILED) but never substitutes for a check: a
 # green table means the checks passed, not that `pip install` returned 0.
 set -uo pipefail
@@ -23,6 +24,10 @@ b(){ printf '\033[1m%s\033[0m' "$1"; }
 
 have(){ command -v "$1" >/dev/null 2>&1; }
 pymod(){ python3 -c "import $1" >/dev/null 2>&1; }
+py_ge(){ have python3 && python3 -c "import sys; sys.exit(sys.version_info < (3, $1))" 2>/dev/null; }
+# kokoro-onnx needs onnxruntime>=1.20.1, which has no Python 3.9 wheels; on
+# macOS the default python3 is 3.9, so point at a newer one in a venv.
+PY_HINT='install Python 3.10+ and make it `python3` — e.g. brew install python@3.12, then: python3.12 -m venv .venv && source .venv/bin/activate'
 node_ge(){ have node && [ "$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null||echo 0)" -ge "$1" ]; }
 
 # where a clean machine's fontconfig/OS actually looks for user fonts
@@ -55,8 +60,25 @@ have_font(){
 INSTALL_FAILED=0
 
 if [ "${1:-}" = "--install" ]; then
+  # manim's pycairo/manimpango builds need cairo + pango headers found via pkg-config.
+  if [ "$(uname -s)" = Darwin ] && ! (have pkg-config && pkg-config --exists cairo pangocairo); then
+    b "Installing pkg-config, cairo and pango (needed to build manim's pycairo)…"; echo
+    if ! have brew; then
+      r "Homebrew not found — install it (brew.sh), then: brew install pkg-config cairo pango"; echo
+      INSTALL_FAILED=1
+    elif ! brew install pkg-config cairo pango; then
+      r "brew install pkg-config cairo pango FAILED — see output above."; echo
+      INSTALL_FAILED=1
+    fi
+    echo
+  fi
+
   b "Installing core Python deps…"; echo
-  if ! python3 -m pip install --break-system-packages -r requirements.txt \
+  if ! py_ge 10; then
+    r "python3 is $(python3 --version 2>&1 || echo missing) — this toolkit needs 3.10+. Skipping pip."; echo
+    echo "  fix: $PY_HINT"
+    INSTALL_FAILED=1
+  elif ! python3 -m pip install --break-system-packages -r requirements.txt \
       && ! python3 -m pip install -r requirements.txt; then
     r "Python dependency install FAILED — see pip output above."; echo
     INSTALL_FAILED=1
@@ -102,14 +124,20 @@ fi
 # ── ElevenLabs guard ─────────────────────────────────────────────────
 # Functional ElevenLabs references are bugs; prose documentation mentioning the
 # name is allowed. setup is excluded because it contains this guard.
+# youtube/ is excluded too: it holds video projects, not toolkit code — the
+# setup explainer quotes these fingerprints on screen, and the your-turn /
+# brand-variant demos keep legacy "engine" fixtures as recorded input.
+# .venv/ is third-party site-packages, like node_modules/.
 EL_PAT="ELEVEN""LABS_API_KEY|elevenlabs""\.io|\"engine\"[^\"]*\"elevenlabs\"|xi-api-key"
 if grep -rqiE "$EL_PAT" \
     --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=__pycache__ \
+    --exclude-dir=.venv --exclude-dir=youtube \
     --exclude-dir='.claude' --exclude='CHANGELOG*' --exclude=setup .; then
   r "ElevenLabs reference found — this toolkit is Kokoro-only for narration."; echo
   echo "  Files with hits:"
   grep -rliE "$EL_PAT" \
     --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=__pycache__ \
+    --exclude-dir=.venv --exclude-dir=youtube \
     --exclude-dir='.claude' --exclude='CHANGELOG*' --exclude=setup . | sed 's/^/    /'
   exit 1
 fi
@@ -126,26 +154,27 @@ check(){
   fi
 }
 check ffmpeg    'ffmpeg -version >/dev/null 2>&1 && ffprobe -version >/dev/null 2>&1' 'install ffmpeg (brew install ffmpeg / apt install ffmpeg)'
-check python    'have python3'                  'install Python 3.10+'
+check python    'py_ge 10'                      "$PY_HINT"
 check node20    'node_ge 20'                    'install Node ≥ 20 (nodejs.org / nvm)'
-check latex     'have pdflatex && (have dvisvgm || have latex)' 'install LaTeX + dvisvgm (MacTeX / TeX Live) — only for Manim equation beats'
+check latex     'have pdflatex && have latex && have dvisvgm' 'install LaTeX + dvisvgm (MacTeX / TeX Live; Homebrew: brew install texlive dvisvgm — its texlive omits dvisvgm) — only for Manim equation beats'
 check py_pillow 'pymod PIL'                     'pip install Pillow (slates / request cards / previz)'
 check py_manim  'pymod manim'                   'pip install "manim>=0.20,<0.21" (the 0.20 series — 0.18 clips come out one frame short per scene)'
 check py_whisper 'pymod faster_whisper'         'pip install "faster-whisper<2" (captions / word clock)'
+check whisper_decode "python3 \"$HERE/runtime/scripts/setup_smoke_whisper.py\"" 'faster-whisper could not decode a test WAV — check ffmpeg and the av version (requirements.txt caps av<19); pip install -r requirements.txt (run runtime/scripts/setup_smoke_whisper.py directly to see why)'
 check py_kokoro 'pymod kokoro_onnx'             'pip install kokoro-onnx (the free voice engine)'
 check kokoro_model '[ -f runtime/models/kokoro/kokoro-v1.0.onnx ] && [ -f runtime/models/kokoro/voices-v1.0.bin ]' 'model files ship with this toolkit — if missing: curl -LO from github.com/thewh1teagle/kokoro-onnx releases (model-files-v1.0)'
-check kokoro_synth "python3 \"$HERE/runtime/scripts/setup_smoke_kokoro.py\"" 'Kokoro failed to synthesize + decode a test phrase above -40 dB — check model files, kokoro_onnx install, and ffmpeg (run runtime/scripts/setup_smoke_kokoro.py directly to see why)'
+check kokoro_synth "python3 \"$HERE/runtime/scripts/setup_smoke_kokoro.py\"" 'Kokoro failed to synthesize + decode a test phrase above -40 dB — check model files, kokoro_onnx install, and ffmpeg; a toolkit path too deep for espeak-ng (data path ≥ 160 chars) needs a shorter folder or a system espeak-ng (run runtime/scripts/setup_smoke_kokoro.py directly to see why)'
 check remotion_deps '[ -d runtime/remotion/node_modules ]' 'cd runtime/remotion && npm install'
 check font_garamond 'have_font Garamond' 'bundled in runtime/fonts/EB_Garamond — install: ./setup --install (copies it into ~/Library/Fonts or equivalent)'
 check font_oswald   'have_font Oswald'   'not bundled — install: ./setup --install (downloads it from Google Fonts)'
 
 FEATURES=(
  "audio (Kokoro Bella/Onyx)|ffmpeg python py_kokoro kokoro_model kokoro_synth"
- "captions + word clock|ffmpeg py_whisper"
- "Manim beats|ffmpeg py_manim py_pillow"
- "Manim equation beats|ffmpeg py_manim latex"
+ "captions + word clock|ffmpeg python py_whisper whisper_decode"
+ "Manim beats|ffmpeg python py_manim py_pillow"
+ "Manim equation beats|ffmpeg python py_manim latex"
  "Remotion beats + bookends|node20 remotion_deps"
- "slates / previz / compile|ffmpeg py_pillow"
+ "slates / previz / compile|ffmpeg python py_pillow"
  "fonts (EB Garamond + Oswald)|font_garamond font_oswald"
 )
 

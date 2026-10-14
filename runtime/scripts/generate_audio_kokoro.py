@@ -148,6 +148,8 @@ def load_engine():
             f"  cd {model.parent}\n"
             f"  curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx\n"
             f"  curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin")
+    from espeak_fallback import use_system_espeak
+    use_system_espeak()
     try:
         from kokoro_onnx import Kokoro
     except ImportError:

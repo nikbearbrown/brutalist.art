@@ -66,6 +66,9 @@ def transcribe(video: Path, model='small'):
 
 def bella(text: str, out_mp3: Path):
     import numpy as np, soundfile as sf
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from espeak_fallback import use_system_espeak
+    use_system_espeak()
     from kokoro_onnx import Kokoro
     k = Kokoro(str(KOKORO / 'kokoro-v1.0.onnx'), str(KOKORO / 'voices-v1.0.bin'))
     a, sr = k.create(text, voice='af_bella', speed=1.0, lang='en-us')

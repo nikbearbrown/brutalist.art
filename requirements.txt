@@ -14,13 +14,17 @@ kokoro-onnx>=0.4            # the FREE voice engine (Kokoro-82M, local, no key)
 mutagen>=1.47,<2           # audio-duration measurement (the master clock)
 Pillow>=11,<13             # slates / request cards / previz / stills
 numpy>=2.1
+soundfile>=0.12,<1         # WAV writing for seis_extract.py's Kokoro voiceover
 
 # ── animation ────────────────────────────────────────────────────────────────
 manim>=0.20,<0.21          # pulls manimpango, moderngl, etc.
 manimpango>=0.6.1,<0.7
+matplotlib>=3.8,<4         # typeset_math.py: MathText -> outlined SVG for Remotion math beats
 
 # ── captions + word clock ────────────────────────────────────────────────────
 faster-whisper>=1.0,<2      # forced alignment + transcript captions (local, no key)
+av<19                       # faster-whisper 1.2.1 calls av.open(..., metadata_errors=…),
+                            # which av 19 removed (TypeError on every file transcription)
 
 # ── optional ────────────────────────────────────────────────────────────────
 # playwright>=1.40          # only for capture_sim.py (recording D3 sims for

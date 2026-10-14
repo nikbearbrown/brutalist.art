@@ -33,6 +33,8 @@ def main() -> int:
     ffmpeg = shutil.which("ffmpeg")
     if not ffmpeg:
         return fail("ffmpeg not on PATH")
+    from espeak_fallback import use_system_espeak
+    use_system_espeak()
     try:
         from kokoro_onnx import Kokoro
     except ImportError:
