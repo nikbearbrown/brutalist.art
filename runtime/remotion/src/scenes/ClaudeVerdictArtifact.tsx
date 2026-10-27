@@ -22,6 +22,12 @@ export const claudeVerdictArtifactSchema = z.object({
   lectureLayout: z.boolean().optional(),
   durationSeconds: z.number().optional(),
   lecturePageFrames: z.array(z.number()).optional(),
+  /**
+   * Optional (2026-10-26): scale the card and its type together. The card is
+   * capped at 1560px, which puts a 16:9 master just under the canvas-fill law.
+   * Omitted or 1, nothing changes.
+   */
+  fillScale: z.number().optional(),
   artifactLines: z.array(z.string()).default([
     'Chat: synchronous judgment — you, in the loop.',
     'Cowork: asynchronous recipes — runs while you rehearse.',
@@ -41,8 +47,7 @@ const stripLeadNum = (s: string) => s.replace(/^\s*\d+\s*[.)\-–—:]\s*/, '');
 
 
 export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
-  artifactTitle, artifactHeading, artifactLines, brandLabel, lectureLayout, lecturePageFrames,
-}) => {
+  artifactTitle, artifactHeading, artifactLines, brandLabel, lectureLayout, lecturePageFrames, fillScale}) => {
   const frame = useCurrentFrame();
   const { fps, width, durationInFrames } = useVideoConfig();
 
@@ -50,7 +55,8 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
   const headIn = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
 
   // Fill the frame: ~84% of width, capped so ultrawide stays readable.
-  const cardW = Math.min(width * 0.84, 1560);
+  const fs = fillScale ?? 1;
+  const cardW = Math.min(width * 0.84 * fs, 1560 * fs);
   const lines = (artifactLines ?? []).map(stripLeadNum);
 
   if (lectureLayout) {
@@ -90,7 +96,7 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
           background: CLAUDE.PAGE, borderBottom: `1px solid ${CLAUDE.BORDER}`,
           padding: '22px 40px', display: 'flex', alignItems: 'center', gap: 16,
         }}>
-          <span style={{ fontFamily: SERIF, fontSize: 30, color: CLAUDE.INK, fontWeight: 600 }}>
+          <span style={{ fontFamily: SERIF, fontSize: 30 * fs, color: CLAUDE.INK, fontWeight: 600 }}>
             {artifactTitle}
           </span>
         </div>
@@ -99,7 +105,7 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
         <div style={{ padding: '48px 60px 54px' }}>
           {/* Heading */}
           <div style={{
-            fontFamily: SERIF, fontSize: 46, fontWeight: 700, color: CLAUDE.INK,
+            fontFamily: SERIF, fontSize: 46 * fs, fontWeight: 700, color: CLAUDE.INK,
             marginBottom: 36,
             opacity: clamp(headIn, 0, 1),
           }}>
@@ -116,10 +122,10 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
                 display: 'flex', alignItems: 'flex-start', gap: 22,
                 marginBottom: 26, opacity: op, transform: `translateY(${ty}px)`,
               }}>
-                <span style={{ fontFamily: SANS, fontSize: 28, color: CLAUDE.SPARK, flexShrink: 0, marginTop: 3, fontWeight: 700 }}>
+                <span style={{ fontFamily: SANS, fontSize: 28 * fs, color: CLAUDE.SPARK, flexShrink: 0, marginTop: 3, fontWeight: 700 }}>
                   {i + 1}.
                 </span>
-                <span style={{ fontFamily: SANS, fontSize: 28, color: CLAUDE.INK, lineHeight: 1.55 }}>
+                <span style={{ fontFamily: SANS, fontSize: 28 * fs, color: CLAUDE.INK, lineHeight: 1.55 }}>
                   {line}
                 </span>
               </div>

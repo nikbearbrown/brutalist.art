@@ -23,7 +23,7 @@ const stripLeadNum = (s: string) => s.replace(/^\s*\d+\s*[.)\-–—:]\s*/, '');
 
 
 export const ClaudeVerdictArtifact916: React.FC<ClaudeVerdictArtifact916Props> = ({
-  artifactTitle, artifactHeading, artifactLines,
+  artifactTitle, artifactHeading, artifactLines, fillScale,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
@@ -35,9 +35,9 @@ export const ClaudeVerdictArtifact916: React.FC<ClaudeVerdictArtifact916Props> =
   const CARD_W = width * 0.90;
   const PAD_H = width * 0.055;
   const PAD_V = height * 0.022;
-  const FONT_TITLE = height * 0.018;
-  const FONT_HEADING = height * 0.024;
-  const FONT_LINE = height * 0.017;
+  const FONT_TITLE = (height * 0.018) * (fillScale ?? 1);
+  const FONT_HEADING = (height * 0.024) * (fillScale ?? 1);
+  const FONT_LINE = (height * 0.017) * (fillScale ?? 1);
   const TEXT_MAX_W = CARD_W - PAD_H * 2 - 30;
 
   return (

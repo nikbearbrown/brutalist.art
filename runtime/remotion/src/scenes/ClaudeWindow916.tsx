@@ -17,11 +17,12 @@ export type ClaudeWindow916Props = ClaudeWindowProps;
 
 const SERIF = CLAUDE_FONT.serif;
 const SANS = CLAUDE_FONT.ui;
+const MONO = CLAUDE_FONT.mono;
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
 
 export const ClaudeWindow916: React.FC<ClaudeWindow916Props> = ({
-  view, artifactTitle, artifactHeading, artifactLines, sparkLine,
+  view, artifactTitle, artifactHeading, artifactLines, sparkLine, numbered = true, fillScale,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
@@ -36,8 +37,13 @@ export const ClaudeWindow916: React.FC<ClaudeWindow916Props> = ({
   const CARD_W = width * 0.90;
   const PAD_X = (width - CARD_W) / 2;
   const FONT_HEADING = height * 0.024;  // ~46px at 1920
-  const FONT_LINE = height * 0.017;     // ~33px at 1920
-  const FONT_TITLE_BAR = height * 0.018;
+  const _fs = fillScale ?? 1;
+  const FONT_LINE = height * 0.017 * _fs;     // ~33px at 1920
+  // Pre-formatted content (numbered:false) cannot wrap without destroying its
+  // column alignment, so size the mono type to the LONGEST line instead.
+  const longest = (artifactLines ?? []).reduce((m, l) => Math.max(m, l.length), 1);
+  const FONT_PRE = Math.min(FONT_LINE, (CARD_W - 130) / (longest * 0.6));
+  const FONT_TITLE_BAR = height * 0.018 * _fs;
 
   if (view === 'blank') {
     return <AbsoluteFill style={{ background: CLAUDE.PAGE }} />;
@@ -99,19 +105,22 @@ export const ClaudeWindow916: React.FC<ClaudeWindow916Props> = ({
                 opacity: op,
                 transform: `translateY(${ty}px)`,
               }}>
+                {numbered ? (
+                  <span style={{
+                    fontFamily: SANS,
+                    fontSize: FONT_LINE,
+                    color: CLAUDE.SPARK,
+                    flexShrink: 0,
+                    marginTop: 2,
+                    fontWeight: 700,
+                  }}>
+                    {i + 1}.
+                  </span>
+                ) : null}
                 <span style={{
-                  fontFamily: SANS,
-                  fontSize: FONT_LINE,
-                  color: CLAUDE.SPARK,
-                  flexShrink: 0,
-                  marginTop: 2,
-                  fontWeight: 700,
-                }}>
-                  {i + 1}.
-                </span>
-                <span style={{
-                  fontFamily: SANS,
-                  fontSize: FONT_LINE,
+                  fontFamily: numbered ? SANS : MONO,
+                  whiteSpace: numbered ? 'normal' : 'pre',
+                  fontSize: numbered ? FONT_LINE : FONT_PRE,
                   color: CLAUDE.INK,
                   lineHeight: 1.55,
                 }}>

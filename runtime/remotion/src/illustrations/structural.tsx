@@ -54,7 +54,16 @@ import { SERIF, SANS, MONO, clamp, remap, ease, useP } from './kit';
  * ADAPT: swap the layer list. Mark the ONE card that matters accent.   *
  * ==================================================================== */
 export type Layer = { title: string; sub: string; accent?: boolean };
-export const LayerStack: React.FC<{ layers: Layer[]; caption?: string; top?: number }> = ({ layers, caption, top = 150 }) => {
+/**
+ * `fillScale` (optional, 2026-10-26): widen the cards and grow their type. The
+ * stack is 640 of 1280 wide but already spans ~66% of the stage height, so a
+ * uniform transform overflows vertically and clips a card. Widening is the axis
+ * that has room. Omitted or 1, geometry is unchanged.
+ */
+export const LayerStack: React.FC<{ layers: Layer[]; caption?: string; top?: number; fillScale?: number }> = ({ layers, caption, top = 150, fillScale }) => {
+  const _k = fillScale ?? 1;
+  const _w = Math.round(640 * _k);
+  const _left = Math.round((1280 - _w) / 2);
   const p = useP();
   return (
     <>
@@ -64,13 +73,13 @@ export const LayerStack: React.FC<{ layers: Layer[]; caption?: string; top?: num
         if (lp <= 0) return null;
         return (
           <div key={i} style={{
-            position: 'absolute', left: 320, width: 640, top: top + i * 130 + (1 - lp) * 40,
+            position: 'absolute', left: _left, width: _w, top: top + i * 130 + (1 - lp) * 40,
             opacity: lp, background: '#FFFFFF', border: `1px solid ${CLAUDE.BORDER}`,
             borderLeft: `10px solid ${l.accent ? CLAUDE.SPARK : CLAUDE.INK}`,
             borderRadius: 14, padding: '20px 28px', boxShadow: '0 8px 24px rgba(61,57,41,0.10)',
           }}>
-            <div style={{ fontFamily: SERIF, fontSize: 34, color: CLAUDE.INK }}>{l.title}</div>
-            <div style={{ fontFamily: SANS, fontSize: 19, color: CLAUDE.INK_SOFT, marginTop: 4 }}>{l.sub}</div>
+            <div style={{ fontFamily: SERIF, fontSize: 34 * _k, color: CLAUDE.INK }}>{l.title}</div>
+            <div style={{ fontFamily: SANS, fontSize: 19 * _k, color: CLAUDE.INK_SOFT, marginTop: 4 }}>{l.sub}</div>
           </div>
         );
       })}
@@ -197,9 +206,16 @@ export const SourceFlow: React.FC<{
  * ADAPT: swap the item list; grid re-flows. Each dot lights spark when *
  *   its chip has fully settled — the "landed" accent.                  *
  * ==================================================================== */
-export const ChipGrid: React.FC<{ items: string[]; cols?: number; caption?: string }> = ({ items, cols = 3, caption }) => {
+/**
+ * `fillScale` (optional, 2026-10-26): grow the chips. A 2-column grid is 646 of
+ * 1280 wide and ~32% of the stage height, which is the worst underfill in the
+ * family, so both axes have room here. Omitted or 1, geometry is unchanged.
+ */
+export const ChipGrid: React.FC<{ items: string[]; cols?: number; caption?: string; fillScale?: number }> = ({ items, cols = 3, caption, fillScale }) => {
   const p = useP();
-  const cw = 300, ch = 96, gapX = 46, gapY = 42;
+  const _k = fillScale ?? 1;
+  const cw = Math.round(300 * _k), ch = Math.round(96 * (1 + (_k - 1) * 0.7));
+  const gapX = 46, gapY = Math.round(42 * _k);
   const gridW = cols * cw + (cols - 1) * gapX;
   const x0 = (1280 - gridW) / 2, y0 = 168;
   const step = 0.7 / Math.max(1, items.length); // spread over first 70%
@@ -219,7 +235,7 @@ export const ChipGrid: React.FC<{ items: string[]; cols?: number; caption?: stri
             display: 'flex', alignItems: 'center', gap: 14, padding: '0 20px',
           }}>
             <div style={{ width: 12, height: 12, borderRadius: 7, background: tp >= 1 ? CLAUDE.SPARK : CLAUDE.BORDER }} />
-            <div style={{ fontFamily: SANS, fontSize: 22, fontWeight: 600, color: CLAUDE.INK }}>{t}</div>
+            <div style={{ fontFamily: SANS, fontSize: 22 * _k, fontWeight: 600, color: CLAUDE.INK }}>{t}</div>
           </div>
         );
       })}

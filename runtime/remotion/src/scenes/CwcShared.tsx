@@ -101,14 +101,24 @@ export const cwcConceptCardSchema = z.object({
   title: z.string().default('Concept'),
   body: z.string().default(''),
   sparkLine: z.string().default(''),
+  /**
+   * Optional (2026-10-26): scale the content box to satisfy the canvas-fill
+   * law. The landscape card widens from its 0.76-of-frame default and its type
+   * grows with it; the 9:16 variant, whose width is already at the safe edge,
+   * scales type only. Omitted or 1, nothing changes.
+   */
+  fillScale: z.number().optional(),
 });
 export type CwcConceptCardProps = z.infer<typeof cwcConceptCardSchema>;
 
-export const CwcConceptCard: React.FC<CwcConceptCardProps> = ({ eyebrow, title, body, sparkLine }) => {
+export const CwcConceptCard: React.FC<CwcConceptCardProps> = ({ eyebrow, title, body, sparkLine, fillScale }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
 
   const PAD_X = width * 0.10;
+  // Type scales with the card so a wider card is not just more whitespace.
+  const tScale   = fillScale ?? 1;
+  const cardFrac = 0.76 * tScale;
   const cardIn = spring({ frame, fps, config: { damping: 28, stiffness: 110, mass: 0.9 } });
   const bodyIn = spring({ frame: frame - 20, fps, config: { damping: 26, stiffness: 100, mass: 0.9 } });
   const sparkIn = spring({ frame: frame - 50, fps, config: { damping: 28, stiffness: 100, mass: 0.8 } });
@@ -116,13 +126,13 @@ export const CwcConceptCard: React.FC<CwcConceptCardProps> = ({ eyebrow, title, 
   return (
     <AbsoluteFill style={{ background: CLAUDE.PAGE, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 0 }}>
       <div style={{
-        width: width * 0.76,
+        width: width * cardFrac,
         opacity: clamp(cardIn, 0, 1),
         transform: `translateY(${(1 - clamp(cardIn, 0, 1)) * 12}px)`,
       }}>
         {eyebrow && (
           <div style={{
-            fontFamily: SANS, fontSize: height * 0.013, fontWeight: 700,
+            fontFamily: SANS, fontSize: height * 0.013 * tScale, fontWeight: 700,
             letterSpacing: 3, textTransform: 'uppercase' as const,
             color: CLAUDE.INK_SOFT, marginBottom: 16,
           }}>
@@ -130,14 +140,14 @@ export const CwcConceptCard: React.FC<CwcConceptCardProps> = ({ eyebrow, title, 
           </div>
         )}
         <div style={{
-          fontFamily: SERIF, fontSize: height * 0.044, fontWeight: 700,
+          fontFamily: SERIF, fontSize: height * 0.044 * tScale, fontWeight: 700,
           color: CLAUDE.INK, letterSpacing: '-0.02em', lineHeight: 1.15,
           marginBottom: 28,
         }}>
           {title}
         </div>
         <div style={{
-          fontFamily: SANS, fontSize: height * 0.022,
+          fontFamily: SANS, fontSize: height * 0.022 * tScale,
           color: CLAUDE.INK_SOFT, lineHeight: 1.65,
           opacity: clamp(bodyIn, 0, 1),
           transform: `translateY(${(1 - clamp(bodyIn, 0, 1)) * 8}px)`,

@@ -23,12 +23,14 @@ export const claudeScienceLayerStackSchema = z.object({
   })).default([]),
   caption: z.string().optional(),
   top: z.number().optional(),
+  /** Optional: scale the content box to satisfy the canvas-fill law. 1 = unchanged. */
+  fillScale: z.number().optional(),
 });
 export type ClaudeScienceLayerStackProps = z.infer<typeof claudeScienceLayerStackSchema>;
 
 export const ClaudeScienceLayerStack: React.FC<ClaudeScienceLayerStackProps> = (props) => (
   <IlluStage spark={props.sparkLine}>
-    <LayerStack layers={props.layers} caption={props.caption} top={props.top} />
+    <LayerStack layers={props.layers} caption={props.caption} top={props.top} fillScale={props.fillScale} />
   </IlluStage>
 );
 
@@ -45,6 +47,8 @@ export const claudeScienceSourceFlowSchema = z.object({
   arcCaption: z.string().optional(),
   settleLine: z.string().optional(),
   rackRows: z.number().optional(),
+  /** Optional: scale the content box to satisfy the canvas-fill law. 1 = unchanged. */
+  fillScale: z.number().optional(),
 });
 export type ClaudeScienceSourceFlowProps = z.infer<typeof claudeScienceSourceFlowSchema>;
 
@@ -68,11 +72,13 @@ export const claudeScienceChipGridSchema = z.object({
   items: z.array(z.string()).default([]),
   cols: z.number().optional(),
   caption: z.string().optional(),
+  /** Optional: scale the content box to satisfy the canvas-fill law. 1 = unchanged. */
+  fillScale: z.number().optional(),
 });
 export type ClaudeScienceChipGridProps = z.infer<typeof claudeScienceChipGridSchema>;
 
 export const ClaudeScienceChipGrid: React.FC<ClaudeScienceChipGridProps> = (props) => (
   <IlluStage spark={props.sparkLine}>
-    <ChipGrid items={props.items} cols={props.cols} caption={props.caption} />
+    <ChipGrid items={props.items} cols={props.cols} caption={props.caption} fillScale={props.fillScale} />
   </IlluStage>
 );

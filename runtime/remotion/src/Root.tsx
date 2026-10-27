@@ -227,6 +227,13 @@ import {ValuesSplitScreen916, valuesSplitScreen916Schema} from './scenes/ValuesS
 // ── portrait 916 wrappers for shared components ──
 import {ClaudeTitleOutro916, claudeTitleOutro916Schema} from './scenes/ClaudeTitleOutro916';
 import {ClaudeWindow916, claudeWindow916Schema} from './scenes/ClaudeWindow916';
+import {
+  ClaudeScienceLayerStack916, claudeScienceLayerStack916Schema,
+  ClaudeScienceSourceFlow916, claudeScienceSourceFlow916Schema,
+  ClaudeScienceChipGrid916,   claudeScienceChipGrid916Schema,
+  CwcConceptCard916,          cwcConceptCard916Schema,
+  ClaudeCodeBeat916,          claudeCodeBeat916Schema,
+} from './scenes/ClaudeIllu916';
 // ── claude-liam — coding-agents-social-sciences figures ──
 import {CodingAgentsFig1Loop, codingAgentsFig1LoopSchema} from './scenes/CodingAgentsFig1Loop';
 import {CodingAgentsFig2Gradient, codingAgentsFig2GradientSchema} from './scenes/CodingAgentsFig2Gradient';
@@ -2243,6 +2250,29 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames={180} fps={30} width={1080} height={1920}
         schema={claudeTitleOutro916Schema}
         defaultProps={claudeTitleOutro916Schema.parse({})} />
+      {/* Portrait 9:16 illustration family — native reflow, not scaled landscape. */}
+      <Composition id="ClaudeScienceLayerStack916" component={ClaudeScienceLayerStack916}
+        durationInFrames={360} fps={30} width={1080} height={1920}
+        schema={claudeScienceLayerStack916Schema}
+        defaultProps={{ sparkLine: 'Layers.', layers: [], caption: undefined, top: undefined }} />
+      <Composition id="ClaudeScienceSourceFlow916" component={ClaudeScienceSourceFlow916}
+        durationInFrames={360} fps={30} width={1080} height={1920}
+        schema={claudeScienceSourceFlow916Schema}
+        defaultProps={{ sparkLine: 'Data flows.', sourceLabel: 'Source', feeds: [],
+          destApp: 'Destination', destTitle: '', arcCaption: undefined,
+          settleLine: undefined, rackRows: undefined }} />
+      <Composition id="ClaudeScienceChipGrid916" component={ClaudeScienceChipGrid916}
+        durationInFrames={360} fps={30} width={1080} height={1920}
+        schema={claudeScienceChipGrid916Schema}
+        defaultProps={{ sparkLine: 'Options.', items: [], cols: undefined, caption: undefined }} />
+      <Composition id="CwcConceptCard916" component={CwcConceptCard916}
+        durationInFrames={360} fps={30} width={1080} height={1920}
+        schema={cwcConceptCard916Schema}
+        defaultProps={{ eyebrow: 'ACT ONE', title: 'The concept', body: 'Body copy.', sparkLine: 'The line.' }} />
+      <Composition id="ClaudeCodeBeat916" component={ClaudeCodeBeat916}
+        durationInFrames={300} fps={30} width={1080} height={1920}
+        schema={claudeCodeBeat916Schema}
+        defaultProps={{ title: 'script.py', code: '# code here', sparkLine: 'The code speaks.' }} />
       <Composition id="ClaudeWindow916" component={ClaudeWindow916}
         durationInFrames={360} fps={30} width={1080} height={1920}
         schema={claudeWindow916Schema}
@@ -2287,15 +2317,15 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="Illu-PredictCard" component={PredictCardPreview} durationInFrames={150} fps={30} width={1280} height={720} />
       {/* ── claude-liam-claude-science — structural illustrations (parameterized) ── */}
       <Composition id="ClaudeScienceLayerStack" component={ClaudeScienceLayerStack}
-        durationInFrames={900} fps={30} width={1280} height={720}
+        durationInFrames={360} fps={30} width={1280} height={720}
         schema={claudeScienceLayerStackSchema}
         defaultProps={claudeScienceLayerStackSchema.parse({})} />
       <Composition id="ClaudeScienceSourceFlow" component={ClaudeScienceSourceFlow}
-        durationInFrames={900} fps={30} width={1280} height={720}
+        durationInFrames={360} fps={30} width={1280} height={720}
         schema={claudeScienceSourceFlowSchema}
         defaultProps={claudeScienceSourceFlowSchema.parse({})} />
       <Composition id="ClaudeScienceChipGrid" component={ClaudeScienceChipGrid}
-        durationInFrames={900} fps={30} width={1280} height={720}
+        durationInFrames={360} fps={30} width={1280} height={720}
         schema={claudeScienceChipGridSchema}
         defaultProps={claudeScienceChipGridSchema.parse({})} />
       {/* ── claude-liam-claude-science — rhetorical patterns (deckPatterns, responsive) ── */}

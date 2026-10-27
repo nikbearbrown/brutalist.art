@@ -20,6 +20,12 @@ export const claudeCodeBeatSchema = z.object({
   brandLabel: z.string().optional(),
   /** Optional (2026-10-11): the frame each line lands (one per line), so lines can arrive on their spoken words. A cue <= 0 = on screen at once. */
   lineCues: z.array(z.number()).optional(),
+  /**
+   * Optional (2026-10-26): size the type to the content and let the card hug the
+   * result, instead of a fixed slab at a fixed font size. Opt-in, because turning
+   * it on changes the layout of every code beat that already exists.
+   */
+  fit: z.boolean().optional(),
 });
 export type ClaudeCodeBeatProps = z.infer<typeof claudeCodeBeatSchema>;
 
@@ -30,7 +36,7 @@ const COMMENT_CLR = '#8B8878';
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
 
-export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, sparkLine, language = 'python', largeText = false, brandLabel, lineCues }) => {
+export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, sparkLine, language = 'python', largeText = false, brandLabel, lineCues, fit = false }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
 
@@ -44,6 +50,29 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
   // Extract the filename from the title (everything before " — " or the whole title)
   const filename = title.includes(' — ') ? title.split(' — ')[0].trim() : title;
 
+  // --- fit the code to the card (consulted only when `fit` is set) ---------
+  // The card used to be a fixed slab from 8% to 82% of the frame at a fixed
+  // font size, so a three-line beat rendered as a mostly empty rectangle and a
+  // long line could run past the right edge. Size the type to whichever of the
+  // two axes binds first, then let the card hug the result.
+  const CARD_W    = width * 0.86;            // left/right insets are 7% each
+  const BAND_TOP  = height * 0.08;
+  const BAND_H    = height * 0.74;           // the space the card may occupy
+  const CHROME_H  = 45;                      // title bar
+  const PAD_V     = 40;                      // <pre> padding, top + bottom
+  const PAD_H     = 56;                      // <pre> padding, left + right
+  const LINE_H    = 1.72;
+  const longest   = lines.reduce((m, l) => Math.max(m, l.length), 1);
+  const byWidth   = (CARD_W - PAD_H) / (longest * 0.602);   // mono advance ratio
+  const byHeight  = (BAND_H - CHROME_H - PAD_V) / (lines.length * LINE_H);
+  const FS_MAX      = largeText ? height * 0.032 : height * 0.030;
+  const fitFontSize = clamp(Math.min(byWidth, byHeight), height * 0.013, FS_MAX);
+  const contentH    = CHROME_H + PAD_V + lines.length * LINE_H * fitFontSize;
+  const fitCardH    = clamp(contentH, height * 0.22, BAND_H);
+  // With `fit` off the card keeps its original fixed slab, 8% to 82% of frame.
+  const cardTop     = fit ? BAND_TOP + (BAND_H - fitCardH) / 2 : BAND_TOP;
+  const cardH       = fit ? fitCardH : BAND_H;
+
   return (
     <AbsoluteFill style={{ background: CLAUDE.PAGE }}>
 
@@ -52,8 +81,8 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
         position: 'absolute',
         left: width * 0.07,
         right: width * 0.07,
-        top: height * 0.08,
-        bottom: height * 0.18,
+        top: cardTop,
+        height: cardH,
         background: CLAUDE.CARD,
         border: `1px solid ${CLAUDE.BORDER}`,
         borderRadius: 14,
@@ -105,8 +134,8 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
           margin: 0,
           padding: '20px 26px',
           fontFamily: MONO,
-          fontSize: largeText ? height * 0.032 : height * 0.022,
-          lineHeight: 1.72,
+          fontSize: fit ? fitFontSize : (largeText ? height * 0.032 : height * 0.022),
+          lineHeight: LINE_H,
           textAlign: 'left',
           overflow: 'hidden',
         }}>
@@ -116,7 +145,8 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
             const ty = start <= 0 ? 0 : interpolate(frame, [start, start + 7], [6, 0], {
               extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
             });
-            const isComment = line.trimStart().startsWith('#');
+            const t = line.trimStart();
+            const isComment = t.startsWith('#') || t.startsWith('//');
             const color = isComment ? COMMENT_CLR : CLAUDE.INK;
             return (
               <div key={i} style={{

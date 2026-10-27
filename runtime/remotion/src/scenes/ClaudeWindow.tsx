@@ -23,19 +23,48 @@ export const claudeWindowSchema = z.object({
   width:          z.number().optional(),
   height:         z.number().optional(),
   fontSize:       z.number().optional(),
+  // false renders the lines unnumbered — for traces, logs and console output,
+  // where "1." "2." would imply an ordered list the source never had.
+  numbered:       z.boolean().optional(),
+  /**
+   * Optional (2026-10-26): scale the type. Used by the 9:16 variant, whose card
+   * already spans the full portrait safe width, so height is what limits canvas
+   * fill and larger type is what makes the content box taller. The landscape
+   * component takes `width`/`fontSize` instead. Omitted or 1, nothing changes.
+   */
+  fillScale:      z.number().optional(),
 });
 export type ClaudeWindowProps = z.infer<typeof claudeWindowSchema>;
 
 const SERIF = CLAUDE_FONT.serif;
 const SANS  = CLAUDE_FONT.ui;
+const MONO  = CLAUDE_FONT.mono;
+const Spark: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
+    {Array.from({ length: 8 }, (_, i) => (
+      <line key={i} x1={12} y1={12}
+        x2={12 + 10 * Math.cos((i * Math.PI) / 4 + 0.2)}
+        y2={12 + 10 * Math.sin((i * Math.PI) / 4 + 0.2)}
+        stroke={CLAUDE.SPARK} strokeWidth={3.2} strokeLinecap="round" />
+    ))}
+  </svg>
+);
+
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
 
 export const ClaudeWindow: React.FC<ClaudeWindowProps> = ({
   view, artifactTitle, artifactHeading, artifactLines, sparkLine,
+  width, fontSize, numbered = true,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+
+  // FILL-THE-CANVAS: the card defaults to 1100px on a 1920 stage, which leaves the
+  // frame two-thirds empty on a short artifact. Callers can widen it and scale the
+  // type with it; everything below derives from these two numbers.
+  const cardW = width ?? 1100;
+  const fs = fontSize ?? 19;
 
   const cardIn = spring({ frame,        fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
   const headIn = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
@@ -51,7 +80,7 @@ export const ClaudeWindow: React.FC<ClaudeWindowProps> = ({
     <AbsoluteFill style={{ background: '#F2F0E9', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 0 }}>
       {/* Artifact card */}
       <div style={{
-        width: 1100,
+        width: cardW,
         background: CLAUDE.CARD,
         borderRadius: 20,
         boxShadow: '0 12px 48px rgba(61,57,41,0.14)',
@@ -69,7 +98,8 @@ export const ClaudeWindow: React.FC<ClaudeWindowProps> = ({
           alignItems: 'center',
           gap: 10,
         }}>
-          <span style={{ fontFamily: SERIF, fontSize: 20, color: CLAUDE.INK, fontWeight: 600 }}>
+          <Spark />
+          <span style={{ fontFamily: SERIF, fontSize: Math.round(fs * 1.05), color: CLAUDE.INK, fontWeight: 600 }}>
             {artifactTitle}
           </span>
         </div>
@@ -79,7 +109,7 @@ export const ClaudeWindow: React.FC<ClaudeWindowProps> = ({
           {/* Heading */}
           <div style={{
             fontFamily: SERIF,
-            fontSize: 32,
+            fontSize: Math.round(fs * 1.68),
             fontWeight: 700,
             color: CLAUDE.INK,
             marginBottom: 24,
@@ -102,21 +132,24 @@ export const ClaudeWindow: React.FC<ClaudeWindowProps> = ({
                 opacity: op,
                 transform: `translateY(${ty}px)`,
               }}>
+                {numbered ? (
+                  <span style={{
+                    fontFamily: SANS,
+                    fontSize: fs,
+                    color: CLAUDE.SPARK,
+                    flexShrink: 0,
+                    marginTop: 2,
+                    fontWeight: 700,
+                  }}>
+                    {i + 1}.
+                  </span>
+                ) : null}
                 <span style={{
-                  fontFamily: SANS,
-                  fontSize: 19,
-                  color: CLAUDE.SPARK,
-                  flexShrink: 0,
-                  marginTop: 2,
-                  fontWeight: 700,
-                }}>
-                  {i + 1}.
-                </span>
-                <span style={{
-                  fontFamily: SANS,
-                  fontSize: 19,
+                  fontFamily: numbered ? SANS : MONO,
+                  fontSize: fs,
                   color: CLAUDE.INK,
                   lineHeight: 1.55,
+                  whiteSpace: numbered ? 'normal' : 'pre',
                 }}>
                   {line}
                 </span>
@@ -138,7 +171,7 @@ export const ClaudeWindow: React.FC<ClaudeWindowProps> = ({
         }}>
           <span style={{
             fontFamily: SERIF,
-            fontSize: 26,
+            fontSize: Math.round(fs * 1.37),
             fontStyle: 'italic',
             color: CLAUDE.INK,
           }}>
