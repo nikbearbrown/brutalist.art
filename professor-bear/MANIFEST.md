@@ -378,3 +378,89 @@ Counts now: 1x1 ×89, 2x3 ×24, 16x9 ×9. `avatars/` is a separate 800 px circle
 
 
 Counts now: 1x1 ×229, 2x3 ×28, 16x9 ×13.
+
+
+## 2026-11-07 — 76 new portraits added (clothed; violin, headphones, glasses, overalls, tweed, embroidered-coat sets)
+
+Screened from 90 new `hf_*` files: 12 were copies of portraits already in the set (same image, Topaz re-export) and are skipped; 2 close-ups with bare shoulders (possibly shirtless) are held back pending Bear's call (`hf_20261006_190011_757f6739…` and `hf_20261006_190125_99565585…`, left in the folder under their `hf_` names). One 2×3 master is 2829×4243 rather than 2822×4234 (the public JPG is the standard 1400×2100). Public JPGs: 1600² / 1400×2100, quality 88, 4:2:0.
+
+| original | new | px |
+|---|---|---|
+| hf_20260929_022915_20fffca2-fa5a-441e-8374-767a086ede4a-topaz-face-upscale-2.1x.png | professor-bear-2x3-29.png | 2822×4234 |
+| hf_20260929_024122_9a858ab4-4f86-4711-bc0a-70482b32f01a-topaz-face-upscale-1.7x.png | professor-bear-1x1-230.png | 3461×3461 |
+| hf_20260929_024124_ccbfb1dd-ad04-4748-91d6-c2ea281ab0fb-topaz-face-upscale-1.7x.png | professor-bear-1x1-231.png | 3461×3461 |
+| hf_20260929_024710_8e3f448a-aa9d-4961-aad7-96fb54e48d6d-topaz-face-upscale-1.7x.png | professor-bear-1x1-232.png | 3461×3461 |
+| hf_20260929_024712_c0c7a1be-9986-4668-ac78-7f783216a769-topaz-face-upscale-1.7x.png | professor-bear-1x1-233.png | 3461×3461 |
+| hf_20260929_024833_f22b013a-ac7d-401b-b660-2aed218bc264-topaz-face-upscale-1.7x.png | professor-bear-1x1-234.png | 3461×3461 |
+| hf_20260929_024835_0079c2c3-60d0-4d74-9777-910edf1a7788-topaz-face-upscale-1.7x.png | professor-bear-1x1-235.png | 3461×3461 |
+| hf_20260930_024248_19db20d8-02af-43a5-b9e4-95c7f8585f50-topaz-face-upscale-2.1x.png | professor-bear-2x3-30.png | 2822×4234 |
+| hf_20260930_030003_2f96ca66-e471-4c23-a151-5b06ee005c28-topaz-face-upscale-2.1x.png | professor-bear-2x3-31.png | 2822×4234 |
+| hf_20260930_033129_091a6107-894f-4362-8815-3b95023a2ce3-topaz-face-upscale-2.1x.png | professor-bear-2x3-32.png | 2822×4234 |
+| hf_20260930_041202_17d699ba-eb4a-4ee2-bbee-7c61ea128e07-topaz-face-upscale-2.1x.png | professor-bear-2x3-33.png | 2822×4234 |
+| hf_20260930_161917_0cca48da-0a8c-48b7-b086-39ef9aa3cd61-topaz-face-upscale-2.1x.png | professor-bear-2x3-34.png | 2822×4234 |
+| hf_20260930_163530_9944449d-07f3-4395-a56a-c746ba59416f-topaz-face-upscale-2.1x.png | professor-bear-2x3-35.png | 2822×4234 |
+| hf_20260930_163531_bde37f76-178c-4275-8a9e-7ac2d906af9f-topaz-face-upscale-2.1x.png | professor-bear-2x3-36.png | 2822×4234 |
+| hf_20260930_163533_ecb8b438-023f-4df2-92a4-32c4d3ae656a-topaz-face-upscale-2.1x.png | professor-bear-2x3-37.png | 2822×4234 |
+| hf_20260930_165200_5b593f27-b366-446c-93d5-bea7134ec1ee-topaz-face-upscale-2.1x.png | professor-bear-2x3-38.png | 2822×4234 |
+| hf_20260930_165205_f142844d-86e4-4fa3-8305-6faef9077c00-topaz-face-upscale-2.1x.png | professor-bear-2x3-39.png | 2822×4234 |
+| hf_20260930_165208_49200884-a0b1-4767-a91f-2237e70a7eac-topaz-face-upscale-2.1x.png | professor-bear-2x3-40.png | 2822×4234 |
+| hf_20261001_001130_39f462e0-e74a-4a91-af76-0469dc528c4a-topaz-face-upscale-2.1x.png | professor-bear-2x3-41.png | 2822×4234 |
+| hf_20261002_010428_6e3ad032-fba7-4bc1-af5a-f4858550ba21-topaz-upscale-1.7x.png | professor-bear-1x1-236.png | 3461×3461 |
+| hf_20261002_010557_ca4e02c6-f134-463b-822b-17814f9eb939-topaz-upscale-1.7x.png | professor-bear-1x1-237.png | 3461×3461 |
+| hf_20261002_010600_cc2997be-ca43-4e11-a553-42d122c442e9-topaz-upscale-1.7x.png | professor-bear-1x1-238.png | 3461×3461 |
+| hf_20261002_010619_56bfbc89-41bc-402f-9cf4-7406de73b2f9-topaz-upscale-1.7x.png | professor-bear-1x1-239.png | 3461×3461 |
+| hf_20261002_014711_415c3e0b-53ba-4145-bcd7-22e9303c3061-topaz-upscale-1.7x.png | professor-bear-1x1-240.png | 3461×3461 |
+| hf_20261002_014721_602aa3d8-a160-4023-9f71-edc57df0cb04-topaz-upscale-1.7x.png | professor-bear-1x1-241.png | 3461×3461 |
+| hf_20261002_034058_40b3c0b4-d11d-4bd6-b9d9-1ecd809327c4-topaz-face-upscale-1.7x.png | professor-bear-1x1-242.png | 3461×3461 |
+| hf_20261006_161001_0d34b279-7c78-45ad-8b06-4c836a1e226e-topaz-sharpen-face-upscale-1.7x.png | professor-bear-2x3-42.png | 2829×4243 |
+| hf_20261006_161114_fa17f821-d814-493b-b2d7-605eff44cfc4-topaz-face-upscale-1.7x.png | professor-bear-1x1-243.png | 3461×3461 |
+| hf_20261006_171356_f857ed13-b148-4d47-8e56-cd13980b3b63-topaz-face-upscale-1.7x.png | professor-bear-1x1-244.png | 3461×3461 |
+| hf_20261006_171357_26c9044d-e867-4c1e-8d8a-1ae7d4913307-topaz-face-upscale-1.7x.png | professor-bear-1x1-245.png | 3461×3461 |
+| hf_20261006_171406_3b3b6d3c-f68b-4b94-9ed6-2ebb0cf74b21-topaz-face-upscale-1.7x.png | professor-bear-1x1-246.png | 3461×3461 |
+| hf_20261006_171612_4ce0394f-dd19-41a2-ac3d-268078e657df-topaz-face-upscale-1.7x.png | professor-bear-1x1-247.png | 3461×3461 |
+| hf_20261006_171619_d5933659-023a-4856-b3b1-9d714c9e7328-topaz-face-upscale-1.7x.png | professor-bear-1x1-248.png | 3461×3461 |
+| hf_20261006_171830_35588810-8240-4fc0-acd3-d538c99c9fed-topaz-face-upscale-1.7x.png | professor-bear-1x1-249.png | 3461×3461 |
+| hf_20261006_182308_efc92b02-b3ec-4ed0-8715-d846cdb5bf40-topaz-face-upscale-1.7x.png | professor-bear-1x1-250.png | 3461×3461 |
+| hf_20261006_182323_c6df7280-f7a8-4b77-813f-69fbbe45a97e-topaz-face-upscale-1.7x.png | professor-bear-1x1-251.png | 3461×3461 |
+| hf_20261006_182433_08b8f945-db47-4afc-bf67-a8904b660739-topaz-face-upscale-1.7x.png | professor-bear-1x1-252.png | 3461×3461 |
+| hf_20261006_182715_b6d953ab-5b6c-45f4-ac5c-b83c31d6c067-topaz-face-upscale-1.7x.png | professor-bear-1x1-253.png | 3461×3461 |
+| hf_20261006_183010_b135d994-1e12-4232-a600-e34880a9b6fa-topaz-face-upscale-1.7x.png | professor-bear-1x1-254.png | 3461×3461 |
+| hf_20261006_183203_c7ce3c87-be5a-4dd5-b3a3-40c33e0f84fa-topaz-face-upscale-1.7x.png | professor-bear-1x1-255.png | 3461×3461 |
+| hf_20261006_183206_ab04fcd6-2a40-48f4-bf21-13baee918ba3-topaz-face-upscale-1.7x.png | professor-bear-1x1-256.png | 3461×3461 |
+| hf_20261006_183359_9bdc0a64-b4dd-403a-82bb-fda7976b72ef-topaz-face-upscale-1.7x.png | professor-bear-1x1-257.png | 3461×3461 |
+| hf_20261006_183645_311df588-e9fe-4828-8243-c43494dbf32e-topaz-face-upscale-1.7x.png | professor-bear-1x1-258.png | 3461×3461 |
+| hf_20261006_183830_53ab8d27-480e-4c0e-995b-d3a2c5a2de7b-topaz-face-upscale-1.7x.png | professor-bear-1x1-259.png | 3461×3461 |
+| hf_20261006_185145_8346ec21-1616-4ef1-9933-a0ca131fb6b5-topaz-face-upscale-1.7x.png | professor-bear-1x1-260.png | 3461×3461 |
+| hf_20261006_185634_5c3a0564-675c-4ba2-85bd-f49892c50a21-topaz-face-upscale-1.7x.png | professor-bear-1x1-261.png | 3461×3461 |
+| hf_20261006_185636_660142f1-f461-4926-959f-330e2a565ba5-topaz-face-upscale-1.7x.png | professor-bear-1x1-262.png | 3461×3461 |
+| hf_20261006_190324_67920192-296a-4df2-b3d0-0e32b434fda1-topaz-face-upscale-1.7x.png | professor-bear-1x1-263.png | 3461×3461 |
+| hf_20261006_190325_aca2996c-6cab-4628-9813-ceb76098b444-topaz-face-upscale-1.7x.png | professor-bear-1x1-264.png | 3461×3461 |
+| hf_20261006_190814_34641117-78ce-4649-b714-570778f8038e-topaz-face-upscale-1.7x.png | professor-bear-1x1-265.png | 3461×3461 |
+| hf_20261006_190822_ccae00a7-5824-4d60-ad31-a30a42c91a10-topaz-face-upscale-1.7x.png | professor-bear-1x1-266.png | 3461×3461 |
+| hf_20261006_225731_9ae71409-3b1b-486d-a2fb-dde98dd591b8-topaz-face-upscale-1.7x.png | professor-bear-1x1-267.png | 3461×3461 |
+| hf_20261006_225734_563b4152-06c0-4976-887f-b98b6ac3fa50-topaz-face-upscale-1.7x.png | professor-bear-1x1-268.png | 3461×3461 |
+| hf_20261006_234936_74194f7c-5de6-46e0-bbc0-30fe57845b95-topaz-face-upscale-1.7x.png | professor-bear-1x1-269.png | 3461×3461 |
+| hf_20261006_234937_f71fada2-6bb5-47a6-bac0-cd796cebe5b3-topaz-face-upscale-1.7x.png | professor-bear-1x1-270.png | 3461×3461 |
+| hf_20261007_002233_aef84f19-afed-4c24-9cdb-1bbbc2ecf6d7-topaz-face-upscale-1.7x.png | professor-bear-1x1-271.png | 3461×3461 |
+| hf_20261007_002236_b24ef452-82a8-4091-9221-b6b906a2b18c-topaz-face-upscale-1.7x.png | professor-bear-1x1-272.png | 3461×3461 |
+| hf_20261007_014551_27c6ebcf-1b21-4876-afa6-f4d2cd4e9d54-topaz-face-upscale-1.7x.png | professor-bear-1x1-273.png | 3461×3461 |
+| hf_20261007_014551_b7791c8f-3b0d-4e1a-bc50-46a284a53126-topaz-face-upscale-1.7x.png | professor-bear-1x1-274.png | 3461×3461 |
+| hf_20261007_021019_0dc50fd9-956f-4587-9390-ecec89f4749d-topaz-face-upscale-1.7x.png | professor-bear-1x1-275.png | 3461×3461 |
+| hf_20261007_030513_1334e0b4-5832-4fe1-b301-2458e01ddbd6-topaz-face-upscale-1.7x.png | professor-bear-1x1-276.png | 3461×3461 |
+| hf_20261007_031014_237436ae-1b99-4201-ba86-4a2df1d28bf7-topaz-face-upscale-1.7x.png | professor-bear-1x1-277.png | 3461×3461 |
+| hf_20261007_031016_4acbe4f7-3f39-404a-ab6c-7847f30a1766-topaz-face-upscale-1.7x.png | professor-bear-1x1-278.png | 3461×3461 |
+| hf_20261007_031121_8da1d4fc-4067-499e-ac6a-e1f531fd7a03-topaz-face-upscale-1.7x.png | professor-bear-1x1-279.png | 3461×3461 |
+| hf_20261007_032138_9e88cc79-9896-4619-be33-8b010376352c-topaz-face-upscale-1.7x.png | professor-bear-1x1-280.png | 3461×3461 |
+| hf_20261007_032141_e36c334d-2dd9-48da-942a-e632552173a1-topaz-face-upscale-1.7x.png | professor-bear-1x1-281.png | 3461×3461 |
+| hf_20261018_012356_f7ad41be-4ecb-432d-8f35-26e022ac8605-topaz-face-upscale-2.1x.png | professor-bear-2x3-43.png | 2822×4234 |
+| hf_20261018_012359_2ba4e21c-261e-49b5-a65b-e54fd0dace50-topaz-face-upscale-2.1x.png | professor-bear-2x3-44.png | 2822×4234 |
+| hf_20261018_012405_c93bb3f0-90ad-4250-82e1-9762a3789c8b-topaz-face-upscale-2.1x.png | professor-bear-2x3-45.png | 2822×4234 |
+| hf_20261018_013539_66efdd8f-2aa9-457c-82b7-e46903633ed4-topaz-face-upscale-2.1x.png | professor-bear-2x3-46.png | 2822×4234 |
+| hf_20261018_015218_9e0bdfef-603f-489f-a013-c1ce5ed11443-topaz-face-upscale-1.7x.png | professor-bear-1x1-282.png | 3461×3461 |
+| hf_20261018_015219_dea4a3c7-33cc-4c6d-a1b2-c16fb437bee6-topaz-face-upscale-1.7x.png | professor-bear-1x1-283.png | 3461×3461 |
+| hf_20261018_020441_a9aa45ca-42f8-4c05-9f2d-00a65628b288-topaz-face-upscale-1.7x.png | professor-bear-1x1-284.png | 3461×3461 |
+| hf_20261018_024621_b44f9cae-c56b-419c-87cc-2f636e648d4d-topaz-face-upscale-1.7x.png | professor-bear-1x1-285.png | 3461×3461 |
+| hf_20261018_024622_b06bfdc6-99ae-4c8f-943a-17179a70836b-topaz-face-upscale-1.7x.png | professor-bear-1x1-286.png | 3461×3461 |
+| hf_20261018_024624_53207005-5771-4fd6-8dd1-311dc1a42cf6-topaz-face-upscale-1.7x.png | professor-bear-1x1-287.png | 3461×3461 |
+
+Counts now: 1x1 ×287, 2x3 ×46, 16x9 ×13.

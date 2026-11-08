@@ -99,7 +99,7 @@ of its output. Pantry remains for genuinely necessary source artifacts.
    The ratio follows the slot: a square badge → `1x1`, a standing figure or side panel → `2x3`, a
    full-frame or wide slot → `16x9`.
    Cropping is fine: a circle (`shape="circle"` / `--crop circle`, from a `1x1`), a rounded square, a tight
-   head-and-shoulders, whatever the slot needs. The set holds 229 · 28 · 13 clothed portraits (the shirtless and
+   head-and-shoulders, whatever the slot needs. The set holds 287 · 46 · 13 clothed portraits (the shirtless and
    underwear shots were removed 2026-10-07; see `professor-bear/MANIFEST.md`).
 
 10. **REMOTION VERSION LAW — always the latest Remotion (Bear, 2026-10-10).** `runtime/remotion` runs the

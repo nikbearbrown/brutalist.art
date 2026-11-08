@@ -8,7 +8,7 @@ import { random, staticFile } from 'remotion';
  * Cropping is fine (Bear, 2026-10-07): a circle, a rounded square, a tight head-and-shoulders — whatever the slot needs.
  */
 export type BearRatio = '1x1' | '2x3' | '16x9';
-export const PROFESSOR_BEAR_COUNTS: Record<BearRatio, number> = { '1x1': 229, '2x3': 28, '16x9': 13 };
+export const PROFESSOR_BEAR_COUNTS: Record<BearRatio, number> = { '1x1': 287, '2x3': 46, '16x9': 13 };
 export const PROFESSOR_BEAR_ASPECT: Record<BearRatio, number> = { '1x1': 1, '2x3': 2 / 3, '16x9': 16 / 9 };
 
 /** A stable pick: same seed → same portrait on every render. Use the beat id as the seed. */
